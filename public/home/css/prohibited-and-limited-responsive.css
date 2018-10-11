@@ -1,0 +1,179 @@
+
+/* Media Queries */         
+
+
+
+/* Large Devices */
+@media (min-width: 1200px) {
+
+    .mr {
+        margin-right: 0
+    }
+    
+}
+
+
+/* Medium Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .icon {
+        margin-right: 43px;
+    }
+
+    .toLeft {
+        padding-left: 0px;
+    }
+
+    .toLeft1 {
+        padding-left: 0px;
+    }
+
+    .mr {
+        margin-right: 0
+    }
+
+}
+
+
+/* Small Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .icon {
+        margin-right: 27px;
+    }
+
+    .toLeft {
+        padding-left: 0px;
+    }
+
+    .toLeft1 {
+        padding-left: 0px;
+    }
+
+    .Paragraphs {
+        margin-top: 20px
+    }
+
+    .itme-info {
+        width: 60%;
+    }
+}
+
+
+/* Extra Small Devices */
+@media (max-width: 768px) {
+   
+   .Paragraphs {
+        margin-top: 20px
+    }
+
+   .icon {
+    margin: 20px 10px 20px 15px;
+   }
+
+   .limited-items-title h4 {
+        margin-top: 30px
+    }
+
+    .toLeft {
+        padding-left: 0px;
+    }
+
+    .toLeft1 {
+        padding-left: 0px;
+    }
+
+    .itme-info {
+        width: 60%;
+    }
+
+    .limited-items-icons {
+        text-align: center;
+
+    }
+}
+
+
+/* Extra Small Devices*/
+
+@media (max-width: 480px) {
+    .h2, h2 {
+        font-size: 25px;
+    }
+
+    .Paragraphs {
+        margin-top: 40px;
+    }
+
+    .Paragraphs p {
+        color: #000;
+        font-size: 12px;
+    }
+
+    .icon {
+        margin: 20px 25px 20px 20px;
+    }
+
+    .Country-specific-box p {
+        font-size: 13px;
+    }
+
+    .itme-info {
+        width: 70%;
+    }
+
+
+}
+
+
+/* Extra Small Devices*/
+
+@media (max-width: 375px) {
+    
+    .h2, h2 {
+        font-size: 25px;
+    }
+
+    .Paragraphs {
+        margin-top: 60px;
+    }
+
+    .icon {
+        margin: 20px 10px 20px 10px;
+    }
+
+    .Country-specific-box p {
+        font-size: 12px;
+    }
+
+    .itme-info {
+        width: 75%;
+    }
+
+}
+
+@media (max-width: 320px) {
+    
+    .h2, h2 {
+        font-size: 20px;
+    }
+
+    .Paragraphs {
+        margin-top: 80px;
+    }
+
+    .icon {
+        width: 42%;
+    }
+
+    .Country-specific-box p {
+        font-size: 12px;
+    }
+
+    .itme-info {
+        width: 90%;
+    }
+    .selection {
+        width: 85%;
+    }
+
+}

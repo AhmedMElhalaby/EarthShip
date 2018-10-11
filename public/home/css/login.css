@@ -1,0 +1,212 @@
+
+header {
+	box-shadow: 1px 1px 50px #ccc;
+}
+
+#login-pg {
+	height: 100%;
+}
+
+#login-pg .container-flauid {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/login-bg1.png);
+	background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+
+
+.login-form {
+	width: 30%;
+	margin: 0 auto;
+	height: auto;
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 50px;
+	align-items: center;
+	text-align: center;
+	box-shadow: 1px 1px 10px grey;
+	padding: 30px 0 50px 0;
+}
+
+.login-form-title h3 {
+	color: #ff0101;
+	margin-top: 30px;
+	font-size: 30px;
+}
+
+.login-form-content form {
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.login-form-content form input , .login-form-content form label {
+	width: 100%;
+	margin: auto;
+	text-align: left;
+	height: 30px;
+	color: #000;
+}
+
+.login-form-content form label {
+	margin-top: 20px;
+}
+
+.login-form-content form input{
+	border:0;
+	border-bottom: 1px solid #9a9a9a;
+}
+
+.login-form-content form input:focus{
+	outline: none;
+}
+
+.login-form-content .btn-primary {
+	background-color: #ff0101;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	margin-bottom: 40px;
+	margin-top: 30px;
+	padding: 10px 0px;
+	width: 70%;
+}
+.login-form-content .btn-primary:hover{
+	background-color: #ff010196 !important;
+	color: #fff !important;
+	border: 0;
+}
+
+.login-form-content .btn-primary:active{
+	background-color: #fff !important;
+	color: #000 !important;
+	border: 0;
+}
+
+.login-form-content .btn-primary:focus {
+	background-color: #fff !important;
+	color: #000 !important;
+	border: 0;
+}
+
+.login-form-content .links a.forget {
+	color: #c332ff !important;
+	margin-top: 50px;
+	font-size: 13px;
+}
+
+.login-form-content .links {
+	margin-top: 10px;
+}
+
+.login-form-content .links p {
+	margin-top: 10px;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.Copyright {
+	width: 25%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+	color: #fff;
+	font-size: 13px;
+}
+
+
+/* ******************* verification ***************************** */
+
+.login-form .login-form-title .v-icon {
+	font-size: 50px;
+	color: #ff010196;
+}
+
+.login-form .login-form-title .v-icon2 i {
+	font-size: 70px;
+	color: #ff010196;
+	margin-top: 20px;
+}
+
+.login-form .v-form h3 {
+	color: #000;
+	font-size: 25px;
+}
+
+
+.login-form .v-form-content p {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.login-form .v-form-content p span{
+	color: #ff010196;
+	font-weight: 700;
+}
+
+.vm-form {
+	width: 30%;
+	padding: 70px 15px 100px 15px;
+}
+
+.vm-form2 {
+	width: 30%;
+	padding: 50px 15px 40px 15px;
+}
+
+.login-form .v-form-content2 h4 {
+	color: #808080;
+	font-size: 16px;
+	padding-top: 20px;
+}
+
+
+.login-form .v-form-content2 .v-address{
+	text-align: left; 
+	padding-left: 15px;
+}
+
+.login-form .v-form-content2 .v-address p{
+	padding-left: 10px;
+	color: #000;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+
+
+@media(max-width: 1200px){
+	.login-form {
+		width: 40%;
+	}
+
+	.Copyright {
+		width: 40%;
+	}
+}
+
+
+@media(max-width: 768px){
+	.login-form {
+		width: 60%;
+	}
+
+	.Copyright {
+		width: 60%;
+	}
+}
+
+@media(max-width: 599px){
+	
+	.login-form {
+		width: 80%;
+	}
+
+	.Copyright {
+		width: 80%;
+	}
+}

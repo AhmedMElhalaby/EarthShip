@@ -1,0 +1,3698 @@
+@font-face {
+	font-family: gs1_icons;
+	src: url(../fonts/gs1_icons.eot?#iefix-khbp73) format("embedded-opentype"), url(../fonts/gs1_icons.woff?-khbp73) format("woff"), url(../fonts/gs1_icons.ttf?-khbp73) format("truetype"), url(../fonts/gs1_icons.svg?-khbp73#gs1_icons) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: "Gotham SSm A", "Gotham SSm B", Verdana, sans-serif;
+}
+.toolkit {
+	padding-top: 5.1em; font-size: 16px; font-weight: 300;
+}
+.toolkit figure {
+	vertical-align: top; display: inline-block;
+}
+.toolkit figcaption {
+	text-align: center; margin-top: 5px;
+} 
+.toolkit .thin {
+	font-weight: 200 !important;
+}
+.toolkit p {
+	color: rgb(69, 69, 69); line-height: 24px; font-size: 16px;
+}
+.toolkit p.small {
+	line-height: 24px; font-size: 14px;
+}
+.toolkit p.large {
+	line-height: 26px; font-size: 18px;
+}
+.toolkit strong {
+	font-weight: 500;
+}
+.toolkit li {
+	line-height: 24px;
+}
+.toolkit ul.list-left {
+	left: -20px; position: relative;
+}
+.toolkit ul.downloads {
+	padding-left: 38px;
+}
+.toolkit ul.downloads li {
+	list-style: none; line-height: 200%; position: relative;
+}
+.toolkit ul.downloads li a {
+	font-weight: normal;
+}
+.toolkit ul.downloads li::before {
+	top: 7px; color: rgb(0, 141, 189); position: absolute; content: "\e61d";
+}
+.toolkit h1 {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit h2 {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit h3 {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit h4 {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit h5 {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit h6 {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit section h1:first-child {
+	margin-top: 0px;
+}
+.toolkit section h2:first-child {
+	margin-top: 0px;
+}
+.toolkit section h3:first-child {
+	margin-top: 0px;
+}
+.toolkit section h4:first-child {
+	margin-top: 0px;
+}
+.toolkit section h5:first-child {
+	margin-top: 0px;
+}
+.toolkit section h6:first-child {
+	margin-top: 0px;
+}
+.toolkit h1 {
+	margin: 20px 0px; font-weight: 400;
+}
+.toolkit h3 {
+	margin-top: 45px;
+}
+.toolkit h4 {
+	margin: 35px 0px 15px;
+}
+.toolkit h5 {
+	margin-top: 20px;
+}
+.toolkit .heading-hr {
+	margin-bottom: 20px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .subhead {
+	margin-top: 0px;
+}
+.toolkit a {
+	color: rgb(0, 141, 189); font-weight: 500; text-decoration: none;
+}
+.toolkit a:hover {
+	color: rgb(0, 44, 108);
+}
+.toolkit a:focus {
+	color: rgb(0, 44, 108);
+}
+.toolkit .gradient {
+	background: linear-gradient(rgb(233, 244, 251) 0%, rgb(255, 255, 255) 100%) repeat-x 0% 0% / auto 43px; width: 100%; margin-top: 0px;
+}
+.toolkit .logo img {
+	width: auto; height: 43px; margin-right: 5px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .logo img {
+	height: 61px; margin-right: 30px;
+}
+}
+.toolkit .logo {
+	float: left; position: relative;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .logo {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+}
+.toolkit .logo p {
+	display: inline-block;
+}
+.toolkit .logo h4 {
+	display: inline-block;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .logo p {
+	font-size: 16px;
+}
+.toolkit .logo h4 {
+	font-size: 16px;
+}
+}
+.toolkit .logo1 {
+	margin-top: 15px; float: left; position: relative;
+}
+.toolkit .logo1 p {
+	left: 103px; top: 42px; width: 300px; line-height: 20px; font-size: 16px; position: absolute;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .logo1 {
+	padding-top: 39px; padding-bottom: 31px; margin-top: 0px;
+}
+}
+.toolkit .secondary-nav {
+	font-size: 12px; display: none;
+}
+.toolkit .secondary-nav .form-search-box {
+	vertical-align: top;
+}
+.toolkit .secondary-nav .login-button {
+	vertical-align: top; position: relative;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .secondary-nav {
+	text-align: right; margin-top: 35px; float: right; display: block;
+}
+.toolkit .secondary-nav ul.list-inline {
+	margin-bottom: 5px; margin-left: 0px;
+}
+.toolkit .secondary-nav ul.list-inline li {
+	padding: 0px;
+}
+.toolkit .secondary-nav ul.list-inline li.language a {
+	color: rgb(69, 69, 69);
+}
+.toolkit .secondary-nav ul.list-inline li.language a:hover {
+	color: rgb(0, 44, 108);
+}
+.toolkit .secondary-nav ul.list-inline li a {
+	padding-left: 5px; border-right-color: rgb(177, 179, 179); border-left-width: 1px; border-left-style: solid;
+}
+.toolkit .secondary-nav ul.list-inline li:first-of-type a {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.toolkit .secondary-nav ul.list-inline li:last-of-type a {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.toolkit .secondary-nav .form-search-box {
+	display: inline-block;
+}
+.toolkit .secondary-nav .login-button {
+	padding-right: 15px; padding-left: 35px; margin-left: 15px;
+}
+.toolkit .secondary-nav .login-button span[class^=icon] {
+	left: 12px; top: 8px; font-size: 18px; position: absolute;
+}
+}
+@media only screen and (min-width:1200px)
+{
+.toolkit .secondary-nav .login-button {
+	padding-right: 42px; padding-left: 70px; margin-left: 30px;
+}
+.toolkit .secondary-nav .login-button span[class^=icon] {
+	left: 40px; top: 8px; font-size: 18px; position: absolute;
+}
+}
+.toolkit .page-flag {
+	left: 61px; top: 45px; display: none; position: absolute;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .page-flag {
+	padding: 30px 25px 15px; float: right; display: block; position: static; background-color: rgb(177, 179, 179);
+}
+}
+.toolkit .page-flag h4 {
+	margin: 0px; color: rgb(255, 255, 255);
+}
+.toolkit .logo1 h5 {
+	display: inline;
+}
+.toolkit .toolbox {
+	padding: 55px 0px;
+}
+.toolkit .toolkit-title {
+	text-align: center;
+}
+.toolkit .toolkit-title > h1 {
+	margin-top: 0px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-title > h1 {
+	font-size: 30px;
+}
+}
+.toolkit .toolkit-buttons a {
+	vertical-align: top;
+}
+.toolkit .toolkit-bottom-container {
+	padding-bottom: 50px; background-color: rgb(242, 250, 252);
+}
+.toolkit .toolkit-bottom-message h1 {
+	margin-top: 50px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-message h1 {
+	margin-top: 30px;
+}
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code {
+	background: url("../images/plum.gif") repeat-x rgb(255, 255, 255); margin-top: 65px; float: left; box-shadow: 0px -5px 10px #e6e6e6;
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-styleguide {
+	background: url("../images/plum.gif") repeat-x rgb(255, 255, 255); margin-top: 65px; float: left; box-shadow: 0px -5px 10px #e6e6e6;
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code {
+	margin-right: 60px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code {
+	margin-right: 0px;
+}
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code .circle {
+	background: rgb(255, 255, 255); border-radius: 4px; width: 7px; height: 7px; text-align: center; line-height: 7px; font-size: 10px; margin-top: 4px; margin-left: 4px; float: left;
+}
+.toolkit .toolkit-bottom-blocks-container {
+	width: 440px; margin-right: 130px; float: left;
+}
+@media only screen and (max-width:1200px)
+{
+.toolkit .toolkit-bottom-blocks-container {
+	margin-right: 30px;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks-container {
+	width: auto; margin-right: 0px;
+}
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code {
+	width: 440px; height: 232px; margin-bottom: 38px;
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-styleguide {
+	width: 440px; height: 232px; margin-bottom: 38px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code {
+	width: 100%;
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-styleguide {
+	width: 100%;
+}
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code .toolkit-block1 {
+	margin-top: 28px; margin-left: 32px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-code .toolkit-block1 {
+	margin-right: 36px; margin-left: 10px;
+}
+}
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-styleguide .toolkit-block2 {
+	margin-top: 42px; margin-left: 116px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks .toolkit-bottom-styleguide .toolkit-block2 img {
+	left: -75px; position: relative;
+}
+}
+.toolkit .toolkit-bottom-blocks .toolkit-block-copy {
+	height: 485px;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .toolkit-bottom-blocks .toolkit-block-copy {
+	height: auto;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks .toolkit-block-copy h4 {
+	clear: both;
+}
+}
+.toolkit .toolkit-bottom-blocks-container .toolkit-style-guide a {
+	float: left;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks-container .toolkit-download {
+	top: 40px; position: relative;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .toolkit-bottom-blocks-container .toolkit-download {
+	padding-right: 15px;
+}
+.toolkit .toolkit-bottom-blocks-container .toolkit-style-guide {
+	padding-right: 15px;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .toolkit-bottom-blocks-container .toolkit-download {
+	margin-top: 20px;
+}
+.toolkit .toolkit-bottom-blocks-container .toolkit-style-guide {
+	margin-top: 20px;
+}
+}
+@media only screen and (min-width:768px)
+{
+.toolkit {
+	padding-top: 11.45em;
+}
+}
+@media only screen and (min-width:992px)
+{
+.toolkit {
+	padding-top: 11.7em;
+}
+}
+.toolkit .header-top {
+	border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid; display: none; background-color: rgb(244, 244, 244);
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .header-top {
+	display: block;
+}
+}
+.toolkit header {
+	left: 0px; top: 0px; width: 100%; position: fixed; z-index: 10000; box-shadow: 0px -18px 30px 26px rgba(0,0,0,0.05);
+}
+.toolkit header.no-gradient {
+	box-shadow: none;
+}
+.header-short.toolkit .logo1 p {
+	top: 38px;
+}
+@media only screen and (min-width:768px)
+{
+.header-short.toolkit {
+	padding-top: 9.2em;
+}
+}
+@media only screen and (min-width:768px)
+{
+.header-short.toolkit header:not(.example-header) .logo1 {
+	padding-top: 15px; padding-bottom: 15px;
+}
+}
+.toolkit .navigation {
+	background-color: rgb(255, 255, 255);
+}
+.toolkit .navbar {
+	margin-bottom: 0px;
+}
+.toolkit .navbar li {
+	left: 0px;
+}
+.toolkit .navbar-default {
+	border: 0px currentColor; border-image: none; background-color: rgb(255, 255, 255);
+}
+.toolkit .navbar-default .navbar-mover li > a {
+	color: rgb(0, 44, 108);
+}
+.toolkit .navbar-default .navbar-toggle .icon-bar {
+	width: 30px; height: 5px; background-color: rgb(242, 99, 52);
+}
+.toolkit .navbar-default .collapsed.navbar-toggle .icon-bar {
+	background-color: rgb(0, 44, 108);
+}
+.toolkit .navbar-toggle {
+	border: currentColor; border-image: none;
+}
+.toolkit .navbar-toggle:hover {
+	background: none;
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .navbar-default .navbar-nav > li.active {
+	background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iMXB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDEgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMSA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHJlY3QgZmlsbD0iI0YyNjMzNCIgd2lkdGg9IjEiIGhlaWdodD0iOCIvPgo8L3N2Zz4=") repeat-x;
+}
+}
+.toolkit .navbar-default .navbar-nav > li > a:hover {
+	color: rgb(242, 99, 52);
+}
+.toolkit .navbar-default .navbar-nav > .active > a {
+	color: rgb(242, 99, 52);
+}
+.toolkit .navbar-default .navbar-nav > .active > a:hover {
+	color: rgb(242, 99, 52);
+}
+.toolkit .navbar-default .navbar-nav > .active > a:focus {
+	color: rgb(242, 99, 52);
+}
+.toolkit .navbar-nav > li > a {
+	font-size: 16px; font-weight: 500; margin-top: 4px; margin-bottom: 0px;
+}
+@media only screen and (max-width:1200px) and (min-width:992px)
+{
+.toolkit .navbar-nav > li > a {
+	font-size: 14px;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .navbar-nav > li > a {
+	margin: 0px !important;
+}
+}
+.toolkit .navbar-default .navbar-nav {
+	width: 100%;
+}
+.toolkit .navbar-default .navbar-nav > li {
+	margin-right: 20px;
+}
+@media only screen and (min-width:1200px)
+{
+.toolkit .navbar-default .navbar-nav > li {
+	margin-right: 45px;
+}
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .navbar-default .navbar-nav > li {
+	margin-left: 30px;
+}
+}
+.toolkit .navbar-default {
+	z-index: 3500;
+}
+.toolkit .navbar-default .navbar-nav > .active > a {
+	background: none;
+}
+.toolkit .navbar-static-top {
+	border-radius: 0px;
+}
+.toolkit .navbar-fixed-top {
+	border-radius: 0px;
+}
+.toolkit .navbar-fixed-bottom {
+	border-radius: 0px;
+}
+.toolkit .navbar-fixed-top {
+	position: relative;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .navbar-fixed-top {
+	position: fixed;
+}
+}
+.toolkit .navbar.yamm {
+	border: currentColor; border-image: none;
+}
+.toolkit .yamm .navbar-nav {
+	margin: 0px;
+}
+.toolkit .yamm .navbar-nav .section li {
+	font-size: 14px; margin-right: 0px; margin-left: 0px;
+}
+.toolkit .yamm .navbar-nav .section li > a {
+	padding-right: 0px; padding-left: 0px; background-color: transparent;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .navbar-nav .section li > a.dropdown-toggle {
+	padding-right: 8px;
+}
+}
+.toolkit .yamm .navbar-nav > li {
+	margin-right: 0px; margin-left: 0px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .navbar-nav > li {
+	font-size: 16px; margin-right: 40px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .yamm .navbar-nav > li {
+	margin-right: 30px;
+}
+}
+.toolkit .yamm .navbar-nav > li:last-of-type {
+	margin-right: 0px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.toolkit .yamm .navbar-nav > li > a {
+	color: rgb(0, 44, 108); padding-right: 0px; padding-left: 0px; font-size: 18px;
+}
+.toolkit .yamm .navbar-nav > li > a:active {
+	color: rgb(0, 44, 108); padding-right: 0px; padding-left: 0px; font-size: 18px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .navbar-nav > li > a {
+	font-size: 16px;
+}
+.toolkit .yamm .navbar-nav > li > a:active {
+	font-size: 16px;
+}
+}
+.toolkit .yamm .navbar-nav > li.dropdown > a {
+	padding-right: 8px;
+}
+.toolkit .yamm .navbar-nav a:hover {
+	color: rgb(242, 99, 52);
+}
+.toolkit .yamm .navbar-nav a:focus {
+	outline-color: rgb(177, 179, 179);
+}
+.toolkit .yamm .navbar-nav a.btn-download:hover {
+	color: rgb(255, 255, 255);
+}
+.toolkit .yamm .navbar-nav .active .section li > a {
+	background-color: transparent;
+}
+.toolkit .yamm .navbar-nav .active .section li > a:hover {
+	background-color: transparent;
+}
+.toolkit .yamm .navbar-nav .active .section li > a:active {
+	background-color: transparent;
+}
+.toolkit .yamm .navbar-nav .secondary-nav {
+	display: block;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .navbar-nav .secondary-nav {
+	display: none;
+}
+}
+.toolkit .yamm .navbar-nav .nav-divider {
+	margin: 0px; height: auto; overflow: auto; border-top-color: rgb(177, 179, 179); border-top-width: 1px; border-top-style: solid; background-color: transparent;
+}
+.toolkit .yamm p {
+	line-height: 20px; font-size: 14px;
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .yamm p {
+	line-height: 24px; font-size: 16px;
+}
+}
+.toolkit .yamm .navbar-header {
+	border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(244, 244, 244);
+}
+.toolkit .yamm .navbar-header .logo1 {
+	margin-top: 12px; margin-left: 15px;
+}
+.toolkit .yamm .navbar-header .secondary-nav {
+	margin-top: 28px; float: right; display: inline-block;
+}
+.toolkit .yamm .navbar-header .secondary-nav .search {
+	padding: 0px 10px; color: rgb(242, 99, 52);
+}
+.toolkit .yamm .navbar-header .secondary-nav .search span {
+	font-size: 24px;
+}
+.toolkit .yamm .navbar-header .secondary-nav .login-button {
+	padding: 3px 5px;
+}
+.toolkit .yamm .navbar-header .secondary-nav .login-button [class^='icon'] {
+	font-size: 12px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .navbar-header .secondary-nav {
+	display: none;
+}
+}
+.toolkit .yamm .navbar-collapse {
+	margin: 7px 0px; padding-right: 0px; padding-left: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .navbar-collapse {
+	margin: 0px;
+}
+}
+.toolkit .navbar-default.yamm {
+	z-index: 3000;
+}
+.toolkit .navbar-default.yamm .navbar-nav li.open > a {
+	background-color: transparent;
+}
+.toolkit .navbar-default.yamm .navbar-nav li.open > a:hover {
+	background-color: transparent;
+}
+.toolkit .yamm .navbar-toggle {
+	border: 0px currentColor; border-image: none; margin-top: 20px; margin-right: 5px; margin-bottom: 20px; background-color: transparent;
+}
+.toolkit .yamm .navbar-toggle:focus {
+	border: 0px currentColor; border-image: none; margin-top: 20px; margin-right: 5px; margin-bottom: 20px; background-color: transparent;
+}
+.toolkit .yamm .logo {
+	height: 140px; padding-top: 35px; background-color: rgb(244, 244, 244);
+}
+.toolkit .yamm .dropdown-toggle {
+	border: currentColor; border-image: none; height: auto; background-color: transparent;
+}
+.toolkit .yamm .dropdown-toggle:hover {
+	border: currentColor; border-image: none; height: auto; background-color: transparent;
+}
+.toolkit .yamm .dropdown-toggle {
+	padding-right: 8px; padding-left: 0px; position: relative;
+}
+.toolkit .yamm .dropdown-toggle::after {
+	transition:transform 250ms; right: 0px; font-family: gs1_icons; position: absolute; content: "\e601"; transform: rotate(-90deg); -webkit-transition: 250ms -webkit-transform; -webkit-transform: rotate(-90deg);
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .dropdown-toggle::after {
+	top: 2px; right: -8px; font-size: 0.9em; position: relative; transform: rotate(0deg);
+}
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .open .dropdown-toggle {
+	color: rgb(242, 99, 52);
+}
+}
+.toolkit .yamm .open .dropdown-toggle::after {
+	transform: rotate(0deg); -webkit-transform: rotate(0deg);
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .yamm .open .dropdown-toggle::before {
+	background: url("../images/nav-arrow-down.png") no-repeat top; left: 0px; width: 100%; height: 12px; bottom: -12px; position: absolute; z-index: 4000; content: "";
+}
+}
+.toolkit .yamm .dropdown-menu {
+	padding: 10px 10px 20px; border: currentColor; border-image: none;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .dropdown-menu {
+	padding: 30px 45px 20px; background-color: rgb(244, 244, 244);
+}
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .dropdown-menu {
+	box-shadow: 0px 9px 25px -6px rgba(0,0,0,0.4);
+}
+}
+.toolkit .yamm .dropdown-menu h4 {
+	margin-left: 0px;
+}
+.toolkit .yamm h4 {
+	font-size: 16px; margin-top: 0px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm h4 {
+	line-height: 20px; font-size: 14px;
+}
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .yamm h4 {
+	font-size: 18px;
+}
+}
+.toolkit .yamm h4 a {
+	color: rgb(0, 44, 108);
+}
+.toolkit .yamm h4 a:hover {
+	background-color: transparent;
+}
+.toolkit .yamm h4 a:focus {
+	background-color: transparent;
+}
+.toolkit .yamm h4:first-of-type {
+	margin-top: 0px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm h4 + h4 {
+	padding-top: 15px; margin-top: 15px; border-top-color: rgb(177, 179, 179); border-top-width: 1px; border-top-style: solid;
+}
+}
+.toolkit .yamm .section {
+	margin: 0px 15px 15px 0px; padding: 0px 0px 15px;
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .yamm .section {
+	margin: 0px 0px 15px; padding-right: 0px;
+}
+}
+.toolkit .yamm .section li {
+	list-style-type: none;
+}
+.toolkit .yamm .section a {
+	line-height: 20px; padding-top: 6px; font-weight: 300; display: inline-block;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .section {
+	border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .yamm :last-of-type.section {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.toolkit .yamm :last-of-type.section + h4 {
+	padding-top: 15px; margin-top: -15px; border-top-color: rgb(177, 179, 179); border-top-width: 1px; border-top-style: solid;
+}
+}
+.toolkit .yamm .return-padding {
+	padding-right: 10px; padding-left: 10px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .yamm .return-padding {
+	padding-right: 45px; padding-left: 45px;
+}
+}
+.toolkit .yamm .mega-menu-module {
+	margin-bottom: 30px; background-color: rgb(255, 255, 255);
+}
+.toolkit .yamm :last-of-type.mega-menu-module {
+	margin-bottom: 0px;
+}
+.toolkit .site-content {
+	margin-top: 0px;
+}
+.toolkit .site-content .typeface {
+	color: rgb(0, 182, 222); font-size: 57px; font-weight: 100; -ms-word-wrap: break-word;
+}
+.toolkit .section-spacing {
+	padding-bottom: 15px; margin-top: 50px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit :first-of-type.section-spacing {
+	margin-top: 30px;
+}
+}
+.toolkit .section-spacing > h1 {
+	margin-bottom: 30px;
+}
+.toolkit .section-spacing h4 {
+	font-weight: 400; margin-top: 30px;
+}
+.toolkit .section-divider {
+	border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit section {
+	margin-top: 30px; margin-bottom: 30px;
+}
+.toolkit .typography-heading-container div {
+	overflow: hidden;
+}
+.toolkit .typography-heading-container .typography-heading > h4 {
+	margin-top: 40px;
+}
+.toolkit .typography-heading-container .typography-example > h1 {
+	margin-top: 40px;
+}
+.toolkit .typography-heading-container .typography-example > h2 {
+	margin-top: 40px;
+}
+.toolkit .typography-heading-container .typography-example > h3 {
+	margin-top: 40px;
+}
+.toolkit .typography-heading-container .typography-example > h4 {
+	margin-top: 40px;
+}
+.toolkit .typography-heading-container .typography-example > h5 {
+	margin-top: 40px;
+}
+.toolkit .typography-heading-container .typography-example > h6 {
+	margin-top: 40px;
+}
+.toolkit .typography-heading-container .typography-example {
+	margin-bottom: 30px; min-height: 62px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .typography-heading-container .typography-example {
+	margin-bottom: 10px; min-height: 33px;
+}
+}
+.toolkit .typography-heading-container .typography-example .typography-anchors {
+	font-weight: 500; margin-right: 35px; float: left;
+}
+.toolkit .typography-heading-container .typography-example .pointer2 {
+	position: relative;
+}
+.toolkit .typography-heading-container .typography-example .pointer1 {
+	width: 17px; margin-top: 9px; margin-left: 200px; position: absolute; cursor: pointer;
+}
+.toolkit .typography-heading-container .typography-example .link-active {
+	color: rgb(0, 44, 108);
+}
+.toolkit .typography-heading-container .typography-heading {
+	width: 196px; float: left;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .typography-heading-container .typography-heading {
+	float: none;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .typography-heading-container .typography-heading {
+	width: 126px;
+}
+}
+.toolkit .typography-heading-container .typography-heading2 {
+	float: left;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .typography-heading-container .typography-heading2 {
+	float: none;
+}
+}
+.toolkit .typography-heading-container .typography-heading2 + .typography-example {
+	margin-bottom: 5px;
+}
+.toolkit .typography-heading-container .typography-floater {
+	font-size: 14px; font-weight: 500; margin-right: 30px; margin-bottom: 10px; float: left;
+}
+.toolkit .typography-blockquote {
+	margin: 30px 0px; color: rgb(0, 44, 108); padding-top: 22px; padding-right: 22px; padding-bottom: 32px; font-size: 24px; border-top-color: rgb(177, 179, 179); border-bottom-color: rgb(177, 179, 179); border-left-color: currentColor; border-top-width: 1px; border-bottom-width: 1px; border-left-width: 0px; border-top-style: solid; border-bottom-style: solid; border-left-style: none; position: relative;
+}
+.toolkit .typography-blockquote cite {
+	right: 30px; bottom: 10px; font-size: 16px; position: absolute;
+}
+.toolkit .blockquote-circle {
+	background: rgb(244, 244, 244); border-radius: 17px; width: 34px; height: 34px; text-align: center; color: rgb(242, 99, 52); line-height: 57px; font-size: 45px; vertical-align: top; display: inline-block;
+}
+.toolkit blockquote::before {
+	content: none;
+}
+.toolkit blockquote::after {
+	content: none;
+}
+.toolkit .iconography-icons {
+	padding-top: 20px; padding-bottom: 62px;
+}
+.toolkit .iconography-icons span {
+	color: rgb(242, 99, 52); line-height: 120px; font-size: 100px; margin-right: 50px;
+}
+.toolkit .set-contents div {
+	width: 25%; float: left;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .set-contents div {
+	width: 50%;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .set-contents div {
+	width: 100%;
+}
+}
+.toolkit .dropdown-menu {
+	border-radius: 0px; width: 100%; padding-bottom: 15px; margin-top: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none; box-shadow: none;
+}
+.toolkit .dropdown-menu a {
+	color: rgb(0, 141, 189);
+}
+.toolkit .dropdown-menu a:hover {
+	color: rgb(0, 44, 108); background-color: rgb(255, 255, 255);
+}
+.toolkit .dropdown-menu a:focus {
+	color: rgb(0, 44, 108); background-color: rgb(255, 255, 255);
+}
+.toolkit .dropdown-menu h4 {
+	margin-top: 15px; margin-left: 20px;
+}
+.toolkit .dropdown-toggle {
+	width: 100%; text-align: left; color: rgb(255, 255, 255); box-shadow: none; background-color: rgb(0, 44, 108);
+}
+.toolkit .open.btn-group .dropdown-toggle {
+	width: 100%; text-align: left; color: rgb(255, 255, 255); box-shadow: none; background-color: rgb(0, 44, 108);
+}
+.toolkit .dropdown-toggle {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit .open.btn-group .dropdown-toggle {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit .open.dropdown-toggle {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit .open.btn-group .open.dropdown-toggle {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit .dropdown-toggle:hover {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit .open.btn-group .dropdown-toggle:hover {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit .dropdown-toggle .icon-arrow_down {
+	top: 3px; color: rgb(242, 99, 52); padding-left: 15px; font-size: 16px; position: relative;
+}
+.toolkit a.btn-primary {
+	background-color: rgb(242, 99, 52);
+}
+.toolkit button.btn-primary {
+	background-color: rgb(242, 99, 52);
+}
+.toolkit *.btn-primary {
+	background-color: rgb(242, 99, 52);
+}
+.toolkit a.btn-primary-active {
+	background-color: rgb(204, 60, 13);
+}
+.toolkit button.btn-primary-active {
+	background-color: rgb(204, 60, 13);
+}
+.toolkit *.btn-primary-active {
+	background-color: rgb(204, 60, 13);
+}
+.toolkit a.btn-primary:hover {
+	background-color: rgb(204, 60, 13);
+}
+.toolkit button.btn-primary:hover {
+	background-color: rgb(204, 60, 13);
+}
+.toolkit *.btn-primary:hover {
+	background-color: rgb(204, 60, 13);
+}
+.toolkit a.btn-primary-disabled {
+	background-color: rgb(248, 173, 148);
+}
+.toolkit button.btn-primary-disabled {
+	background-color: rgb(248, 173, 148);
+}
+.toolkit *.btn-primary-disabled {
+	background-color: rgb(248, 173, 148);
+}
+.toolkit a[role=button] + a[role=button] {
+	margin-top: 20px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit a[role=button] + a[role=button] {
+	margin-top: 0px;
+}
+}
+.toolkit a[role=button].btn-primary {
+	display: inline-block;
+}
+.toolkit a[role=button].btn-secondary {
+	display: inline-block;
+}
+.toolkit a[role=menuitem].btn-primary {
+	display: inline-block;
+}
+.toolkit a[role=menuitem].btn-secondary {
+	display: inline-block;
+}
+.toolkit a[role=button].btn-primary:hover {
+	color: rgb(255, 255, 255);
+}
+.toolkit a.btn-download {
+	line-height: 120%; padding-right: 64px;
+}
+.toolkit .elements-buttons .buttons-section > p {
+	font-weight: 400; margin-bottom: 0px; display: block;
+}
+.toolkit .elements-buttons p.btn-orange {
+	color: rgb(242, 99, 52); margin-top: 30px;
+}
+.toolkit .btn {
+	padding: 0px; border-radius: 0px;
+}
+.toolkit .buttons-section > div {
+	width: auto; margin-right: 62px; float: left;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .buttons-section > div {
+	float: none;
+}
+}
+.toolkit .buttons-section > div:last-of-type {
+	margin-right: 0px;
+}
+.toolkit .buttons-section button {
+	display: block;
+}
+.toolkit .buttons-section .pointer2 {
+	position: relative;
+}
+.toolkit .buttons-section .pointer1 {
+	width: 17px; margin-top: -15px; margin-left: 130px; position: absolute; cursor: pointer;
+}
+.toolkit .buttons-section .btn-background {
+	background-color: rgb(0, 182, 222);
+}
+.toolkit .btn-grid-5 {
+	margin-right: 10px;
+}
+.toolkit .buttons-section .small {
+	margin-top: 10px;
+}
+.toolkit .btn-secondary-container .small {
+	margin-top: 10px;
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .buttons-section .small {
+	margin-bottom: 30px;
+}
+.toolkit .btn-secondary-container .small {
+	margin-bottom: 30px;
+}
+}
+.toolkit .btn-primary {
+	padding: 9px 16px 8px;
+}
+.toolkit .btn-secondary {
+	padding: 9px 16px 8px;
+}
+.toolkit a.btn-primary {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit button.btn-primary {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit div.btn-primary {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit a.btn-primary:hover {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit button.btn-primary:hover {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit div.btn-primary:hover {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit a.btn-primary:hover {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit button.btn-primary:hover {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit div.btn-primary:hover {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit a.btn-primary-active {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit button.btn-primary-active {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit div.btn-primary-active {
+	border: 0px currentColor; border-image: none; color: rgb(255, 255, 255);
+}
+.toolkit .btn-secondary {
+	border: 1px solid rgb(177, 179, 179); border-image: none; color: rgb(242, 99, 52); background-color: rgb(255, 255, 255);
+}
+.toolkit .btn-secondary:hover {
+	color: rgb(204, 83, 43);
+}
+.toolkit .btn-secondary-active {
+	color: rgb(204, 83, 43);
+}
+.toolkit :disabled.btn-secondary {
+	color: rgb(248, 173, 148) !important;
+}
+.toolkit .btn-margin {
+	margin-top: 15px; margin-right: 15px;
+}
+.toolkit .btn-lg {
+	border-radius: 0px; font-size: 18px;
+}
+.toolkit .btn-sm {
+	padding: 10px; border-radius: 0px; font-size: 14px;
+}
+.toolkit .btn-background {
+	padding: 12px; color: transparent; margin-top: 30px; margin-bottom: 30px;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .btn-background {
+	width: 80%; margin-top: 15px;
+}
+}
+.toolkit .btn-background p {
+	color: rgb(255, 255, 255);
+}
+.toolkit .btn-background button {
+	margin-top: 5px; margin-bottom: 5px;
+}
+.toolkit .btn-navy {
+	color: rgb(255, 255, 255); background-color: rgb(0, 44, 108);
+}
+.toolkit .btn-navy-active {
+	color: rgb(255, 255, 255); background-color: rgb(0, 44, 108);
+}
+.toolkit .btn-navy-active:hover {
+	color: rgb(255, 255, 255); background-color: rgb(0, 44, 108);
+}
+.toolkit .btn-navy:hover {
+	color: rgb(255, 255, 255); background-color: rgb(0, 44, 108);
+}
+.toolkit :disabled.btn-navy {
+	color: rgb(255, 255, 255); background-color: rgb(0, 44, 108);
+}
+.toolkit .btn-icon {
+	position: relative;
+}
+.toolkit .btn-icon .glyphicon {
+	top: 12px; right: 18px; color: rgb(0, 44, 108); font-size: 2em; position: absolute;
+}
+.toolkit .form-control {
+	margin: 0px; border-radius: 0px; height: 34px; box-shadow: none;
+}
+.toolkit select.form-control {
+	height: auto;
+}
+.toolkit input.form-control {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit textarea.form-control {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit select.form-control {
+	border: 1px solid rgb(177, 179, 179); border-image: none;
+}
+.toolkit .form-control-feedback {
+	top: 0px;
+}
+.toolkit .form-search-box > div {
+	height: 34px; float: left;
+}
+.toolkit .form-search-box input {
+	padding-left: 30px;
+}
+.toolkit .form-search-box .search-glyph2 {
+	position: absolute;
+}
+.toolkit .form-search-box .search-glyph1 {
+	position: relative;
+}
+.toolkit .form-search-box .btn-search {
+	background: rgb(255, 255, 255); border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(177, 179, 179) rgb(177, 179, 179) rgb(177, 179, 179) currentColor; padding: 5px 8px 5px 7px; transition:border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-image: none; left: 0px; height: 34px; color: rgb(242, 99, 52); font-size: 16px; position: relative; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075); -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.toolkit .form-search-box .input-wrapper {
+	position: relative;
+}
+.toolkit .form-search-box .input-wrapper::before {
+	left: 0px; top: 0px; color: rgb(153, 153, 153); line-height: 1; font-family: "Glyphicons Halflings"; font-style: normal; font-weight: 400; margin-top: 9px; margin-left: 9px; display: inline-block; position: absolute; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.toolkit .has-success .form-control-feedback {
+	color: rgb(90, 143, 50);
+}
+.toolkit .has-error .form-control-feedback {
+	color: rgb(204, 83, 43);
+}
+.toolkit .alert {
+	border-radius: 0px; border: 0px currentColor; border-image: none; background-image: none;
+}
+.toolkit .alert p {
+	font-size: 18px; font-weight: 400; display: block;
+}
+.toolkit .alert .close {
+	margin-left: 12px;
+}
+.toolkit .alert-danger {
+	background-color: rgb(252, 224, 214);
+}
+.toolkit .alert-danger p {
+	color: rgb(204, 83, 43);
+}
+.toolkit .alert-warning {
+	background-color: rgb(254, 239, 214);
+}
+.toolkit .alert-warning p {
+	color: rgb(189, 126, 38);
+}
+.toolkit .alert-info {
+	background-color: rgb(204, 237, 245);
+}
+.toolkit .alert-info p {
+	color: rgb(0, 125, 153);
+}
+.toolkit .alert-success {
+	background-color: rgb(228, 243, 217);
+}
+.toolkit .alert-success p {
+	color: rgb(90, 143, 50);
+}
+.toolkit .tooltips-section {
+	width: 100%; margin-top: 25px;
+}
+.toolkit .tooltips-section > div {
+	padding: 5px; float: left;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .tooltips-section > div {
+	text-align: center; float: none;
+}
+}
+.toolkit .tooltip-inner {
+	padding: 12px; border-radius: 0px; text-align: left; color: rgb(255, 255, 255); text-decoration: none; display: block; max-width: 200px; box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5); background-color: rgb(69, 69, 69);
+}
+.toolkit .top.tooltip {
+	padding: 5px 0px; margin-top: -7px;
+}
+.toolkit .right.tooltip {
+	padding: 0px 5px; margin-left: 7px;
+}
+.toolkit .bottom.tooltip {
+	padding: 5px 0px; margin-top: 7px;
+}
+.toolkit .left.tooltip {
+	padding: 0px 5px; margin-left: -7px;
+}
+.toolkit .top.tooltip .tooltip-arrow {
+	border-width: 10px 10px 0px; left: 50%; bottom: -5px; margin-left: -9px; border-top-color: rgb(69, 69, 69);
+}
+.toolkit .top-left.tooltip .tooltip-arrow {
+	border-width: 10px 10px 0px; left: 5px; bottom: 0px; border-top-color: rgb(69, 69, 69);
+}
+.toolkit .top-right.tooltip .tooltip-arrow {
+	border-width: 10px 10px 0px; right: 5px; bottom: 0px; border-top-color: rgb(69, 69, 69);
+}
+.toolkit .right.tooltip .tooltip-arrow {
+	border-width: 10px 10px 10px 0px; left: -5px; top: 50%; margin-top: -9px; border-right-color: rgb(69, 69, 69);
+}
+.toolkit .left.tooltip .tooltip-arrow {
+	border-width: 10px 0px 10px 10px; top: 50%; right: -5px; margin-top: -9px; border-left-color: rgb(69, 69, 69);
+}
+.toolkit .bottom.tooltip .tooltip-arrow {
+	border-width: 0px 10px 10px; left: 50%; top: -5px; margin-left: -9px; border-bottom-color: rgb(69, 69, 69);
+}
+.toolkit .bottom-left.tooltip .tooltip-arrow {
+	border-width: 0px 10px 10px; left: 5px; top: -5px; border-bottom-color: rgb(69, 69, 69);
+}
+.toolkit .bottom-right.tooltip .tooltip-arrow {
+	border-width: 0px 10px 10px; top: -5px; right: 5px; border-bottom-color: rgb(69, 69, 69);
+}
+.toolkit .form-group #inputError2 {
+	color: rgb(204, 83, 43); background-color: rgb(252, 224, 214);
+}
+.toolkit .alert {
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.25), 0px 1px 2px rgba(0,0,0,0.05); text-shadow: 0px 1px 0px rgba(255,255,255,0.2); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.toolkit .form-date-picker input {
+	border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+.toolkit .input-group-addon {
+	border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204) currentColor; padding: 0px 10px 0px 0px; border-radius: 0px; transition:border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-image: none; left: 0px; top: 0px; text-align: center; color: rgb(177, 179, 179); font-size: 22px; position: relative; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075); background-color: rgb(255, 255, 255); -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.toolkit .logos-section {
+	padding-bottom: 30px; margin-bottom: 20px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit :last-of-type.logos-section {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.toolkit .logo-image {
+	overflow: hidden; margin-top: 10px; margin-bottom: 30px;
+}
+.toolkit .logo-circle {
+	margin: 10px 10px 10px 0px; border-radius: 150px; width: 150px; height: 150px; text-align: center; color: rgb(255, 255, 255); line-height: 150px; font-size: 16px; vertical-align: top; float: left; display: inline-block; position: relative;
+}
+.toolkit .logo-circle .title {
+	left: 0px; top: 160px; width: 150px; color: rgb(69, 69, 69); line-height: 1.3em; font-size: 0.7em; position: absolute;
+}
+.toolkit .bg-white.logo-circle {
+	border: 1px solid rgb(69, 69, 69); border-image: none; color: rgb(69, 69, 69);
+}
+.toolkit .bg-lightgray.logo-circle {
+	color: rgb(69, 69, 69);
+}
+.toolkit .captions .logo-circle {
+	margin-bottom: 60px;
+}
+.toolkit .table-striped > tbody > tr:nth-child(2n+1) > td {
+	background-color: rgb(245, 245, 245);
+}
+.toolkit .table-striped > tbody > tr:nth-child(2n+1) > th {
+	background-color: rgb(245, 245, 245);
+}
+.toolkit .table-hover > tbody > tr:hover > td {
+	background-color: rgb(221, 221, 221);
+}
+.toolkit .table-hover > tbody > tr:hover > th {
+	background-color: rgb(221, 221, 221);
+}
+.toolkit .inside-dividers tr {
+	border-bottom-color: rgb(244, 244, 244); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .inside-dividers li {
+	border-bottom-color: rgb(244, 244, 244); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .inside-dividers tr:last-child {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.toolkit .inside-dividers li:last-child {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.toolkit [role=tabpanel] {
+	margin-bottom: 30px;
+}
+.toolkit .nav-tabs {
+	padding-left: 20px; font-weight: 400; margin-bottom: 0px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .nav-tabs > li {
+	margin-bottom: -1px; float: left;
+}
+.toolkit .nav-tabs > li > a {
+	border-radius: 0px; border: 1px solid transparent; border-image: none; line-height: 1.4285; margin-right: 2px;
+}
+.toolkit .nav-pills > li > a {
+	border-radius: 0px; border: 1px solid transparent; border-image: none; line-height: 1.4285; margin-right: 2px;
+}
+.toolkit .nav-tabs > li > a:hover {
+	border-color: transparent; border-bottom-width: 0px; border-bottom-style: none; background-color: transparent;
+}
+.toolkit .nav-pills > li > a:hover {
+	border-color: transparent; border-bottom-width: 0px; border-bottom-style: none; background-color: transparent;
+}
+.toolkit .nav-tabs > li.active > a {
+	background: url("../images/nav-select.gif") repeat-x 0px -5px rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: transparent rgb(177, 179, 179) rgb(255, 255, 255); border-image: none; color: rgb(0, 44, 108); cursor: default;
+}
+.toolkit .nav-tabs > li.active > a:hover {
+	background: url("../images/nav-select.gif") repeat-x 0px -5px rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: transparent rgb(177, 179, 179) rgb(255, 255, 255); border-image: none; color: rgb(0, 44, 108); cursor: default;
+}
+.toolkit .nav-tabs > li.active > a:focus {
+	background: url("../images/nav-select.gif") repeat-x 0px -5px rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: transparent rgb(177, 179, 179) rgb(255, 255, 255); border-image: none; color: rgb(0, 44, 108); cursor: default;
+}
+.toolkit .nav-pills {
+	padding-left: 20px; font-weight: 400; margin-bottom: 0px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .nav-pills > li.active > a {
+	background: url("../images/nav-select.gif") repeat-x 0px -5px rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: transparent rgb(177, 179, 179) rgb(255, 255, 255); border-image: none; color: rgb(0, 44, 108); cursor: default;
+}
+.toolkit .nav-pills > li.active > a:hover {
+	background: url("../images/nav-select.gif") repeat-x 0px -5px rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: transparent rgb(177, 179, 179) rgb(255, 255, 255); border-image: none; color: rgb(0, 44, 108); cursor: default;
+}
+.toolkit .nav-pills > li.active > a:focus {
+	background: url("../images/nav-select.gif") repeat-x 0px -5px rgb(255, 255, 255); border-width: 1px; border-style: solid; border-color: transparent rgb(177, 179, 179) rgb(255, 255, 255); border-image: none; color: rgb(0, 44, 108); cursor: default;
+}
+.toolkit .nav-pills > li.active > a {
+	/*border-bottom-color: rgb(177, 179, 179);*/
+}
+.toolkit .nav-pills > li.active > a:hover {
+	/*border-bottom-color: rgb(177, 179, 179);*/
+}
+.toolkit .nav-pills > li.active > a:focus {
+	border-bottom-color: rgb(177, 179, 179);
+}
+.toolkit .nav-pills ul {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit .nav-justified.nav-tabs {
+	width: 100%; border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit .nav-justified.nav-tabs > li {
+	float: none;
+}
+.toolkit .nav-justified.nav-tabs > li > a {
+	text-align: center; margin-bottom: 5px;
+}
+.toolkit .nav-justified.nav-tabs > .dropdown .dropdown-menu {
+	left: auto; top: auto;
+}
+@media all and (min-width:768px)
+{
+.toolkit .nav-justified.nav-tabs > li {
+	width: 1%; display: table-cell;
+}
+.toolkit .nav-justified.nav-tabs > li > a {
+	margin-bottom: 0px;
+}
+}
+.toolkit .nav-justified.nav-tabs > li > a {
+	border-radius: 4px; margin-right: 0px;
+}
+.toolkit .nav-justified.nav-tabs > .active > a {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.toolkit .nav-justified.nav-tabs > .active > a:hover {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.toolkit .nav-justified.nav-tabs > .active > a:focus {
+	border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+@media all and (min-width:768px)
+{
+.toolkit .nav-justified.nav-tabs > li > a {
+	border-radius: 4px 4px 0px 0px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .nav-justified.nav-tabs > .active > a {
+	border-bottom-color: rgb(255, 255, 255);
+}
+.toolkit .nav-justified.nav-tabs > .active > a:hover {
+	border-bottom-color: rgb(255, 255, 255);
+}
+.toolkit .nav-justified.nav-tabs > .active > a:focus {
+	border-bottom-color: rgb(255, 255, 255);
+}
+}
+.toolkit .tab-content .tab-pane {
+	padding: 20px; background-color: rgb(255, 255, 255);
+}
+.toolkit .tab-content {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(177, 179, 179) rgb(177, 179, 179); border-image: none;
+}
+.toolkit .tab-content > .active {
+	display: inline-block;
+}
+.toolkit .panel-title > a {
+	background: url("../images/plus-minus.png") no-repeat right 1px; width: 100%; height: 18px; display: inline-block;
+}
+.toolkit .panel-title .collapsed {
+	background: url("../images/plus-minus.png") no-repeat right -29px;
+}
+.toolkit .panel-group {
+	margin-bottom: 5px;
+}
+.toolkit .carousel p {
+	color: rgb(0, 44, 108);
+}
+.toolkit .carousel-container {
+	max-width: 100%;
+}
+.toolkit .carousel-inner {
+	height: 400px;
+}
+.toolkit .carousel-indicators {
+	background: rgba(0, 0, 0, 0.15); left: 0px; width: 100%; height: 42px; bottom: 0px; margin-bottom: 0px; margin-left: 0px;
+}
+.toolkit .carousel-indicators li {
+	margin: 13px 5px 10px; border-radius: 15px; width: 15px; height: 15px;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .carousel-indicators li {
+	margin: 13px 10px 10px;
+}
+}
+.toolkit .carousel-control {
+	top: auto; width: auto; height: 42px; bottom: 0px; color: rgb(255, 255, 255); font-size: 20px; position: absolute; z-index: 15; opacity: 1; text-shadow: none;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-control {
+	width: 20%;
+}
+}
+.toolkit .carousel-control {
+	background: none;
+}
+.toolkit .carousel-control .glyphicon {
+	top: 6px; font-size: 30px; font-weight: 700;
+}
+.toolkit .carousel-control .glyphicon-arrow_left {
+	left: 50px; top: 9px; font-size: 20px; margin-left: 0px; position: relative;
+}
+.toolkit .carousel-control .glyphicon-arrow_right {
+	top: 9px; right: 50px; font-size: 20px; margin-left: 0px; position: relative;
+}
+.toolkit .carousel-inner > .item {
+	padding: 40px; width: 100%; height: 100%;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-inner > .item {
+	padding: 35px;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .carousel-inner > .item {
+	padding: 25px;
+}
+}
+.toolkit .carousel-inner > .item h1 {
+	color: rgb(255, 255, 255);
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-inner > .item h1 {
+	font-size: 30px;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .carousel-inner > .item h1 {
+	font-size: 20px;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-inner > .item p {
+	font-size: 16px;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .carousel-inner > .item p {
+	font-size: 14px;
+}
+}
+.toolkit .carousel-inner .item p {
+	margin-top: 0px; display: block;
+}
+.toolkit .carousel-inner .item h1 {
+	margin-top: 0px; display: block;
+}
+.toolkit .carousel-inner > .item .carousel-glyph {
+	width: auto; height: 100%;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-inner > .item .carousel-glyph {
+	display: none;
+}
+}
+.toolkit .carousel-inner > .item .carousel-glyph span {
+	color: rgb(0, 44, 108); font-size: 200px; margin-right: 50px;
+}
+.toolkit .carousel-inner > .item .place-hold-image {
+	background: url("http://placehold.it/200x200") no-repeat; width: 200px; height: 100%; margin-right: 30px; margin-bottom: 10px;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-inner > .item .place-hold-image {
+	display: none;
+}
+}
+.toolkit .carousel-bgimage-right h1 {
+	width: 650px;
+}
+.toolkit .carousel-bgimage-right p {
+	width: 650px;
+}
+@media only screen and (max-width:1200px)
+{
+.toolkit .carousel-bgimage-right h1 {
+	width: 420px;
+}
+.toolkit .carousel-bgimage-right p {
+	width: 420px;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-bgimage-right h1 {
+	width: 100%;
+}
+.toolkit .carousel-bgimage-right p {
+	width: 100%;
+}
+}
+.toolkit .carousel-bgimage-right {
+	background: url("../images/comp1.jpg") no-repeat right;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-bgimage-right {
+	background: url("../images/comp1b.jpg") no-repeat right;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-bgimage-right {
+	background: none;
+}
+}
+.toolkit .carousel-bgimage {
+	background: url("../images/comp2.jpg") no-repeat right;
+}
+.toolkit .carousel-sidebar {
+	padding: 20px 50px 50px; left: -40px; top: -40px; width: 420px; height: 358px; position: relative; background-color: rgb(244, 244, 244);
+}
+@media only screen and (max-width:1200px)
+{
+.toolkit .carousel-sidebar {
+	width: 50%;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .carousel-sidebar {
+	display: none;
+}
+}
+.toolkit .carousel-sidebar a {
+	padding: 10px 10px 10px 0px; font-size: 16px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+.toolkit .carousel-sidebar a:last-of-type {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .full-width .right.carousel-control {
+	right: 30%;
+}
+.toolkit .full-width .left.carousel-control {
+	left: 30%;
+}
+}
+@media only screen and (max-width:1200px)
+{
+.toolkit .structure-grid .col-md-2 {
+	margin-top: 20px; margin-right: 20px; float: left;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .structure-grid .col-md-2 {
+	float: none;
+}
+}
+.toolkit .section-spacing.structure-grid {
+	padding-bottom: 30px;
+}
+.toolkit .section-spacing.structure-media-queries {
+	padding-bottom: 30px;
+}
+.toolkit .section-spacing > p.small {
+	margin-bottom: 30px;
+}
+.toolkit .content-module-container {
+	margin-bottom: 30px;
+}
+.toolkit .content-module-container::before {
+	display: table; content: " ";
+}
+.toolkit .content-module-container::after {
+	display: table; content: " ";
+}
+.toolkit .content-module-container::after {
+	clear: both;
+}
+.toolkit .flag-new.content-module-container .content-module::before {
+	padding: 4px 15px; left: -1px; top: -18px; color: rgb(255, 255, 255); position: absolute; content: "New"; background-color: rgb(242, 99, 52);
+}
+.toolkit .content-module-bar {
+	height: 7px; pointer-events: none;
+}
+.toolkit .content-module {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(177, 179, 179) rgb(177, 179, 179); border-image: none; position: relative; background-color: rgb(255, 255, 255);
+}
+.toolkit .content-module-freeform {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(177, 179, 179) rgb(177, 179, 179); border-image: none; position: relative; background-color: rgb(255, 255, 255);
+}
+.toolkit .content-module h1 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module-freeform h1 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module h2 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module-freeform h2 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module h3 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module-freeform h3 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module h4 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module-freeform h4 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module h5 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module-freeform h5 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module h6 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module-freeform h6 {
+	padding-bottom: 10px; margin-top: 0px; margin-bottom: 15px; border-bottom-color: rgb(178, 178, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module h1.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module-freeform h1.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module h2.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module-freeform h2.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module h3.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module-freeform h3.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module h4.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module-freeform h4.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module h5.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module-freeform h5.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module h6.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module-freeform h6.no-border {
+	border: currentColor; border-image: none; padding-bottom: 0px;
+}
+.toolkit .content-module-freeform {
+	padding-right: 0px; padding-left: 0px;
+}
+.toolkit .content-module-freeform ul {
+	margin-bottom: 20px;
+}
+.toolkit .content-module-freeform ol {
+	margin-bottom: 20px;
+}
+.toolkit .content-module a {
+	font-weight: 300;
+}
+.toolkit .content-module p.gray {
+	color: rgb(177, 179, 179); font-weight: 500;
+}
+@media only screen and (max-width:1200px) and (min-width:992px)
+{
+.toolkit .content-module p {
+	line-height: 20px; font-size: 14px;
+}
+}
+.toolkit .content-module h4 {
+	line-height: 26px;
+}
+.toolkit .content-module h4 a {
+	color: rgb(0, 44, 108);
+}
+.toolkit .content-module ul {
+	list-style: none; padding-left: 0px; margin-bottom: 30px;
+}
+.toolkit .content-module ul:last-child {
+	margin-bottom: 0px;
+}
+.toolkit .content-module li {
+	padding-top: 5px; padding-bottom: 5px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module li:last-of-type {
+	padding-bottom: 0px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.toolkit .content-module dl {
+	padding-bottom: 20px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .content-module dl:last-of-type {
+	padding-bottom: 0px; border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit .content-module dt {
+	vertical-align: top; float: left;
+}
+.toolkit .content-module dd {
+	vertical-align: top; float: left;
+}
+.toolkit .content-module dt {
+	width: 20%; color: rgb(177, 179, 179); line-height: 100%; font-size: 11px; font-weight: normal;
+}
+.toolkit .content-module dt span {
+	line-height: 100%; font-size: 11px; display: block;
+}
+.toolkit .content-module dt.large span {
+	font-size: 16px;
+}
+.toolkit .content-module dd {
+	width: 76%; padding-left: 4%;
+}
+.toolkit .content-module-padding {
+	padding: 20px;
+}
+.toolkit .centered-image-column img {
+	margin: 0px auto;
+}
+.toolkit .structure-content-modules .col-md-6 {
+	float: left;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .structure-content-modules .col-md-6 {
+	float: none;
+}
+}
+.toolkit .content-module-featured-news {
+	padding: 0px;
+}
+.toolkit .content-module-featured-news > div {
+	padding: 20px;
+}
+.toolkit .content-module-featured-news img {
+	width: 100%;
+}
+.toolkit .content-module-featured-news h4 a {
+	color: rgb(255, 255, 255);
+}
+.toolkit .content-module-3col {
+	margin-bottom: 30px;
+}
+.toolkit .content-module-3col .row div:last-of-type {
+	left: -1px; position: relative;
+}
+.toolkit .content-module-3col-img {
+	display: none;
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .content-module-3col-img {
+	display: block;
+}
+}
+.toolkit .content-module-divider {
+	padding: 15px 30px 0px 15px; border-right-color: rgb(177, 179, 179); border-left-color: rgb(177, 179, 179); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+.toolkit :nth-of-type(2).content-module-divider {
+	border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.toolkit :last-of-type.content-module-divider {
+	border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .content-module-divider {
+	padding: 30px;
+}
+}
+.toolkit .panel {
+	border-radius: 0px; box-shadow: none; background-color: transparent;
+}
+.toolkit .panel-default > .panel-heading {
+	background-image: linear-gradient(rgb(245, 245, 245) 0%, rgb(232, 232, 232) 100%); background-repeat: repeat-x;
+}
+.toolkit .panel-primary > .panel-heading {
+	background-image: linear-gradient(rgb(66, 139, 202) 0%, rgb(53, 126, 189) 100%); background-repeat: repeat-x;
+}
+.toolkit .panel-success > .panel-heading {
+	background-image: linear-gradient(rgb(223, 240, 216) 0%, rgb(208, 233, 198) 100%); background-repeat: repeat-x;
+}
+.toolkit .panel-info > .panel-heading {
+	background-image: linear-gradient(rgb(217, 237, 247) 0%, rgb(196, 227, 243) 100%); background-repeat: repeat-x;
+}
+.toolkit .panel-warning > .panel-heading {
+	background-image: linear-gradient(rgb(252, 248, 227) 0%, rgb(250, 242, 204) 100%); background-repeat: repeat-x;
+}
+.toolkit .panel-danger > .panel-heading {
+	background-image: linear-gradient(rgb(242, 222, 222) 0%, rgb(235, 204, 204) 100%); background-repeat: repeat-x;
+}
+.toolkit .panel-default > .panel-heading {
+	background: url("../images/navy.gif") repeat-x 0px -8px; padding-top: 24px; border-top-left-radius: 0px; border-top-right-radius: 0px;
+}
+.toolkit .panel-group .panel-heading + .panel-collapse .panel-body {
+	border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.toolkit .panel-body {
+	padding-top: 0px;
+}
+.toolkit .panel-title {
+	font-size: 18px;
+}
+.toolkit .panel-title a {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit .dropdown-toggle {
+	height: 34px; padding-right: 8px; padding-left: 10px; white-space: normal;
+}
+.toolkit .badge {
+	color: rgb(69, 69, 69); float: right; background-color: transparent;
+}
+.toolkit .dropdown-toggle .badge {
+	padding: 3px 5px; color: rgb(242, 99, 52); margin-left: 15px; float: none; background-color: rgb(255, 255, 255);
+}
+.toolkit .structure-navigation-other a {
+	font-weight: 300;
+}
+.toolkit .panel {
+	border: currentColor; border-image: none;
+}
+.toolkit .panel-default > .panel-heading {
+	background: none; padding-top: 0px;
+}
+/*.toolkit .panel-body form div {
+	color: rgb(0, 141, 189); padding-top: 5px; padding-bottom: 5px; margin-left: 15px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .panel-body form div:last-child {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit .panel-body div[type='checkbox']:checked.input {
+	color: yellow;
+}*/
+.toolkit .list-group {
+	border-radius: 0px; box-shadow: none;
+}
+.toolkit .list-group-item {
+	padding: 5px 0px; border-radius: 0px; border: currentColor; border-image: none; margin-bottom: 0px;
+}
+.toolkit .item-l1 {
+	padding-right: 10px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .item-l2 {
+	padding-right: 10px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .item-l3 {
+	padding-right: 10px; border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit :last-of-type.item-l2 {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit :last-of-type.item-l3 {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit .item-l2-active > a {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit .item-l3-active > a {
+	color: rgb(0, 44, 108); font-weight: 400;
+}
+.toolkit .item-l1 > a {
+	color: rgb(0, 44, 108); font-size: 22px;
+}
+.toolkit .item-l1 > a:hover {
+	color: rgb(242, 99, 52);
+}
+.toolkit .local-navigation {
+	margin-top: 20px;
+}
+.toolkit .local-navigation .group-l2 {
+	margin-bottom: 0px;
+}
+.toolkit .local-navigation .group-l3 {
+	margin-bottom: 0px;
+}
+.toolkit .group-l3.list-group {
+	margin-left: 15px;
+}
+.toolkit .sidebar-list h4 {
+	font-weight: 400;
+}
+.toolkit .sidebar-list .list-group {
+	padding-right: 10px; margin-left: 15px;
+}
+.toolkit .sidebar-list .list-group-item {
+	border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit .sidebar-list :last-of-type.list-group-item {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit .nav-tags {
+	margin-top: 5px; margin-bottom: 15px;
+}
+.toolkit .nav-tags .navtag {
+	padding: 5px; border: 1px solid rgb(177, 179, 179); border-image: none; font-weight: 300; margin-right: 10px;
+}
+.toolkit .nav-tags :last-of-type.navtag {
+	margin-right: 0px;
+}
+.toolkit .nav-tags .navtag-strong a {
+	font-weight: 500;
+}
+.toolkit .breadcrumb {
+	list-style: none; padding: 0px; border-radius: 0px; margin-top: 20px; margin-bottom: 0px; background-color: rgb(255, 255, 255);
+}
+.toolkit .breadcrumb > li + li::before {
+	padding: 0px 5px; color: rgb(177, 179, 179); content: ">\00a0";
+}
+.toolkit .breadcrumb > .active {
+	color: rgb(0, 44, 108); font-weight: 500;
+}
+.toolkit .pagination li a {
+	background-color: rgb(244, 244, 244);
+}
+.toolkit .pagination .active a {
+	pointer-events: none; background-color: rgb(0, 44, 108);
+}
+.toolkit .pagination > li:last-child > a {
+	border-radius: 0px;
+}
+.toolkit .pagination > li:last-child > span {
+	border-radius: 0px;
+}
+.toolkit .pagination > li:first-child > a {
+	border-radius: 0px;
+}
+.toolkit .pagination > li:first-child > span {
+	border-radius: 0px;
+}
+.toolkit .pagination > li > a:hover {
+	color: rgb(0, 44, 108);
+}
+.toolkit .pagination > li > span:hover {
+	color: rgb(0, 44, 108);
+}
+.toolkit .pagination > li > a:focus {
+	color: rgb(0, 44, 108);
+}
+.toolkit .pagination > li > span:focus {
+	color: rgb(0, 44, 108);
+}
+.toolkit .pagination .glyphicon {
+	top: 2px; color: rgb(242, 99, 52); font-size: 16px; font-weight: bold; position: relative;
+}
+.toolkit .nav-btn-group {
+	margin-bottom: 20px;
+}
+.toolkit .nav-btn-group .btn-default {
+	padding: 20px; border: 1px solid rgb(177, 179, 179); border-image: none; color: rgb(0, 141, 189);
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .nav-btn-group .btn-default {
+	padding: 15px; font-size: 12px;
+}
+}
+@media only screen and (max-width:768px)
+{
+.toolkit .nav-btn-group .btn-default {
+	padding: 10px; font-size: 12px;
+}
+}
+.toolkit .nav-btn-group .btn-default:hover {
+	border: 1px solid rgb(177, 179, 179); border-image: none; color: rgb(0, 44, 108); background-color: rgb(255, 255, 255);
+}
+.toolkit .nav-btn-group .selected.btn-default {
+	color: rgb(255, 255, 255); pointer-events: none; background-color: rgb(0, 44, 108);
+}
+.toolkit .col-md-12 {
+	padding-left: 0px;
+}
+.toolkit .ancillary-nav1 {
+	position: absolute;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .ancillary-nav1 {
+	position: relative;
+}
+}
+.toolkit .ancillary-nav2 {
+	left: -215px; top: -80px; width: 450px; font-size: 0.8em; position: relative;
+}
+@media only screen and (min-width:1200px)
+{
+.toolkit .ancillary-nav2 {
+	left: -168px;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .ancillary-nav2 {
+	left: 437px; top: -155px;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .ancillary-nav2 {
+	left: 0px; top: 0px;
+}
+}
+@media only screen and (max-width:992px) and (min-width:992px)
+{
+.toolkit .ancillary-nav2 .input-wrapper {
+	width: 20%;
+}
+}
+.toolkit .ancillary-nav2 .form-group {
+	margin-top: 10px; margin-bottom: 0px; margin-left: 15px;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .ancillary-nav2 .btn-primary {
+	clear: both; margin-top: 20px; margin-left: 15px; float: left;
+}
+}
+.toolkit .ancillary-nav2 p {
+	text-align: right; position: relative;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .ancillary-nav2 p {
+	display: none;
+}
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .ancillary-nav2 p {
+	left: -167px; font-size: 12px;
+}
+}
+.toolkit .ancillary-nav2 .glyphicon-user {
+	padding-right: 5px;
+}
+@media only screen and (max-width:992px)
+{
+.toolkit .ancillary-nav2 .glyphicon-user {
+	display: none;
+}
+}
+.toolkit .modal {
+	z-index: 10011;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .modal-header {
+	padding-right: 75px; padding-left: 75px;
+}
+.toolkit .modal-body {
+	padding-right: 75px; padding-left: 75px;
+}
+.toolkit .modal-footer {
+	padding-right: 75px; padding-left: 75px;
+}
+}
+.toolkit .modal-content {
+	border-radius: 0px;
+}
+.toolkit .modal-header {
+	border-width: 7px 0px 0px; border-style: solid none none; border-color: rgb(34, 188, 185) currentColor currentColor; border-image: none;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .modal-header {
+	padding-top: 45px;
+}
+}
+.toolkit .modal-footer {
+	border: 0px currentColor; border-image: none; text-align: left;
+}
+@media only screen and (min-width:768px)
+{
+.toolkit .modal-footer {
+	padding-bottom: 50px;
+}
+}
+.toolkit .progress {
+	background-image: linear-gradient(rgb(235, 235, 235) 0%, rgb(245, 245, 245) 100%); background-repeat: repeat-x;
+}
+.toolkit .progress-bar {
+	background-image: linear-gradient(rgb(66, 139, 202) 0%, rgb(48, 113, 169) 100%); background-repeat: repeat-x;
+}
+.toolkit .progress-bar-success {
+	background-image: linear-gradient(rgb(92, 184, 92) 0%, rgb(68, 157, 68) 100%); background-repeat: repeat-x;
+}
+.toolkit .progress-bar-info {
+	background-image: linear-gradient(rgb(91, 192, 222) 0%, rgb(49, 176, 213) 100%); background-repeat: repeat-x;
+}
+.toolkit .progress-bar-warning {
+	background-image: linear-gradient(rgb(240, 173, 78) 0%, rgb(236, 151, 31) 100%); background-repeat: repeat-x;
+}
+.toolkit .progress-bar-danger {
+	background-image: linear-gradient(rgb(217, 83, 79) 0%, rgb(201, 48, 44) 100%); background-repeat: repeat-x;
+}
+.toolkit .list-group {
+	border-radius: 0px;
+}
+.toolkit .active.list-group-item {
+	border-radius: 0px;
+}
+.toolkit .active.list-group-item:hover {
+	border-radius: 0px;
+}
+.toolkit .active.list-group-item:focus {
+	border-radius: 0px;
+}
+.toolkit table tbody tr:last-child td {
+	border-bottom-color: rgb(177, 179, 179); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.toolkit table tbody tr:nth-child(2n+1) td {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.toolkit .usage {
+	padding: 10px 20px 20px; margin-bottom: 20px; background-color: rgb(229, 246, 250);
+}
+.toolkit .usage > h5 {
+	padding-bottom: 5px; font-weight: 400;
+}
+.toolkit .highlight {
+	margin: 10px 0px 40px; padding: 10px 20px 20px; clear: both; float: none; background-color: rgb(244, 244, 244);
+}
+.toolkit .highlight h5 {
+	margin: 20px 0px 0px; padding: 0px; font-weight: 400;
+}
+.toolkit .highlight pre {
+	margin: 0px; padding: 0px; border-radius: 0px; border: 0px currentColor; border-image: none;
+}
+.toolkit .highlight code {
+	color: rgb(122, 193, 67); font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 15px; font-style: normal; font-weight: 500;
+}
+.toolkit .highlight p {
+	font-family: "Gotham SSm A", "Gotham SSm B", Verdana, sans-serif; font-size: 14px; font-weight: 300; margin-top: 20px;
+}
+.toolkit .highlight {
+	display: none;
+}
+@media only screen and (min-width:992px)
+{
+.toolkit .highlight {
+	display: block;
+}
+}
+.toolkit .collapsed.btn-secondary .collapse-button-hide {
+	display: none;
+}
+.toolkit .collapsed.btn-secondary .collapse-button-show {
+	display: block;
+}
+.toolkit .btn-secondary .collapse-button-show {
+	display: none;
+}
+.toolkit .in.collapse {
+	display: block;
+}
+.toolkit .bg-transparent {
+	background-color: transparent !important;
+}
+.toolkit .bg-blue {
+	background-color: rgb(0, 44, 108) !important;
+}
+.toolkit .bg-dark-gray {
+	background-color: rgb(69, 69, 69) !important;
+}
+.toolkit .bg-link {
+	background-color: rgb(0, 141, 189) !important;
+}
+.toolkit .bg-light-medium-gray {
+	background-color: rgb(177, 179, 179) !important;
+}
+.toolkit .bg-dark-medium-gray {
+	background-color: rgb(136, 139, 141) !important;
+}
+.toolkit .bg-white {
+	background-color: rgb(255, 255, 255) !important;
+}
+.toolkit .bg-light-gray {
+	background-color: rgb(244, 244, 244) !important;
+}
+.toolkit .bg-orange {
+	background-color: rgb(242, 99, 52) !important;
+}
+.toolkit .bg-raspberry {
+	background-color: rgb(240, 85, 135) !important;
+}
+.toolkit .bg-purple {
+	background-color: rgb(191, 131, 185) !important;
+}
+.toolkit .bg-tangerine {
+	background-color: rgb(255, 130, 0) !important;
+}
+.toolkit .bg-peach {
+	background-color: rgb(251, 176, 52) !important;
+}
+.toolkit .bg-sky {
+	background-color: rgb(0, 182, 222) !important;
+}
+.toolkit .bg-teal {
+	background-color: rgb(34, 188, 185) !important;
+}
+.toolkit .bg-grass {
+	background-color: rgb(122, 193, 67) !important;
+}
+.toolkit .bg-gold {
+	background-color: rgb(196, 176, 0) !important;
+}
+.toolkit .bg-mint {
+	background-color: rgb(113, 183, 144) !important;
+}
+.toolkit .bg-lime {
+	background-color: rgb(193, 216, 47) !important;
+}
+.toolkit .bg-lavender {
+	background-color: rgb(175, 150, 212) !important;
+}
+.toolkit .bg-terracotta {
+	background-color: rgb(211, 135, 95) !important;
+}
+.toolkit .bg-olive {
+	background-color: rgb(157, 187, 104) !important;
+}
+.toolkit .bg-mist {
+	background-color: rgb(141, 185, 202) !important;
+}
+.toolkit .bg-honey {
+	background-color: rgb(183, 139, 32) !important;
+}
+.toolkit .bg-forest {
+	background-color: rgb(0, 183, 79) !important;
+}
+.toolkit .bg-slate {
+	background-color: rgb(137, 170, 219) !important;
+}
+.toolkit .bg-blue-active {
+	background-color: rgb(0, 44, 108) !important;
+}
+.toolkit .bg-blue.btn-primary:hover {
+	background-color: rgb(0, 44, 108) !important;
+}
+.toolkit .bg-blue-disabled {
+	background-color: rgb(0, 86, 210) !important;
+}
+.toolkit .bg-blue-disabled:hover {
+	background-color: rgb(0, 86, 210) !important;
+}
+.toolkit .bg-dark-gray-active {
+	background-color: rgb(31, 31, 31) !important;
+}
+.toolkit .bg-dark-gray.btn-primary:hover {
+	background-color: rgb(31, 31, 31) !important;
+}
+.toolkit .bg-dark-gray-disabled {
+	background-color: rgb(158, 158, 158) !important;
+}
+.toolkit .bg-dark-gray-disabled:hover {
+	background-color: rgb(158, 158, 158) !important;
+}
+.toolkit .bg-link-active {
+	background-color: rgb(0, 84, 113) !important;
+}
+.toolkit .bg-link.btn-primary:hover {
+	background-color: rgb(0, 84, 113) !important;
+}
+.toolkit .bg-link-disabled {
+	background-color: rgb(113, 219, 255) !important;
+}
+.toolkit .bg-link-disabled:hover {
+	background-color: rgb(113, 219, 255) !important;
+}
+.toolkit .bg-light-medium-gray-active {
+	background-color: rgb(138, 141, 141) !important;
+}
+.toolkit .bg-light-medium-gray.btn-primary:hover {
+	background-color: rgb(138, 141, 141) !important;
+}
+.toolkit .bg-light-medium-gray-disabled {
+	background-color: rgb(229, 229, 229) !important;
+}
+.toolkit .bg-light-medium-gray-disabled:hover {
+	background-color: rgb(229, 229, 229) !important;
+}
+.toolkit .bg-dark-medium-gray-active {
+	background-color: rgb(98, 101, 102) !important;
+}
+.toolkit .bg-dark-medium-gray.btn-primary:hover {
+	background-color: rgb(98, 101, 102) !important;
+}
+.toolkit .bg-dark-medium-gray-disabled {
+	background-color: rgb(188, 190, 191) !important;
+}
+.toolkit .bg-dark-medium-gray-disabled:hover {
+	background-color: rgb(188, 190, 191) !important;
+}
+.toolkit .bg-white-active {
+	background-color: rgb(217, 217, 217) !important;
+}
+.toolkit .bg-white.btn-primary:hover {
+	background-color: rgb(217, 217, 217) !important;
+}
+.toolkit .bg-white-disabled {
+	background-color: rgb(255, 255, 255) !important;
+}
+.toolkit .bg-white-disabled:hover {
+	background-color: rgb(255, 255, 255) !important;
+}
+.toolkit .bg-light-gray-active {
+	background-color: rgb(206, 206, 206) !important;
+}
+.toolkit .bg-light-gray.btn-primary:hover {
+	background-color: rgb(206, 206, 206) !important;
+}
+.toolkit .bg-light-gray-disabled {
+	background-color: rgb(255, 255, 255) !important;
+}
+.toolkit .bg-light-gray-disabled:hover {
+	background-color: rgb(255, 255, 255) !important;
+}
+.toolkit .bg-orange-active {
+	background-color: rgb(204, 60, 13) !important;
+}
+.toolkit .bg-orange.btn-primary:hover {
+	background-color: rgb(204, 60, 13) !important;
+}
+.toolkit .bg-orange-disabled {
+	background-color: rgb(248, 173, 148) !important;
+}
+.toolkit .bg-orange-disabled:hover {
+	background-color: rgb(248, 173, 148) !important;
+}
+.toolkit .bg-raspberry-active {
+	background-color: rgb(228, 20, 87) !important;
+}
+.toolkit .bg-raspberry.btn-primary:hover {
+	background-color: rgb(228, 20, 87) !important;
+}
+.toolkit .bg-raspberry-disabled {
+	background-color: rgb(248, 179, 201) !important;
+}
+.toolkit .bg-raspberry-disabled:hover {
+	background-color: rgb(248, 179, 201) !important;
+}
+.toolkit .bg-purple-active {
+	background-color: rgb(162, 84, 154) !important;
+}
+.toolkit .bg-purple.btn-primary:hover {
+	background-color: rgb(162, 84, 154) !important;
+}
+.toolkit .bg-purple-disabled {
+	background-color: rgb(226, 198, 223) !important;
+}
+.toolkit .bg-purple-disabled:hover {
+	background-color: rgb(226, 198, 223) !important;
+}
+.toolkit .bg-tangerine-active {
+	background-color: rgb(179, 91, 0) !important;
+}
+.toolkit .bg-tangerine.btn-primary:hover {
+	background-color: rgb(179, 91, 0) !important;
+}
+.toolkit .bg-tangerine-disabled {
+	background-color: rgb(255, 180, 102) !important;
+}
+.toolkit .bg-tangerine-disabled:hover {
+	background-color: rgb(255, 180, 102) !important;
+}
+.toolkit .bg-peach-active {
+	background-color: rgb(222, 140, 4) !important;
+}
+.toolkit .bg-peach.btn-primary:hover {
+	background-color: rgb(222, 140, 4) !important;
+}
+.toolkit .bg-peach-disabled {
+	background-color: rgb(253, 215, 152) !important;
+}
+.toolkit .bg-peach-disabled:hover {
+	background-color: rgb(253, 215, 152) !important;
+}
+.toolkit .bg-sky-active {
+	background-color: rgb(0, 119, 146) !important;
+}
+.toolkit .bg-sky.btn-primary:hover {
+	background-color: rgb(0, 119, 146) !important;
+}
+.toolkit .bg-sky-disabled {
+	background-color: rgb(120, 231, 255) !important;
+}
+.toolkit .bg-sky-disabled:hover {
+	background-color: rgb(120, 231, 255) !important;
+}
+.toolkit .bg-teal-active {
+	background-color: rgb(22, 123, 121) !important;
+}
+.toolkit .bg-teal.btn-primary:hover {
+	background-color: rgb(22, 123, 121) !important;
+}
+.toolkit .bg-teal-disabled {
+	background-color: rgb(97, 227, 224) !important;
+}
+.toolkit .bg-teal-disabled:hover {
+	background-color: rgb(97, 227, 224) !important;
+}
+.toolkit .bg-grass-active {
+	background-color: rgb(86, 138, 46) !important;
+}
+.toolkit .bg-grass.btn-primary:hover {
+	background-color: rgb(86, 138, 46) !important;
+}
+.toolkit .bg-grass-disabled {
+	background-color: rgb(176, 218, 144) !important;
+}
+.toolkit .bg-grass-disabled:hover {
+	background-color: rgb(176, 218, 144) !important;
+}
+.toolkit .bg-gold-active {
+	background-color: rgb(120, 107, 0) !important;
+}
+.toolkit .bg-gold.btn-primary:hover {
+	background-color: rgb(120, 107, 0) !important;
+}
+.toolkit .bg-gold-disabled {
+	background-color: rgb(255, 233, 43) !important;
+}
+.toolkit .bg-gold-disabled:hover {
+	background-color: rgb(255, 233, 43) !important;
+}
+.toolkit .bg-mint-active {
+	background-color: rgb(74, 146, 106) !important;
+}
+.toolkit .bg-mint.btn-primary:hover {
+	background-color: rgb(74, 146, 106) !important;
+}
+.toolkit .bg-mint-disabled {
+	background-color: rgb(181, 217, 197) !important;
+}
+.toolkit .bg-mint-disabled:hover {
+	background-color: rgb(181, 217, 197) !important;
+}
+.toolkit .bg-lime-active {
+	background-color: rgb(140, 157, 29) !important;
+}
+.toolkit .bg-lime.btn-primary:hover {
+	background-color: rgb(140, 157, 29) !important;
+}
+.toolkit .bg-lime-disabled {
+	background-color: rgb(225, 236, 154) !important;
+}
+.toolkit .bg-lime-disabled:hover {
+	background-color: rgb(225, 236, 154) !important;
+}
+.toolkit .bg-lavender-active {
+	background-color: rgb(134, 96, 190) !important;
+}
+.toolkit .bg-lavender.btn-primary:hover {
+	background-color: rgb(134, 96, 190) !important;
+}
+.toolkit .bg-lavender-disabled {
+	background-color: rgb(230, 222, 242) !important;
+}
+.toolkit .bg-lavender-disabled:hover {
+	background-color: rgb(230, 222, 242) !important;
+}
+.toolkit .bg-terracotta-active {
+	background-color: rgb(180, 95, 50) !important;
+}
+.toolkit .bg-terracotta.btn-primary:hover {
+	background-color: rgb(180, 95, 50) !important;
+}
+.toolkit .bg-terracotta-disabled {
+	background-color: rgb(233, 195, 175) !important;
+}
+.toolkit .bg-terracotta-disabled:hover {
+	background-color: rgb(233, 195, 175) !important;
+}
+.toolkit .bg-olive-active {
+	background-color: rgb(119, 148, 67) !important;
+}
+.toolkit .bg-olive.btn-primary:hover {
+	background-color: rgb(119, 148, 67) !important;
+}
+.toolkit .bg-olive-disabled {
+	background-color: rgb(203, 219, 174) !important;
+}
+.toolkit .bg-olive-disabled:hover {
+	background-color: rgb(203, 219, 174) !important;
+}
+.toolkit .bg-mist-active {
+	background-color: rgb(89, 153, 178) !important;
+}
+.toolkit .bg-mist.btn-primary:hover {
+	background-color: rgb(89, 153, 178) !important;
+}
+.toolkit .bg-mist-disabled {
+	background-color: rgb(211, 228, 234) !important;
+}
+.toolkit .bg-mist-disabled:hover {
+	background-color: rgb(211, 228, 234) !important;
+}
+.toolkit .bg-honey-active {
+	background-color: rgb(118, 90, 21) !important;
+}
+.toolkit .bg-honey.btn-primary:hover {
+	background-color: rgb(118, 90, 21) !important;
+}
+.toolkit .bg-honey-disabled {
+	background-color: rgb(226, 187, 91) !important;
+}
+.toolkit .bg-honey-disabled:hover {
+	background-color: rgb(226, 187, 91) !important;
+}
+.toolkit .bg-forest-active {
+	background-color: rgb(0, 107, 46) !important;
+}
+.toolkit .bg-forest.btn-primary:hover {
+	background-color: rgb(0, 107, 46) !important;
+}
+.toolkit .bg-forest-disabled {
+	background-color: rgb(106, 255, 171) !important;
+}
+.toolkit .bg-forest-disabled:hover {
+	background-color: rgb(106, 255, 171) !important;
+}
+.toolkit .bg-slate-active {
+	background-color: rgb(78, 128, 201) !important;
+}
+.toolkit .bg-slate.btn-primary:hover {
+	background-color: rgb(78, 128, 201) !important;
+}
+.toolkit .bg-slate-disabled {
+	background-color: rgb(215, 226, 243) !important;
+}
+.toolkit .bg-slate-disabled:hover {
+	background-color: rgb(215, 226, 243) !important;
+}
+.toolkit .color-blue {
+	color: rgb(0, 44, 108) !important;
+}
+.toolkit .color-blue-hover:hover {
+	color: rgb(0, 44, 108) !important;
+}
+.toolkit .color-dark-gray {
+	color: rgb(69, 69, 69) !important;
+}
+.toolkit .color-dark-gray-hover:hover {
+	color: rgb(69, 69, 69) !important;
+}
+.toolkit .color-link {
+	color: rgb(0, 141, 189) !important;
+}
+.toolkit .color-link-hover:hover {
+	color: rgb(0, 141, 189) !important;
+}
+.toolkit .color-light-medium-gray {
+	color: rgb(177, 179, 179) !important;
+}
+.toolkit .color-light-medium-gray-hover:hover {
+	color: rgb(177, 179, 179) !important;
+}
+.toolkit .color-dark-medium-gray {
+	color: rgb(136, 139, 141) !important;
+}
+.toolkit .color-dark-medium-gray-hover:hover {
+	color: rgb(136, 139, 141) !important;
+}
+.toolkit .color-white {
+	color: rgb(255, 255, 255) !important;
+}
+.toolkit .color-white-hover:hover {
+	color: rgb(255, 255, 255) !important;
+}
+.toolkit .color-light-gray {
+	color: rgb(244, 244, 244) !important;
+}
+.toolkit .color-light-gray-hover:hover {
+	color: rgb(244, 244, 244) !important;
+}
+.toolkit .color-orange {
+	color: rgb(242, 99, 52) !important;
+}
+.toolkit .color-orange-hover:hover {
+	color: rgb(242, 99, 52) !important;
+}
+.toolkit .color-raspberry {
+	color: rgb(240, 85, 135) !important;
+}
+.toolkit .color-raspberry-hover:hover {
+	color: rgb(240, 85, 135) !important;
+}
+.toolkit .color-purple {
+	color: rgb(191, 131, 185) !important;
+}
+.toolkit .color-purple-hover:hover {
+	color: rgb(191, 131, 185) !important;
+}
+.toolkit .color-tangerine {
+	color: rgb(255, 130, 0) !important;
+}
+.toolkit .color-tangerine-hover:hover {
+	color: rgb(255, 130, 0) !important;
+}
+.toolkit .color-peach {
+	color: rgb(251, 176, 52) !important;
+}
+.toolkit .color-peach-hover:hover {
+	color: rgb(251, 176, 52) !important;
+}
+.toolkit .color-sky {
+	color: rgb(0, 182, 222) !important;
+}
+.toolkit .color-sky-hover:hover {
+	color: rgb(0, 182, 222) !important;
+}
+.toolkit .color-teal {
+	color: rgb(34, 188, 185) !important;
+}
+.toolkit .color-teal-hover:hover {
+	color: rgb(34, 188, 185) !important;
+}
+.toolkit .color-grass {
+	color: rgb(122, 193, 67) !important;
+}
+.toolkit .color-grass-hover:hover {
+	color: rgb(122, 193, 67) !important;
+}
+.toolkit .color-gold {
+	color: rgb(196, 176, 0) !important;
+}
+.toolkit .color-gold-hover:hover {
+	color: rgb(196, 176, 0) !important;
+}
+.toolkit .color-mint {
+	color: rgb(113, 183, 144) !important;
+}
+.toolkit .color-mint-hover:hover {
+	color: rgb(113, 183, 144) !important;
+}
+.toolkit .color-lime {
+	color: rgb(193, 216, 47) !important;
+}
+.toolkit .color-lime-hover:hover {
+	color: rgb(193, 216, 47) !important;
+}
+.toolkit .color-lavender {
+	color: rgb(175, 150, 212) !important;
+}
+.toolkit .color-lavender-hover:hover {
+	color: rgb(175, 150, 212) !important;
+}
+.toolkit .color-terracotta {
+	color: rgb(211, 135, 95) !important;
+}
+.toolkit .color-terracotta-hover:hover {
+	color: rgb(211, 135, 95) !important;
+}
+.toolkit .color-olive {
+	color: rgb(157, 187, 104) !important;
+}
+.toolkit .color-olive-hover:hover {
+	color: rgb(157, 187, 104) !important;
+}
+.toolkit .color-mist {
+	color: rgb(141, 185, 202) !important;
+}
+.toolkit .color-mist-hover:hover {
+	color: rgb(141, 185, 202) !important;
+}
+.toolkit .color-honey {
+	color: rgb(183, 139, 32) !important;
+}
+.toolkit .color-honey-hover:hover {
+	color: rgb(183, 139, 32) !important;
+}
+.toolkit .color-forest {
+	color: rgb(0, 183, 79) !important;
+}
+.toolkit .color-forest-hover:hover {
+	color: rgb(0, 183, 79) !important;
+}
+.toolkit .color-slate {
+	color: rgb(137, 170, 219) !important;
+}
+.toolkit .color-slate-hover:hover {
+	color: rgb(137, 170, 219) !important;
+}
+.toolkit .no-padding {
+	padding-right: 0px; padding-left: 0px;
+}
+.toolkit .btn-disable {
+	pointer-events: none;
+}
+.toolkit .glyphicon-disabled {
+	opacity: 0.3;
+}
+.toolkit hr {
+	margin: 25px 0px; border: 0px currentColor; border-image: none; height: 1px; color: rgb(244, 244, 244); clear: both; background-color: rgb(177, 179, 179);
+}
+.toolkit [class^='icon-'] {
+	text-transform: none; line-height: 1; font-family: "gs1_icons"; font-style: normal; font-variant: normal; font-weight: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; speak: none;
+}
+.toolkit [class*=' icon-'] {
+	text-transform: none; line-height: 1; font-family: "gs1_icons"; font-style: normal; font-variant: normal; font-weight: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; speak: none;
+}
+.toolkit .downloads li::before {
+	text-transform: none; line-height: 1; font-family: "gs1_icons"; font-style: normal; font-variant: normal; font-weight: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; speak: none;
+}
+.toolkit .icon-arrow_down_2::before {
+	content: "\e600";
+}
+.toolkit .icon-arrow_down::before {
+	content: "\e601";
+}
+.toolkit .icon-arrow_left_2::before {
+	content: "\e602";
+}
+.toolkit .icon-arrow_left::before {
+	content: "\e603";
+}
+.toolkit .icon-arrow_right_2::before {
+	content: "\e604";
+}
+.toolkit .icon-arrow_right::before {
+	content: "\e605";
+}
+.toolkit .icon-arrow_up_2::before {
+	content: "\e606";
+}
+.toolkit .icon-arrow_up::before {
+	content: "\e607";
+}
+.toolkit .icon-backward::before {
+	content: "\e608";
+}
+.toolkit .icon-ban_circle::before {
+	content: "\e609";
+}
+.toolkit .icon-barcode::before {
+	content: "\e60a";
+}
+.toolkit .icon-book::before {
+	content: "\e60b";
+}
+.toolkit .icon-bookmark::before {
+	content: "\e60c";
+}
+.toolkit .icon-calculator::before {
+	content: "\e60d";
+}
+.toolkit .icon-calendar::before {
+	content: "\e60e";
+}
+.toolkit .icon-check_file::before {
+	content: "\e60f";
+}
+.toolkit .icon-check::before {
+	content: "\e610";
+}
+.toolkit .icon-circle_arrow_down::before {
+	content: "\e611";
+}
+.toolkit .icon-circle_arrow_left::before {
+	content: "\e612";
+}
+.toolkit .icon-circle_arrow_right::before {
+	content: "\e613";
+}
+.toolkit .icon-circle_arrow_up::before {
+	content: "\e614";
+}
+.toolkit .icon-clock::before {
+	content: "\e615";
+}
+.toolkit .icon-close::before {
+	content: "\e616";
+}
+.toolkit .icon-cloud_download::before {
+	content: "\e617";
+}
+.toolkit .icon-cloud_upload::before {
+	content: "\e618";
+}
+.toolkit .icon-cog::before {
+	content: "\e619";
+}
+.toolkit .icon-comment::before {
+	content: "\e61a";
+}
+.toolkit .icon-credit_card::before {
+	content: "\e61b";
+}
+.toolkit .icon-dashboard::before {
+	content: "\e61c";
+}
+.toolkit .icon-download::before {
+	content: "\e61d";
+}
+.toolkit .icon-earphone::before {
+	content: "\e61e";
+}
+.toolkit .icon-envelope::before {
+	content: "\e61f";
+}
+.toolkit .icon-excel_file::before {
+	content: "\e620";
+}
+.toolkit .icon-exclamation_sign::before {
+	content: "\e621";
+}
+.toolkit .icon-expand::before {
+	content: "\e622";
+}
+.toolkit .icon-facebook::before {
+	content: "\e623";
+}
+.toolkit .icon-fast_backward::before {
+	content: "\e624";
+}
+.toolkit .icon-fast_forward::before {
+	content: "\e625";
+}
+.toolkit .icon-file::before {
+	content: "\e626";
+}
+.toolkit .icon-flag::before {
+	content: "\e627";
+}
+.toolkit .icon-flickr::before {
+	content: "\e628";
+}
+.toolkit .icon-folder_close::before {
+	content: "\e629";
+}
+.toolkit .icon-folder_open::before {
+	content: "\e62a";
+}
+.toolkit .icon-forward::before {
+	content: "\e62b";
+}
+.toolkit .icon-globe::before {
+	content: "\e62c";
+}
+.toolkit .icon-google_plus::before {
+	content: "\e62d";
+}
+.toolkit .icon-heart::before {
+	content: "\e62e";
+}
+.toolkit .icon-help::before {
+	content: "\e62f";
+}
+.toolkit .icon-home::before {
+	content: "\e630";
+}
+.toolkit .icon-inbox::before {
+	content: "\e631";
+}
+.toolkit .icon-info_sign::before {
+	content: "\e632";
+}
+.toolkit .icon-instagram::before {
+	content: "\e633";
+}
+.toolkit .icon-issuu::before {
+	content: "\e634";
+}
+.toolkit .icon-linkedin::before {
+	content: "\e635";
+}
+.toolkit .icon-list::before {
+	content: "\e636";
+}
+.toolkit .icon-location::before {
+	content: "\e637";
+}
+.toolkit .icon-lock::before {
+	content: "\e638";
+}
+.toolkit .icon-menu::before {
+	content: "\e639";
+}
+.toolkit .icon-minus::before {
+	content: "\e63a";
+}
+.toolkit .icon-move::before {
+	content: "\e63b";
+}
+.toolkit .icon-music_file::before {
+	content: "\e63c";
+}
+.toolkit .icon-not_complete::before {
+	content: "\e63d";
+}
+.toolkit .icon-ok_circle::before {
+	content: "\e63e";
+}
+.toolkit .icon-ok_sign::before {
+	content: "\e63f";
+}
+.toolkit .icon-open_in_new_tab::before {
+	content: "\e640";
+}
+.toolkit .icon-open_lock::before {
+	content: "\e641";
+}
+.toolkit .icon-paperclip::before {
+	content: "\e642";
+}
+.toolkit .icon-pause::before {
+	content: "\e643";
+}
+.toolkit .icon-pdf_file::before {
+	content: "\e644";
+}
+.toolkit .icon-pencil::before {
+	content: "\e645";
+}
+.toolkit .icon-play::before {
+	content: "\e646";
+}
+.toolkit .icon-plus::before {
+	content: "\e647";
+}
+.toolkit .icon-ppt_file::before {
+	content: "\e648";
+}
+.toolkit .icon-print::before {
+	content: "\e649";
+}
+.toolkit .icon-refresh::before {
+	content: "\e64a";
+}
+.toolkit .icon-remove_circle::before {
+	content: "\e64b";
+}
+.toolkit .icon-remove_file::before {
+	content: "\e64c";
+}
+.toolkit .icon-remove_sign::before {
+	content: "\e64d";
+}
+.toolkit .icon-search::before {
+	content: "\e64e";
+}
+.toolkit .icon-share_alt::before {
+	content: "\e64f";
+}
+.toolkit .icon-shopping_cart::before {
+	content: "\e650";
+}
+.toolkit .icon-skip_next::before {
+	content: "\e651";
+}
+.toolkit .icon-skip_start::before {
+	content: "\e652";
+}
+.toolkit .icon-smartphone::before {
+	content: "\e653";
+}
+.toolkit .icon-sort::before {
+	content: "\e654";
+}
+.toolkit .icon-star_empty::before {
+	content: "\e655";
+}
+.toolkit .icon-star::before {
+	content: "\e656";
+}
+.toolkit .icon-stats::before {
+	content: "\e657";
+}
+.toolkit .icon-stop::before {
+	content: "\e658";
+}
+.toolkit .icon-thumbs_down::before {
+	content: "\e659";
+}
+.toolkit .icon-thumbs_up::before {
+	content: "\e65a";
+}
+.toolkit .icon-transfer::before {
+	content: "\e65b";
+}
+.toolkit .icon-trashcan::before {
+	content: "\e65c";
+}
+.toolkit .icon-twitter::before {
+	content: "\e65d";
+}
+.toolkit .icon-upload::before {
+	content: "\e65e";
+}
+.toolkit .icon-user::before {
+	content: "\e65f";
+}
+.toolkit .icon-video_file::before {
+	content: "\e660";
+}
+.toolkit .icon-volume_down::before {
+	content: "\e661";
+}
+.toolkit .icon-volume_off::before {
+	content: "\e662";
+}
+.toolkit .icon-volume_up::before {
+	content: "\e663";
+}
+.toolkit .icon-warning_file::before {
+	content: "\e664";
+}
+.toolkit .icon-warning_sign::before {
+	content: "\e665";
+}
+.toolkit .icon-word_file::before {
+	content: "\e666";
+}
+.toolkit .icon-youtube::before {
+	content: "\e667";
+}
+.toolkit .icon-zoom_in::before {
+	content: "\e668";
+}
+.toolkit .icon-zoom_out::before {
+	content: "\e669";
+}
+.toolkit .jumbotron {
+	padding: 0px;
+}
+.toolkit .jumbotron .container {
+	padding: 0px; width: 100%;
+}
+.toolkit .jumbotron img {
+	padding: 0px; width: 100%;
+}
+.toolkit .jumbotron-spacing {
+	margin: 40px 0px; padding: 40px 0px;
+}
+.toolkit .jumbotron-background {
+	background-position: 50% 50%; background-size: cover;
+}
+.toolkit footer {
+	padding: 20px 0px;
+    background-color:rgb(244, 244, 244)
+}
+.toolkit footer h4 {
+	margin-top: 0px;
+}
+.toolkit footer p {
+	margin: 0px; font-size: 12px; display: block;
+}
+.toolkit footer a {
+	font-weight: 300;
+}
+.toolkit footer ul {
+	padding: 0px; margin-bottom: 20px; list-style-type: none;
+}
+.toolkit footer ul li {
+	line-height: 1em; margin-bottom: 7px;
+}
+.toolkit footer ul li > a {
+	font-size: 0.87em;
+}
+.toolkit footer .icon {
+	font-size: 40px;
+}
+.toolkit footer .footer-links {
+	font-size: 0.87em; margin-top: 20px; margin-bottom: 20px;
+}
+.toolkit footer .footer-links hr {
+	margin-top: 0px; margin-bottom: 15px;
+}
+.toolkit footer .footer-links .link-pipe {
+	margin: 0px 15px; color: rgb(177, 179, 179);
+}
+.toolkit footer .social a {
+	color: rgb(0, 44, 108);
+}
+.toolkit footer .social a:hover {
+	color: rgb(0, 141, 189);
+}
+.toolkit .navbar-fixed-top + .content-container {
+	margin-top: 70px;
+}
+.toolkit .content-container {
+	margin: 0px 130px;
+}
+.toolkit #top-link-block {
+	z-index: 5000;
+}
+.toolkit #top-link-block .affix-top {
+	left: 10px; bottom: -82px; position: absolute;
+}
+.toolkit #top-link-block .affix {
+	left: 10px; bottom: 18px; position: fixed;
+}
+.toolkit .vertical-center-outer {
+	overflow: hidden; display: table;
+}
+.toolkit .vertical-center-inner {
+	vertical-align: middle; display: table-cell;
+}
+.toolkit a {
+	
+}
+.toolkit .pointer2 {
+	
+}
+.header-short.toolkit header .logo1 {
+	
+}
+.documentation.toolkit header.example-header {
+	position: static; box-shadow: none;
+}
+.brand-home.toolkit header.example-header {
+	position: static; box-shadow: none;
+}
+.documentation.toolkit .yamm .btn-download {
+	margin-top: 20px;
+}
+.brand-home.toolkit .yamm .btn-download {
+	margin-top: 20px;
+}
+@media only screen and (max-width:992px) and (min-width:768px)
+{
+.documentation.toolkit .yamm .btn-download {
+	padding-right: 16px;
+}
+.brand-home.toolkit .yamm .btn-download {
+	padding-right: 16px;
+}
+.documentation.toolkit .yamm .btn-download .icon-download {
+	display: none;
+}
+.brand-home.toolkit .yamm .btn-download .icon-download {
+	display: none;
+}
+}
+.documentation.toolkit .anchor {
+	padding-top: 162px;
+}
+.brand-home.toolkit .anchor {
+	padding-top: 162px;
+}
+.documentation.toolkit h3.anchor {
+	
+}
+.brand-home.toolkit h3.anchor {
+	
+}
+.documentation.toolkit .screenshot {
+	border: 1px solid rgb(177, 179, 179); border-image: none; margin-bottom: 40px;
+}
+.brand-home.toolkit .screenshot {
+	border: 1px solid rgb(177, 179, 179); border-image: none; margin-bottom: 40px;
+}
+@media only screen and (min-width:768px)
+{
+.documentation.toolkit .actions {
+	float: left;
+}
+.brand-home.toolkit .actions {
+	float: left;
+}
+}
+.documentation.toolkit .setting {
+	margin-top: 10px; float: left;
+}
+.brand-home.toolkit .setting {
+	margin-top: 10px; float: left;
+}
+@media only screen and (min-width:768px)
+{
+.documentation.toolkit .setting {
+	margin-top: 0px; float: right;
+}
+.brand-home.toolkit .setting {
+	margin-top: 0px; float: right;
+}
+}
+.documentation.toolkit .setting label {
+	font-size: 12px; font-weight: normal;
+}
+.brand-home.toolkit .setting label {
+	font-size: 12px; font-weight: normal;
+}
+.documentation.toolkit figure {
+	margin-top: 20px;
+}
+.brand-home.toolkit figure {
+	margin-top: 20px;
+}
+.documentation.toolkit img.preview {
+	border: 1px solid rgb(244, 244, 244); border-image: none;
+}
+.brand-home.toolkit img.preview {
+	border: 1px solid rgb(244, 244, 244); border-image: none;
+}
+.documentation.toolkit .bg-light-gray img.preview {
+	border-color: rgb(136, 139, 141);
+}
+.brand-home.toolkit .bg-light-gray img.preview {
+	border-color: rgb(136, 139, 141);
+}
+@media only screen and (min-width:992px)
+{
+.documentation.toolkit .logo2 {
+	background-color: rgb(0, 141, 189);
+}
+}
+.documentation.toolkit table.status {
+	width: 100%;
+}
+.documentation.toolkit table.status > tbody > tr:first-child > td {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.documentation.toolkit table.status tr td {
+	text-align: right;
+}
+.documentation.toolkit table.status tr td:first-child {
+	text-align: left;
+}
+.documentation.toolkit :last-of-type.section-spacing {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.documentation.toolkit .video {
+	margin: 70px auto; width: 780px;
+}
+.documentation.toolkit .video p {
+	margin-top: 35px;
+}
+.documentation.toolkit .toolkit-buttons .btn-style-guide {
+	margin-left: 0px;
+}
+@media only screen and (min-width:992px)
+{
+.documentation.toolkit .toolkit-buttons .btn-style-guide {
+	margin-left: 42px;
+}
+}
+.documentation.toolkit .btn-style-guide {
+	height: 53px; line-height: 33px; padding-right: 20px; padding-left: 20px;
+}
+.brand-home.toolkit .site-content.intro {
+	padding-top: 0px;
+}
+.brand-home.toolkit .intro .container {
+	background: url("../images/world-background.png") no-repeat 10% 14%; height: 200px;
+}
+.brand-home.toolkit .intro h1 {
+	font-size: 3.4em; font-weight: 200;
+}
+.brand-home.toolkit .intro p {
+	line-height: 120%; letter-spacing: 1px; font-size: 1.5em; margin-bottom: 25px;
+}
+@media only screen and (min-width:768px)
+{
+.brand-home.toolkit .intro p {
+	font-size: 3em;
+}
+}
+.brand-home.toolkit .section-spacing {
+	border: currentColor; border-image: none;
+}
+/*.modal-backdrop {
+	z-index: 10010;
+}*/
+.flush-outside > :first-child.col-xs-1 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-1 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-1 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-1 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-2 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-2 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-2 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-2 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-3 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-3 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-3 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-3 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-4 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-4 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-4 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-4 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-5 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-5 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-5 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-5 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-6 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-6 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-6 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-6 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-7 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-7 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-7 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-7 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-8 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-8 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-8 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-8 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-9 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-9 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-9 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-9 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-10 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-10 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-10 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-10 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-11 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-11 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-11 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-11 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-xs-12 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-sm-12 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-md-12 {
+	padding-left: 0px;
+}
+.flush-outside > :first-child.col-lg-12 {
+	padding-left: 0px;
+}
+.flush-outside > :last-child.col-xs-1 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-1 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-1 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-1 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-2 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-2 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-2 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-2 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-3 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-3 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-3 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-3 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-4 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-4 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-4 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-4 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-5 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-5 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-5 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-5 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-6 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-6 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-6 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-6 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-7 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-7 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-7 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-7 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-8 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-8 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-8 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-8 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-9 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-9 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-9 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-9 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-10 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-10 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-10 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-10 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-11 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-11 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-11 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-11 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-xs-12 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-sm-12 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-md-12 {
+	padding-right: 0px;
+}
+.flush-outside > :last-child.col-lg-12 {
+	padding-right: 0px;
+}
+@media all and (min-width:768px)
+{
+   .toolkit h3.panel-title{
+        margin-top:20px;
+    }
+}
+
+.dataTables_filter{
+      float:right;
+  }

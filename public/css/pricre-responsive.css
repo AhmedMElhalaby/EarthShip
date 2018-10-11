@@ -1,0 +1,154 @@
+
+/* Media Queries */         
+
+
+
+/* Large Devices */
+@media (min-width: 1200px) {
+    /*OKKKKK*/
+}
+
+
+/* Medium Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* $ */
+    /*h1 sup {
+        left: 30px;
+    }*/
+
+    /* cards */
+    .general-card {
+        height: 830px !important;
+    }
+
+    div.sign button {
+        margin-left: 30px;
+    }
+
+}
+
+
+/* Small Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    /* cards */
+    .general-card {
+        width: 100%;
+    }
+
+    /* Options */
+    .options-box {
+        padding-left: 0px; 
+        margin:0 auto;
+    }
+}
+
+
+/* Extra Small Devices */
+@media (max-width: 767px) {
+   /* cards */
+    .card1 {
+        float: none;
+    }
+    .general-card {
+        width: 60%;
+        margin: auto;
+    }
+
+   .card2 {
+    margin-top: 50px;
+   }
+    
+    /*h1 sup {
+        left: 110px;
+    }*/
+
+    /* Options */
+    #options {
+        margin-top: 0;  
+    }
+    .option-desc {
+        width: 85%;
+    }
+    .padding3 {
+        padding-top: 50px;
+    }
+    .padding1 {
+        padding-top: 50px;
+    }
+    .padding1 {
+        padding-top: 50px;
+    }
+
+    .lg-img img{
+        width: 80%;
+    }
+
+}
+
+/* Extra Small Devices*/
+
+@media (max-width: 480px) {
+    /* cards */
+    /*.card1 {
+        float: none;
+    }
+    .general-card {
+        width: 80%;
+        height: 750px !important;
+    } 
+    h1 sup {
+        left: 70px;
+    }
+
+    div.sign button {
+        margin-left: 30px;
+    }
+    
+    /* Options */
+    /*.option-title {
+        width: 80%;
+    }*/
+    
+}
+
+
+/* Extra Small Devices*/
+
+@media (max-width: 600px) {
+    
+    /* cards */
+    .general-card {
+        width: 100%;
+        height: auto !important;
+        padding-bottom: 20px; 
+    }
+    /*h1 sup {
+        left: 40px;
+    }*/
+    
+
+    /* Options */
+    .lg-img img{
+        width: 80%;
+    }
+    .options-box {
+        padding-left: 0px; 
+        margin:0 auto;
+    }
+    #options {
+        margin-top: 0;  
+    }
+    .option-desc {
+        width: 85%;
+    }
+    .padding3 {
+        padding-top: 50px;
+    }
+    .padding1 {
+        padding-top: 50px;
+    }
+    .padding1 {
+        padding-top: 50px;
+    }
+}

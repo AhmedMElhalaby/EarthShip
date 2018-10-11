@@ -1,0 +1,62 @@
+
+.box1 {
+	margin-top: -43px;
+}
+
+
+.text{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: -70px;
+}
+
+.text p{
+	font-size: 16px;
+	font-weight: 500;
+
+	padding-bottom: 50px;
+
+}
+
+#map {
+	height: 500px;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+
+@media (max-width: 768px) { 
+
+	.text p {
+    	padding-top: 30px;
+    	font-size: 14px;
+    	text-align: center;
+
+	}
+
+	.text {
+    	width: 90%;
+
+    }
+}
+
+
+@media (max-width: 480px) {
+	.text {
+    	width: 92%;
+
+    }
+
+    .text p {
+    	padding-top: 50px;
+    	font-size: 14px;
+    	text-align: center;
+    	text-align: justify;
+
+	}
+}
