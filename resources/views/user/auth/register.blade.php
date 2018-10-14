@@ -4,36 +4,35 @@
     $MemberShip = \App\Membership::all();
     $Features = \App\Feature::all();
     ?>
-    <section id="progress-bar">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <form id="msform" method="post" action="{{url('register')}}" >
-                    <input type="hidden" name="MemberShip" id="MemberShip" value="">
-                    <input type="hidden" name="MemberShipPrice" id="MemberShipPrice" value="">
-                    <input type="hidden" name="MemberShipName" id="MemberShipName" value="">
-                    <input type="hidden" name="BillingType" id="BillingType" value="">
+    <section id="tabs">
+        <div class="container">
+            <h6 class="section-title h1">Sign Up</h6>
+            <form method="post" action="{{url('register')}}" class="row">
+                <input type="hidden" name="MemberShip" id="MemberShip" value="">
+                <input type="hidden" name="MemberShipPrice" id="MemberShipPrice" value="">
+                <input type="hidden" name="MemberShipName" id="MemberShipName" value="">
+                <input type="hidden" name="BillingType" id="BillingType" value="">
                 {{ csrf_field() }}
+                <div class="col-xs-12 ">
+                    <nav>
+                        <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                            <ul class="nav-ul">
+                                <li class="nav-item border-right active" id="nav-tab1" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">MEMBERSHIP SELECTION</li>
+                                <li class="nav-item border-right" id="nav-tab2" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">REVIEW YOUR ORDER</li>
+                                <li class="nav-item border-right" id="nav-tab3" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">MEMBER INFORMATION</li>
+                                <li class="nav-item" id="nav-tab4"  data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">BILLING INFORMATION</li>
+                            </ul>
+                        </div>
+                        <p>
+                            All Earthship  members receive our world-class customer service and express door-to-door delivery options. Cancel or change at any time! Cancel or change at any time! Cancel or change at any time!
+                        </p>
+                    </nav>
 
-                <!-- progressbar -->
-                    <div class="container-fluid">
-                        <div class="row" style="margin-bottom: 100px">
-                            <div class="title">
-                                <h2> Sign Up </h2>
-                                <ul id="progressbar">
-                                    <li class="active border-right">MEMBERSHIP SELECTION
-                                    <li class="border-right">REVIEW YOUR ORDER</li>
-                                    <li class="border-right" id="li3">BILLING INFORMATION</li>
-                                    <li>MEMBER INFORMATION</li>
-                                </ul>
-                                <p>
-                                    All Earthship  members receive our world-class customer service and express door-to-door delivery options. Cancel or change at any time! Cancel or change at any time! Cancel or change at any time!
-                                </p>
-                            </div>
-                            <!-- fieldsets -->
-                            <fieldset id="fieldset1">
-                                <div class="container">
-                                    <div class="row">
-                                        @foreach($MemberShip as $item)
+                    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                        <div class="tab-pane active" id="tab1" role="tabpanel" aria-labelledby="nav-tab1">
+                            <div class="container">
+                                <div class="row">
+                                    @foreach($MemberShip as $item)
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="general-card card{{$item->id}}">
                                                 <div class="top">
@@ -42,26 +41,27 @@
                                                 </div>
                                                 <div class="description">
                                                     {{--<p>--}}
-                                                        {{--for people who want to try<br> Shipito for as long as they like--}}
+                                                    {{--for people who want to try<br> Shipito for as long as they like--}}
                                                     {{--</p>--}}
                                                     <h3>{{$item->name}} includes:</h3>
                                                     <ul>
                                                         @foreach($Features as $feature)
-                                                        <li class="@if($item->featureExist($feature->id)) true @else false @endif"><i class="fa @if($item->featureExist($feature->id))fa-check-circle @else fa-times-circle @endif"></i>&ensp;{{$feature->name}}</li>
+                                                            <li class="@if($item->featureExist($feature->id)) true @else false @endif"><i class="fa @if($item->featureExist($feature->id))fa-check-circle @else fa-times-circle @endif"></i>&ensp;{{$feature->name}}</li>
                                                         @endforeach
                                                     </ul>
 
                                                 </div>
-                                                <input id="input{{$item->id}}" type="button" name="next" data-id="{{$item->id}}" data-name="{{$item->name}} MemberShip" data-price="{{$item->price}}" class="@if($item->price > 0)  prem payment-button @else sign-free @endif  next1 action-button MemberShip" value="Sign Up as {{$item->name}}"/>
+                                                <input id="input{{$item->id}}" type="button" data-id="nav-tab1" name="next" data-id="{{$item->id}}" data-name="{{$item->name}} MemberShip" data-price="{{$item->price}}" class="@if($item->price > 0)  prem payment-button @else sign-free @endif  next action-button MemberShip" value="Sign Up as {{$item->name}}"/>
                                             </div>
                                         </div>
-                                        @endforeach
-                                    </div>
+                                    @endforeach
                                 </div>
-                                {{--<input id="input1" type="button" name="next" class="sign-free next action-button " value="sign up free"/>--}}
-                                {{--<input id="input1" type="button" name="next" class="prem next payment-button action-button " value="Become Premium"/>--}}
-                            </fieldset>
-                            <fieldset id="fieldset2">
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="nav-tab2">
+                            <div class="container tab2">
                                 <div class="container">
                                     <div class="form1">
                                         <div class="row">
@@ -184,107 +184,110 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="button" id="AccountInformation" name="next" class="next2  next action-button" value="Next"/>
-                            </fieldset>
-                            <fieldset id="fieldset3">
-                                <div class="container">
-                                    <div class="form1">
-                                        <div class="col-md-12 col-sm-12 buttons">
-                                            <button type="button" class="payment" data-name="Credit Card">
-                                                <i class="fa fa-credit-card"></i>Credit Card
-                                            </button>
-                                            <button type="button" class="payment" data-name="PayPal">
+                            </div>
+                            <input type="button" name="next" data-id="nav-tab2" class="next2  next action-button" value="Next"/>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="nav-tab3">
+                            <div class="container tab2">
+                                <div class="form1">
+                                    <div class="col-md-12 col-sm-12 buttons">
+                                        <button type="button" class="payment" data-name="Credit Card">
+                                            <i class="fa fa-credit-card"></i>Credit Card
+                                        </button>
+                                        <button type="button" class="payment" data-name="PayPal">
                                             <i class="fa fa-paypal"></i>PayPal
-                                            </button>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="payment_first_name">Cardholder's First Name:</label>
-                                                <input type="text" id="payment_first_name" name="payment_first_name" class="form-control" value="{{old('payment_first_name')}}">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="payment_second_name">Cardholder's Last Name:</label>
-                                                <input type="text" id="payment_second_name" name="payment_second_name" value="{{old('payment_second_name')}}" class="form-control">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="card_number">Card Number:</label>
-                                                <input type="text" id="card_number" name="card_number" value="{{old('card_number')}}" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="expiration_month">Expiration date*:</label>
-                                                <input type="text" id="expiration_month" name="expiration_month" value="{{old('expiration_month')}}" class="form-control ex-date1">
-                                                <label for="expiration_year" style="display: none;"></label>
-                                                <input type="text" id="expiration_year" name="expiration_year" value="{{old('expiration_year')}}" class="form-control ex-date2">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="security_code">Security Code*:</label>
-                                                <input type="text" id="security_code" name="security_code" value="{{old('security_code')}}" class="form-control sec-date">
-                                            </div>
-                                        </div>
+                                        </button>
                                     </div>
-                                </div>
-                                <input type="button" name="next" id="BillingInformation" class="  next action-button next2" value="Next"/>
-                            </fieldset>
-                            <fieldset id="fieldset4">
-                                <div class="container">
-                                    <div class="row billing">
-                                        <div class="col-md-4 col-sm-5 col-xs-12 leftSection">
-                                            <h3>Account Information</h3>
-                                            <h4 id="name_text"></h4>
-                                            <h4 id="email_text"></h4>
-                                            <p>
-                                                <span id="address_text"></span> <br>
-                                                <span id="address2_text"></span> <br>
-                                                <span id="city_text"></span> , <span id="country_text"></span> <br>
-                                                <span id="postal_code_text"></span> <br>
-                                                <span id="phone_number_text"></span>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-4 col-sm-5 col-xs-12 rightSection">
-                                            <h3>Billing Information</h3>
-                                            <h4 id="MemberShip_text"></h4>
-                                            <h4 id="BillingType_text"></h4>
-                                            <h4 id="card_number_text"></h4>
-                                            <h4><span id="expiration_month_text"></span>/<span id="Expiration_year_text"></span>   </h4>
-                                        </div>
-                                    </div>
-
-                                    <div class="inner-text">
-                                        <p>Please verify the information above is correct , and click "Submit" to complete your membership application . you can cancel or change your membership at any time! </p>
-                                    </div>
-
                                     <div class="row">
-                                        <div class="col-md-8 summary">
-                                            <h3>Order Summary</h3>
-                                            <div class="col-md-8 col-xs-12">
-                                                <h4>One-time Setup fee:</h4>
-                                                <span><strong>$ <span id="setup_fee_text"></span></strong></span><br>
-                                                <h4>Membership fee (Monthly):</h4>
-                                                <span><strong>$ <span id="MemberShipPrice_text"></span></strong></span>
-                                            </div>
-                                            <div class="col-md-8 col-xs-12 Total">
-                                                <h2><strong>Total:</strong></h2>
-                                                <span class="bs"><strong>$ <slot id="TotalPrice_text"></slot></strong></span><br>
-                                            </div>
+                                        <div class="col-md-6">
+                                            <label for="payment_first_name">Cardholder's First Name:</label>
+                                            <input type="text" id="payment_first_name" name="payment_first_name" class="form-control" value="{{old('payment_first_name')}}">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="payment_second_name">Cardholder's Last Name:</label>
+                                            <input type="text" id="payment_second_name" name="payment_second_name" value="{{old('payment_second_name')}}" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="card_number">Card Number:</label>
+                                            <input type="text" id="card_number" name="card_number" value="{{old('card_number')}}" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="mrT">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" style="opacity: 0" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">I accept and agree ...... </label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="expiration_month">Expiration date*:</label>
+                                            <input type="text" id="expiration_month" name="expiration_month" value="{{old('expiration_month')}}" class="form-control ex-date1">
+                                            <label for="expiration_year" style="display: none;"></label>
+                                            <input type="text" id="expiration_year" name="expiration_year" value="{{old('expiration_year')}}" class="form-control ex-date2">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="security_code">Security Code*:</label>
+                                            <input type="text" id="security_code" name="security_code" value="{{old('security_code')}}" class="form-control sec-date">
+                                        </div>
                                     </div>
                                 </div>
-                                <input type="hidden" class="previous">
+                            </div>
+                            <input type="button" name="next" data-id="nav-tab3" class="  next action-button next2" value="Next"/>
+                        </div>
+                        <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="nav-tab4">
+                            <div class="container tab2">
+                                <div class="row billing">
+                                    <div class="col-md-4 col-sm-5 col-xs-12 leftSection">
+                                        <h3>Account Information</h3>
+                                        <h4 id="name_text"></h4>
+                                        <h4 id="email_text"></h4>
+                                        <p>
+                                            <span id="address_text"></span> <br>
+                                            <span id="address2_text"></span> <br>
+                                            <span id="city_text"></span> , <span id="country_text"></span> <br>
+                                            <span id="postal_code_text"></span> <br>
+                                            <span id="phone_number_text"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 col-sm-5 col-xs-12 rightSection">
+                                        <h3>Billing Information</h3>
+                                        <h4 id="MemberShip_text"></h4>
+                                        <h4 id="BillingType_text"></h4>
+                                        <h4 id="card_number_text"></h4>
+                                        <h4><span id="expiration_month_text"></span>/<span id="Expiration_year_text"></span>   </h4>
+                                    </div>
+                                </div>
 
-                                <input type="submit" name="submit" id="Submit" class="submit action-button next2" value="Submit"/>
-                            </fieldset>
+                                <div class="inner-text">
+                                    <p>Please verify the information above is correct , and click "Submit" to complete your membership application . you can cancel or change your membership at any time! </p>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 summary">
+                                        <h3>Order Summary</h3>
+                                        <div class="col-md-8 col-xs-12">
+                                            <h4>One-time Setup fee:</h4>
+                                            <span><strong>$ <span id="setup_fee_text"></span></strong></span><br>
+                                            <h4>Membership fee (Monthly):</h4>
+                                            <span><strong>$ <span id="MemberShipPrice_text"></span></strong></span>
+                                        </div>
+                                        <div class="col-md-8 col-xs-12 Total">
+                                            <h2><strong>Total:</strong></h2>
+                                            <span class="bs"><strong>$ <slot id="TotalPrice_text"></slot></strong></span><br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mrT">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" style="opacity: 0" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">I accept and agree ...... </label>
+                                </div>
+                            </div>
+                            <input type="submit" name="submit" class="submit action-button next2" value="Submit"/>
                         </div>
                     </div>
-                </form>
-            </div>
+
+                </div>
+            </form>
         </div>
     </section>
+    <br><br><br><br><br><br><br><br>
+
     @include('layout.footer')
 @endsection
 @section('style')
@@ -334,54 +337,9 @@
         var left, opacity, scale; //fieldset properties which we will animate
         var animating; //flag to prevent quick multi-click glitches
 
-        function f2(){
-            $("html, body").animate({ scrollTop: 0 }, "fast");
-            if(animating) return false;
-            animating = true;
 
-            current_fs = $('#fieldset4');
-            next_fs = $('#fieldset2');
-
-            //activate next step on progressbar using the index of next_fs
-            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-            //show the next fieldset
-            next_fs.show();
-            //hide the current fieldset with style
-            current_fs.animate({opacity: 0}, {
-                step: function(now, mx) {
-                    //as the opacity of current_fs reduces to 0 - stored in "now"
-                    //1. scale current_fs down to 80%
-                    scale = 1 - (1 - now) * 0.2;
-                    //2. bring next_fs from the right(50%)
-                    left = (now * 50)+"%";
-                    //3. increase opacity of next_fs to 1 as it moves in
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'transform': 'scale('+scale+')',
-                        'position': 'absolute'
-                    });
-                    next_fs.css({'left': left, 'opacity': opacity});
-                },
-                duration: 800,
-                complete: function(){
-                    current_fs.hide();
-                    animating = false;
-                },
-                //this comes from the custom easing plugin
-                easing: 'easeInOutBack'
-            });
-        }
-
-        function signupfree() {
-            $('#fieldset3').remove();
-            $('#li3').remove();
-            $('#progressbar li').css('width','33.3%');
-        };
         $(document).ready(function () {
-            $(".form-check-label").click(function() {
-                $(this).toggleClass("active");
-            });
+
             $('.MemberShip').on('click',function () {
                 console.log($(this).attr('data-price'));
                 $('#MemberShip').val($(this).attr('data-id'));
@@ -456,10 +414,9 @@
                     cache: true,
                     success: function(response) {
                         if(response.status){
-
+                            window.location = '{{url('')}}';
                         }
                         else {
-                            f2();
                         }
                     },
                     contentType: false,
@@ -468,6 +425,23 @@
                 });
             });
         });
+        $(function() {
+            $(".form-check-label").click(function() {
+                $(this).toggleClass("active");
+            });
+        });
+        function signupfree() {
+            $(".sign-free").click(function() {
+                $('#tab3').remove();
+                $('#nav-tab3').remove();
+                $('#tabs .nav-tabs ul li.nav-item').css('width','33.3%');
+                // $('#tabs .nav-tabs ul li.nav-item').css('height','60px');
+                // $('#tabs .nav-tabs ul li.nav-item').css('verticalAlign','middel');
+                $('#nav-tab4').toggleClass('border-left');
+            });
+        };
+        signupfree();
+
     </script>
 
 @endsection

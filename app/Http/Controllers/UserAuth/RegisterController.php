@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers\UserAuth;
 
+use App\Mail\VerifyMail;
 use App\Payment;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use App\User;
+use App\Address;
+use App\VerifyUser;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Session;
 
 class RegisterController extends Controller
 {
@@ -53,9 +58,14 @@ class RegisterController extends Controller
                 'msg'=>$validation->errors()
             ]);
         }
-
-//        $this->validator($request->all())->validate();
         $user = (new User)->CreateUser($request);
+        $verifyUser = VerifyUser::create([
+            'user_id' => $user->id,
+            'token' => str_random(40)
+        ]);
+
+        Mail::to($user->email)->send(new VerifyMail($user));
+
         if($user->membership->price > 0){
             $this->CreatePayment($request ,$user->id);
         }
@@ -94,6 +104,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $Address = Address::where('permission',1)->first();
         return User::create([
             'first_name' => $data['first_name'],
             'second_name' => $data['second_name'],
@@ -106,6 +117,7 @@ class RegisterController extends Controller
             'state_province' => $data['state_province'],
             'postal_code' => $data['postal_code'],
             'phone_number' => $data['phone_number'],
+            'default_address_id' => $Address->id,
         ]);
     }
     protected function CreatePayment($data ,$id)
@@ -130,12 +142,45 @@ class RegisterController extends Controller
     {
         return view('user.auth.register');
     }
-
+    public function verifyUser($token)
+    {
+        $verifyUser = VerifyUser::where('token', $token)->first();
+        if(isset($verifyUser) ){
+            $user = $verifyUser->user;
+            if(!$user->verified) {
+                $verifyUser->user->verified = 1;
+                $verifyUser->user->save();
+                $status = "Your e-mail is verified. You can now login.";
+            }else{
+                $status = "Your e-mail is already verified. You can now login.";
+            }
+        }else{
+            return response()->json([
+                'status'=>false,
+                'msg'=>'Sorry your email cannot be identified.'
+            ]);
+        }
+//        return response()->json([
+//            'status'=>true,
+//            'msg'=>$status
+//        ]);
+        return view('user.auth.SuccessVerify',compact('user'));
+    }
     /**
      * Get the guard to be used during registration.
      *
      * @return \Illuminate\Contracts\Auth\StatefulGuard
      */
+
+
+    public function VerifyEmail()
+    {
+        if(!Session::has('email')){
+            return redirect('/');
+        }
+        $email = Session::get('email');
+        return view('user.auth.verify',compact('email'));
+    }
     protected function guard()
     {
         return Auth::guard('user');

@@ -18,7 +18,7 @@ header .bottom {
     text-transform: uppercase;
 }
 
-.title p {
+nav p {
     color: #000;
     text-align: center;
     font-size: 16px;
@@ -28,9 +28,8 @@ header .bottom {
 }
 
 
-#msform {
+#tabs {
     text-align: center;
-    position: relative;
 }
 
 
@@ -77,14 +76,14 @@ header .bottom {
     height: 55px !important;
 }
 
-#fieldset2 .countrypicker , #fieldset2 .countrypicker button{
+#tab2 .countrypicker , #tab2 .countrypicker button{
     width: 101% !important;
     margin:0 !important;
     margin-left: -2px !important ;
     height: 55px !important;
     border-radius: 12px !important;
 }
-#fieldset2 .countrypicker button{
+#tab2 .countrypicker button{
     background-position: 12px 19px !important;
 }
 .bootstrap-select.btn-group .dropdown-menu.inner{
@@ -115,13 +114,9 @@ header .bottom {
     margin: 0px;
 }
 
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-    display: none;
-}
 
 /*inputs*/
-#msform input, #msform textarea {
+#tabs input, #tabs textarea {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 0px;
@@ -132,20 +127,20 @@ header .bottom {
     font-size: 13px;
 }
 
-#	 input:focus, #msform textarea:focus {
-          -moz-box-shadow: none !important;
-          -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-          border: 1px solid #ee0979;
-          outline-width: 0;
-          transition: All 0.5s ease-in;
-          -webkit-transition: All 0.5s ease-in;
-          -moz-transition: All 0.5s ease-in;
-          -o-transition: All 0.5s ease-in;
-      }
+#input:focus, #tabs textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ee0979;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
 
 /*buttons*/
-#msform .action-button {
+#tabs .action-button {
     background: #ff0101;
     color: #fff;
     border-radius: 40px;
@@ -157,47 +152,47 @@ header .bottom {
     width: 200px;
     /*margin: 0 75px;*/
 }
-#msform .container , #msform .container{
-    width: 100%;
+#tabs .container{
+    width: 90%;
     padding:0;
 }
-#msform .next2{
+#tabs .next2{
     position: absolute;
-    left:10px;
+    left:50px;
     margin-top: 30px;
 }
-#fieldset1 .container .general-card{
+
+#tab1 .container .general-card{
     width: 90%;
-    position: relative;
     border:1px solid #ccc;
 }
-#fieldset1 .container .general-card:hover,#fieldset1 .container .general-card.active{
+#tab1 .container .general-card:hover{
     border-color: #ff0101
 }
-#fieldset1 .sign-free , #fieldset1 .prem{
+#tab1 .sign-free , #tab1 .prem{
     margin-top: 50px;
 }
-#msform .ex-date1{
+#tabs .ex-date1{
     width: 70% !important;
     margin-right: 4%;
     display: inline-block;
 }
-#msform .ex-date2{
+#tabs .ex-date2{
     width: 24% !important;
     display: inline-block;
 }
-#msform .sec-date{
+#tabs .sec-date{
     width: 40% !important;
 }
-#msform .container-fluid{
+#tabs .container-fluid{
     padding:10px;
 }
-#msform .action-button:hover, #msform .action-button:focus {
+#tabs .action-button:hover, #tabs .action-button:focus {
     background: #ff01019c;
     color: #fff;
 }
 
-#msform .action-button-previous {
+#tabs .action-button-previous {
     width: 100px;
     background: #C5C5F1;
     font-weight: bold;
@@ -209,7 +204,7 @@ header .bottom {
     margin: 10px 5px;
 }
 
-#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+#tabs .action-button-previous:hover, #tabs .action-button-previous:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
 }
 .buttons{
@@ -236,34 +231,40 @@ header .bottom {
 .buttons button i{
     display: block;
     font-size: 50px;
-}/*headings
-.fs-title {
-    font-size: 18px;
+}
+
+
+
+/* =========================== Tabs ============================== */
+
+#tabs {
+    margin-top: 50px;
+}
+
+#tabs .section-title {
+    text-align: center;
+    color: #ff0101;
+    margin-bottom: 50px;
     text-transform: uppercase;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    font-weight: bold;
 }
 
-.fs-subtitle {
-    font-weight: normal;
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 20px;
+#tabs .nav-tabs {
+    border-bottom: none;
 }
 
-/*progressbar*/
-#progressbar {
+#tabs .nav-tabs ul {
+    list-style: none;
     margin-bottom: 30px;
     overflow: hidden;
     border:1px solid #e5e5e5;
     padding:0px 0px;
     counter-reset: step;
     border-radius: 35px;
+    text-align: center;
+    cursor: default;
 }
 
-#progressbar li {
+#tabs .nav-tabs ul li.nav-item {
     list-style-type: none;
     color: #808080;
     text-transform: uppercase;
@@ -274,9 +275,16 @@ header .bottom {
     padding: 20px 0px;
 }
 
+#tabs .nav-tabs ul li.active {
+    background: #ff1010;
+    color: white;
+}
+#tabs .nav-tabs ul li.visited {
+    background: #ff1010;
+    color: white;
+}
 
-/*progressbar connectors*/
-#progressbar li.border-right:after{
+#tabs .nav-tabs ul li.border-right:after{
     content: '';
     width: 1px;
     height: 100%;
@@ -286,37 +294,19 @@ header .bottom {
     top: 0px;
     z-index: 1; /*put it behind the numbers*/
 }
-#progressbar li.border-left:after{
-    content: '';
-    width: 2px;
-    height: 100%;
-    background: #e5e5e5;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 1; /*put it behind the numbers*/
+
+.tab2 {
+    width: 98% !important ;
 }
 
 
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active{
-    background: #ff1010;
-    color: white;
-}
-
-#progressbar li.border-right.active:after {
-    background: #fff;
-    z-index: 1;
-}
-
-/* -------------------- fieldset4 ------------------------- */
+/* -------------------- tab4 ------------------------- */
 
 .billing {
     margin-top: 50px;
 }
 
-#fieldset4 .row .leftSection , #fieldset4 .row .rightSection , #fieldset4 .row .summary {
+#tab4 .row .leftSection , #tab4 .row .rightSection , #tab4 .row .summary {
     border: 2px solid #808080;
     border-radius: 20px;
     text-align: left;
@@ -324,14 +314,14 @@ header .bottom {
     height: auto;
 }
 
-#fieldset4 .row .rightSection {
+#tab4 .row .rightSection {
     margin-left:20px;
 }
 
 
-#fieldset4 .row .leftSection h3 ,
-#fieldset4 .row .rightSection h3 ,
-#fieldset4 .row .summary h3 {
+#tab4 .row .leftSection h3 ,
+#tab4 .row .rightSection h3 ,
+#tab4 .row .summary h3 {
     margin-top: -15px;
     background-color: #fff;
     width: 75%;
@@ -343,58 +333,58 @@ header .bottom {
     color: #ff0101;
 }
 
-#fieldset4 .row .leftSection h4 ,  #fieldset4 .row .leftSection p
-, #fieldset4 .row .rightSection h4 ,  #fieldset4 .row .rightSection p
-, #fieldset4 .row .summary h4 ,  #fieldset4 .row .summary p {
+#tab4 .row .leftSection h4 ,  #tab4 .row .leftSection p
+, #tab4 .row .rightSection h4 ,  #tab4 .row .rightSection p
+, #tab4 .row .summary h4 ,  #tab4 .row .summary p {
     font-size: 14px;
     font-weight: 400;
     color: #000;
 }
 
-#fieldset4 .row .leftSection p , #fieldset4 .row .rightSection p
-, #fieldset4 .row .summary p {
+#tab4 .row .leftSection p , #tab4 .row .rightSection p
+, #tab4 .row .summary p {
 
     line-height: 22px;
 
 }
 
-#fieldset4 .inner-text p {
+#tab4 .inner-text p {
     font-size: 14px ;
     font-weight: 600;
     text-align: left;
     margin-top: 20px;
 }
 
-#fieldset4 .row .summary {
+#tab4 .row .summary {
     margin-top: 40px;
     height: 250px;
 }
 
-#fieldset4 .row .summary h3 {
+#tab4 .row .summary h3 {
     width:35%;
 }
 
-#fieldset4 .row .summary h4  {
+#tab4 .row .summary h4  {
     display: inline-block;
 }
-#fieldset4 .row .summary span {
+#tab4 .row .summary span {
     float: right;
     margin-top: 5px;
     font-size: 16px;
 }
 
-#fieldset4 .row .summary .col-md-8 {
+#tab4 .row .summary .col-md-8 {
 
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
 }
 
-#fieldset4 .row .summary .col-md-8 h2 {
+#tab4 .row .summary .col-md-8 h2 {
 
     margin-top: 50px;
 }
 
-#fieldset4 .row .summary .col-md-8 .bs {
+#tab4 .row .summary .col-md-8 .bs {
 
     font-size: 30px;
     font-weight: 700;
@@ -402,85 +392,110 @@ header .bottom {
 
 }
 
-#fieldset4 .row .summary .Total {
+#tab4 .row .summary .Total {
 
     border-bottom: 0;
 
 }
 
-#fieldset4 .mrT{
+#tab4 .mrT{
     text-align: left;
     margin-top: 20px;
 }
 
 
-@media(max-width:767px){
-    #fieldset1 .container .general-card{
+@media(max-width:800px){
+    #tab1 .container .general-card{
         width: 100%;
     }
-    #fieldset1 .container .col-xs-12{
-        float: none;
+    #tab1 .container .col-xs-12{
+        float: left;
     }
-    #progressbar li{
+    #nav-ul li{
         width: 50%;
         font-size: 10.5px;
 
     }
-    #progressbar li.border-right:nth-child(2):after{
+    #nav-ul li.border-right:nth-child(2):after{
         content: '';
         width:0 ;
     }
-    #progressbar li.border-right:nth-child(2){
+    #nav-ul li.border-right:nth-child(2){
         border-bottom:1.5px solid #e5e5e5;
     }
-    #progressbar li.border-right.active:nth-child(2){
+    #nav-ul li.border-right.active:nth-child(2){
         border-bottom:0
     }
     .general-card{
         height: auto !important;
         padding-bottom: 100px;
     }
-    #msform .sec-date{
+    #tabs .sec-date{
         width: 100% !important;
     }
+
+    #tabs .nav-tabs ul li.nav-item {
+        font-size: 12px;
+    }
 }
-@media(max-width: 600px){
-    #fieldset1 .container{
+@media(max-width: 680px){
+    #tab1 .container{
         padding:0;
     }
-    #fieldset1 .description{
+    #tab1 .description{
         padding-right: 10px;
     }
-    #fieldset1 .description ul{
+    #tab1 .description ul{
         padding:10px;
     }
 
+    #tabs .nav-tabs ul li.nav-item {
+        font-size: 12px;
+        width: 50%;
+    }
+
+    #tabs .nav-tabs .nav-ul #nav-tab1 , #tabs .nav-tabs .nav-ul #nav-tab2{
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    #tab1 .container .col-xs-12{
+        padding: 0;
+    }
 
 }
 
 @media(max-width: 450px){
 
-    #fieldset4 .row .rightSection {
+    #tab4 .row .rightSection {
         margin-left:0px;
         margin-top: 40px;
     }
 
-    #fieldset4 .row .summary h3 {
+    #tab4 .row .summary h3 {
         width: 75%;
     }
 
-    #fieldset4 .row .leftSection h3 ,
-    #fieldset4 .row .rightSection h3 ,
-    #fieldset4 .row .summary h3 {
+    #tab4 .row .leftSection h3 ,
+    #tab4 .row .rightSection h3 ,
+    #tab4 .row .summary h3 {
         width: 90%;
     }
 
-    #fieldset4 .row .summary .Total {
+    #tab4 .row .summary .Total {
         margin-bottom: 30px;
 
     }
-    #fieldset4 .row .summary .col-xs-12 {
+    #tab4 .row .summary .col-xs-12 {
         padding: 0;
+    }
+
+    #tabs .nav-tabs ul li.nav-item {
+        font-size: 10px;
+        width: 50%;
+    }
+
+    #tabs .nav-tabs .nav-ul #nav-tab1 , #tabs .nav-tabs .nav-ul #nav-tab2{
+        border-bottom: 1px solid #e5e5e5;
     }
 
 }

@@ -1,6 +1,21 @@
 
 jQuery(function($){
 
+    $('.next').click(function(){
+        var newe =$('.nav-ul > .active').next('li');
+        $('.nav-ul li').removeClass('active');
+        $('.tab-pane').removeClass('in active')
+        newe.addClass('active');
+
+        $('#'+newe.attr('aria-controls')).addClass('in active');
+        $('html, body').animate({scrollTop: $('#tabs').offset().top}, 500);
+        $('#'+$(this).attr('data-id')).addClass('visited');
+        // $('.nav-item').addClass('visited');
+    });
+    $(".nav-tabs li[data-toggle=tab]").on("click", function(e) {
+        e.preventDefault();
+        return false;
+    });
     $('.itme-info a').on('click',function () {
         $('.coll').removeClass('in');
         $(this).closest('coll').toggleClass('in');

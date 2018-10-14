@@ -72,6 +72,7 @@ class User extends Authenticatable implements JWTSubject
         'other_instruction',
         'default_address_id',
         'balance',
+        'verified',
     ];
 
     /**
@@ -146,5 +147,8 @@ class User extends Authenticatable implements JWTSubject
             'balance'=>$request->balance
         ));
     }
-
+    public function verifyUser()
+    {
+        return $this->hasOne('App\VerifyUser');
+    }
 }

@@ -74,12 +74,26 @@
                     <li>
                         <a href="">How it works</a>
                     </li>
+                    @if(!Auth::guard('user')->check())
                     <li class="login">
                         <button onclick="window.location='{{url('login')}}'" class="btn">Login</button>
                     </li>
                     <li class="sign">
                         <button onclick="window.location='{{url('register')}}'" class="btn">sign up</button>
                     </li>
+                    @else
+                    <li class="login">
+                        <button onclick="window.location='{{url('dashboad')}}'" class="btn">Dashboard</button>
+                    </li>
+                    <li class="sign">
+                        <button  class="btn" onclick="event.preventDefault();document.getElementById('logout-form').submit();" >
+                            Logout
+                        </button>
+                        <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                    @endif
                 </ul>
             </div>
         </div>

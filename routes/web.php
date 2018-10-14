@@ -15,6 +15,9 @@ use App\Http\Resources\MemberShip as MemberShipResource;
 use App\Http\Resources\MemberShipFeature as MemberShipFeatureResource;
 use App\Membership;
 use App\MembershipFeature;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin'], function () {
@@ -30,12 +33,22 @@ Route::group(['prefix' => ''], function () {
 
     Route::get('/register', 'UserAuth\RegisterController@showRegistrationForm')->name('register');
     Route::post('/register', 'UserAuth\RegisterController@register');
+    Route::get('/verify/{token}', 'UserAuth\RegisterController@verifyUser');
+
+    Route::get('verify-email', 'UserAuth\RegisterController@VerifyEmail');
 
     Route::post('/password/email', 'UserAuth\ForgotPasswordController@sendResetLinkEmail')->name('password.request');
     Route::post('/password/reset', 'UserAuth\ResetPasswordController@reset')->name('password.email');
     Route::get('/password/reset', 'UserAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
     Route::get('/password/reset/{token}', 'UserAuth\ResetPasswordController@showResetForm');
 });
+
+Route::get('GetOut', function (){
+
+        Auth::guard('user')->logout();
+    return redirect('login');
+});
+
 Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
@@ -176,4 +189,10 @@ Route::get('api/memberships',function (){
 Route::get('api/memberships/feature',function (\Illuminate\Http\Request $request){
 
     return MemberShipFeatureResource::collection(MembershipFeature::where('membership_id',$request->id)->get());
+});
+Route::get('test', function() {
+
+    Mail::send('emails.test', [], function ($message) {
+        $message->to('eng.ahmed.elhalaby@gmail.com', 'Ahmed')->subject('Welcome!');
+    });
 });

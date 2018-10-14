@@ -51,6 +51,32 @@ class LoginController extends Controller
     {
         return view('user.auth.login');
     }
+    public function login(Request $request)
+    {
+        $this->validateLogin($request);
+
+//        $credentials = request(['email', 'password']);
+//        return $this->guard()->attempt($this->credentials($request), $request->filled('remember'));
+        if (! $token = $this->guard()->attempt($this->credentials($request), $request->filled('remember'))) {
+//        if (! $token = auth()->attempt($credentials)) {
+            return $this->sendFailedLoginResponse($request);
+        }
+//        dd($token);
+        if (!Auth::guard('user')->user()->verified) {
+            Auth::guard('user')->logout();
+            return redirect('verify-email')->with('email',$request->email);
+        }
+        return redirect('/')->with('token', $token);
+    }
+
+    public function authenticated(Request $request, $user)
+    {
+        if (!$user->verified) {
+            auth()->logout();
+            return redirect('verify-email')->with($user->email);
+        }
+        return redirect()->intended($this->redirectPath());
+    }
     /**
      * Get the guard to be used during authentication.
      *
