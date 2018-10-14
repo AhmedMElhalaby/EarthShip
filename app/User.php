@@ -106,6 +106,8 @@ class User extends Authenticatable implements JWTSubject
         return  $this->belongsTo('App\Membership','membership_id','id');
     }
     public function CreateUser($request){
+        $Address = Address::where('permission',1)->first();
+
         return $new = User::create(array(
             'first_name'=>$request->first_name,
             'second_name'=>$request->second_name,
@@ -119,6 +121,8 @@ class User extends Authenticatable implements JWTSubject
             'state_province'=> $request->state_province,
             'postal_code'=> $request->postal_code,
             'phone_number'=>$request->phone_number,
+            'default_address_id' => $Address->id,
+
         ));
     }
 

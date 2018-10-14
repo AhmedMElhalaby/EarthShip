@@ -69,6 +69,8 @@ class RegisterController extends Controller
         if($user->membership->price > 0){
             $this->CreatePayment($request ,$user->id);
         }
+        session(['email'=>$user->email]);
+
         return response()->json([
             'status'=>true,
             'user'=>$user

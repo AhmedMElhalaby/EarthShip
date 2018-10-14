@@ -51,7 +51,7 @@
                                                     </ul>
 
                                                 </div>
-                                                <input id="input{{$item->id}}" type="button" data-id="nav-tab1" name="next" data-id="{{$item->id}}" data-name="{{$item->name}} MemberShip" data-price="{{$item->price}}" class="@if($item->price > 0)  prem payment-button @else sign-free @endif  next action-button MemberShip" value="Sign Up as {{$item->name}}"/>
+                                                <input id="input{{$item->id}}" type="button" data-id="nav-tab1" name="next" data-item-id="{{$item->id}}" data-name="{{$item->name}} MemberShip" data-price="{{$item->price}}" class="@if($item->price > 0)  prem payment-button @else sign-free @endif  next action-button MemberShip" value="Sign Up as {{$item->name}}"/>
                                             </div>
                                         </div>
                                     @endforeach
@@ -185,7 +185,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" data-id="nav-tab2" class="next2  next action-button" value="Next"/>
+                            <input type="button" name="next" id="AccountInformation" data-id="nav-tab2" class="next2  next action-button" value="Next"/>
                         </div>
 
 
@@ -228,7 +228,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" data-id="nav-tab3" class="  next action-button next2" value="Next"/>
+                            <input type="button" name="next" id="BillingInformation" data-id="nav-tab3" class="  next action-button next2" value="Next"/>
                         </div>
                         <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="nav-tab4">
                             <div class="container tab2">
@@ -278,7 +278,7 @@
                                     <label class="form-check-label" for="inlineCheckbox1">I accept and agree ...... </label>
                                 </div>
                             </div>
-                            <input type="submit" name="submit" class="submit action-button next2" value="Submit"/>
+                            <input id="Submit" type="submit" name="submit" class="submit action-button next2" value="Submit"/>
                         </div>
                     </div>
 
@@ -333,16 +333,11 @@
         });
     </script>
     <script>
-        var current_fs, next_fs, previous_fs; //fieldsets
-        var left, opacity, scale; //fieldset properties which we will animate
-        var animating; //flag to prevent quick multi-click glitches
-
 
         $(document).ready(function () {
-
             $('.MemberShip').on('click',function () {
                 console.log($(this).attr('data-price'));
-                $('#MemberShip').val($(this).attr('data-id'));
+                $('#MemberShip').val($(this).attr('data-item-id'));
                 $('#MemberShipPrice').val($(this).attr('data-price'));
                 $('#MemberShipName').val($(this).attr('data-name'));
                 $('#MemberShip_text').html($(this).attr('data-name'));
@@ -350,7 +345,6 @@
                     signupfree();
                 }
             });
-
             $('.payment').on('click',function () {
                 $('.payment').removeClass('PaymentActive');
                 $(this).addClass('PaymentActive');
@@ -414,7 +408,8 @@
                     cache: true,
                     success: function(response) {
                         if(response.status){
-                            window.location = '{{url('')}}';
+
+                            window.location = '{{url('verify-email')}}';
                         }
                         else {
                         }
