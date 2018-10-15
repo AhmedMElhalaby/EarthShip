@@ -10,6 +10,7 @@ class Support extends Model
 
     public static $rules =[
         'subject' => 'required',
+        'user_id' => 'required',
         'detail' => 'required',
         'attachment' => 'required',
         'type' => 'required',
@@ -19,7 +20,7 @@ class Support extends Model
     ];
 
     protected $fillable = [
-        'subject','detail','attachment','type','status','close_date',
+        'subject','user_id','detail','attachment','type','status','close_date',
     ];
 
     public function supportType(){
@@ -38,14 +39,15 @@ class Support extends Model
         if ($request->hasFile('attachment')) {
             $image = $request->file('attachment');
             $name = $image->getClientOriginalName();
-            $destinationPath = "storage/app/attachments";
+            $destinationPath = "public/app-images/support-attachments/";
             $image->move($destinationPath, $name);            
         }
 
         $new = Support::create(array(
             'subject'=>$request->subject,
             'detail'=>$request->detail,
-            'attachment'=>'storage/app/attachments/'.$name ,
+            'user_id'=> 1,
+            'attachment'=>'public/app-images/support-attachments/'.$name ,
             'type'=>$request->type,
             'status'=>$request->status,
             'close_date'=>$request->close_date
@@ -56,7 +58,7 @@ class Support extends Model
         if ($request->hasFile('attachment')) {
             $image = $request->file('attachment');
             $name = $image->getClientOriginalName();
-            $destinationPath = "storage/app/attachments";
+            $destinationPath = "public/app-images/support-attachments/";
             $image->move($destinationPath, $name);            
         }
 
@@ -64,7 +66,7 @@ class Support extends Model
         $Support->update(array(
             'subject'=>$request->subject,
             'detail'=>$request->detail,
-            'attachment'=>'storage/app/attachments/'.$name ,
+            'attachment'=>'public/app-images/support-attachments/'.$name ,
             'type'=>$request->type,
             'status'=>$request->status,
             'close_date'=>$request->close_date

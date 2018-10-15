@@ -4,49 +4,52 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Product extends Model
 {
-    protected $table = 'services';
+    protected $table = 'products';
 
     public static $rules =[
         'name' => 'required',
-        'description' => 'required',
         'price' => 'required',
+        'url' => 'required',
+        'notes' => 'required',
         
     ];
 
     protected $fillable = [
-        'name','description','price','image',
+        'name','image','price','url','notes',
     ];
 
-    public function CreateService($request){
+    public function CreateProduct($request){
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $name = $image->getClientOriginalName();
-            $destinationPath = "public/app-images/services/";
+            $destinationPath = "public/app-images/products/";
             $image->move($destinationPath, $name);            
         }
-        $new = Service::create(array(
+        $new = Product::create(array(
             'name'=>$request->name,
-            'description'=>$request->description,
+            'url'=>$request->url,
             'price'=>$request->price,
-            'image'=>'public/app-images/services/'.$name ,
+            'notes'=>$request->notes,
+            'image'=>'public/app-images/products/'.$name ,
         ));
     }
     
-    public static function UpdateService($request){
+    public static function UpdateProduct($request){
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $name = $image->getClientOriginalName();
-            $destinationPath = "public/app-images/services/";
+            $destinationPath = "public/app-images/products/";
             $image->move($destinationPath, $name);            
         }
-        $Service = Service::where('id',$request->id)->first();
-        $Service->update(array(
+        $Product = Product::where('id',$request->id)->first();
+        $Product->update(array(
             'name'=>$request->name,
-            'description'=>$request->description,
+            'url'=>$request->url,
             'price'=>$request->price,
-            'image'=>'public/app-images/services/'.$name ,
+            'notes'=>$request->notes,
+            'image'=>'public/app-images/products/'.$name ,
         ));
     }
 }
