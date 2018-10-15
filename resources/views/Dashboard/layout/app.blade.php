@@ -20,6 +20,13 @@
         .closebtn:hover {
             color: white;
         }
+        .info-note{
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+        }
+        .info-note-p{
+            padding: 15px;
+        }
         
         #loader{
             transition:all .3s ease-in-out;
@@ -146,6 +153,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                        <a class="sidebar-link" href="{{url('admin/howItWork-mainSteps')}}">
+                            <span class="icon-holder">
+                                <i class="c-brown-500 ti-stack-overflow"></i>
+                            </span>
+                            <span class="title">How It Work</span>
+                        </a>
+                </li>
+                <li class="nav-item">
                     <a class="sidebar-link" href="{{url('admin/admins')}}">
                         <span class="icon-holder">
                             <i class="c-brown-500 ti-user"></i>
@@ -194,6 +209,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                        <a class="sidebar-link" href="{{url('admin/products/')}}">
+                            <span class="icon-holder">
+                                <i class="c-brown-500 ti-gift"></i>
+                            </span>
+                            <span class="title">Products</span>
+                        </a>
+                </li>
+                <li class="nav-item">
                     <a class="sidebar-link" href="{{url('admin/support/')}}">
                         <span class="icon-holder">
                             <i class="c-brown-500 ti-support"></i>
@@ -231,6 +254,14 @@
                             <i class="c-brown-500 ti-help"></i>
                         </span>
                         <span class="title">FAQ</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="sidebar-link" href="{{url('admin/prohibited-category/')}}">
+                        <span class="icon-holder">
+                            <i class="c-brown-500 ti-na"></i>
+                        </span>
+                        <span class="title">Prohibited Category</span>
                     </a>
                 </li>
                 {{--<li class="nav-item">--}}

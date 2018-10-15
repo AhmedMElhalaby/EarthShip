@@ -27,20 +27,20 @@ class FAQCategory extends Model
         if ($request->hasFile('image')) {
             $category_image = $request->file('image');
             $category_image_name = $category_image->getClientOriginalName();
-            $destinationPath_Img = "storage/app/faq/img";
+            $destinationPath_Img = "public/app-images/faq/img";
             $category_image->move($destinationPath_Img, $category_image_name);            
         }
         if ($request->hasFile('icon')) {
             $category_icon = $request->file('icon');
             $category_icon_name = $category_icon->getClientOriginalName();
-            $destinationPath_Icon = "storage/app/faq/icon";
+            $destinationPath_Icon = "public/app-images/faq/icon";
             $category_icon->move($destinationPath_Icon, $category_icon_name);            
         }
         $new = FAQCategory::create(array(
             'name'=>$request->name,
             'description'=>$request->description,
-            'image'=>'storage/app/faq/img/'.$category_image_name ,
-            'icon'=>'storage/app/faq/icon/'.$category_icon_name 
+            'image'=>'public/app-images/faq/img/'.$category_image_name ,
+            'icon'=>'public/app-images/faq/icon/'.$category_icon_name 
         ));
     }
 
@@ -55,7 +55,7 @@ class FAQCategory extends Model
         else{
             $Imgfile = $request->file('image');
             $image = $Imgfile->getClientOriginalName();
-            $destinationPath_Img = "storage/app/faq/img";
+            $destinationPath_Img = "public/app-images/faq/img";
             $Imgfile->move($destinationPath_Img, $image); 
         }
 
@@ -65,15 +65,15 @@ class FAQCategory extends Model
         else{
             $Iconfile = $request->file('icon');
             $icon = $Iconfile->getClientOriginalName();
-            $destinationPath_Icon = "storage/app/faq/img";
+            $destinationPath_Icon = "public/app-images/faq/img";
             $Iconfile->move($destinationPath_Icon, $icon); 
         }
         
         $FAQCategory->update(array(
             'name'=>$request->name,
             'description'=>$request->description,
-            'image'=> 'storage/app/faq/img/'.$image ,
-            'icon'=>  'storage/app/faq/icon/'.$icon 
+            'image'=> 'public/app-images/faq/img/'.$image ,
+            'icon'=>  'public/app-images/faq/icon/'.$icon 
         ));
     }
 

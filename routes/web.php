@@ -60,9 +60,12 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
 });
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::get('/','GeneralController@Index');
+Route::get('/prohibition','GeneralController@Prohibitions');
+Route::post('/prohibition-search-result','GeneralController@ProhibitionSearch');
+Route::get('/how-it-work','GeneralController@HowItWork');
+Route::get('/services-prices','GeneralController@ServicesPrices');
 
 
 Route::group(['prefix' => 'admin/','middleware' => 'admin'], function () {
@@ -177,6 +180,46 @@ Route::group(['prefix' => 'admin/','middleware' => 'admin'], function () {
     Route::get('shipping-method/add','ShippingMethodController@Add');
     Route::post('shipping-method/postAdd','ShippingMethodController@postAdd');
     Route::get('shipping-method/delete/{id}','ShippingMethodController@Delete');
+        #/ Prohibited Category Routes/#
+    Route::get('prohibited-category/','ProhibitedCategoryController@ProhibitedCategories');
+    Route::get('prohibited-category/edit/{id}','ProhibitedCategoryController@Edit');
+    Route::post('prohibited-category/postEdit','ProhibitedCategoryController@postEdit');
+    Route::get('prohibited-category/add','ProhibitedCategoryController@Add');
+    Route::post('prohibited-category/postAdd','ProhibitedCategoryController@postAdd');
+    Route::get('prohibited-category/delete/{id}','ProhibitedCategoryController@Delete');
+        #/ Prohibited Items Routes/#
+    Route::get('prohibited-category-item/{id}','ProhibitedCategoryController@ShowCategoryItems');
+    Route::get('prohibited-item/{category}/edit/{id}','ProhibitedItemController@Edit');
+    Route::post('prohibited-item/postEdit','ProhibitedItemController@postEdit');
+    Route::get('prohibited-item/{category_id}/add','ProhibitedItemController@Add');
+    Route::post('prohibited-item/postAdd','ProhibitedItemController@postAdd');
+    Route::get('prohibited-item/delete/{id}','ProhibitedItemController@Delete');
+        #/ Prohibited Items Counry Routes/#
+    Route::post('prohibited-item-country/postAdd','ProhibitedItemCountryController@postAdd');
+    Route::get('prohibited-item-country/delete/{id}','ProhibitedItemCountryController@Delete');
+        #/ How It Work Main Steps/#
+    Route::get('howItWork-mainSteps/','HowItWorkStepsController@MainSteps');
+    Route::get('howItWork-mainStep/edit/{id}','HowItWorkStepsController@Edit');
+    Route::post('howItWork-mainStep/postEdit','HowItWorkStepsController@postEdit');
+    Route::get('howItWork-mainStep/add','HowItWorkStepsController@Add');
+    Route::post('howItWork-mainStep/postAdd','HowItWorkStepsController@postAdd');
+    Route::get('howItWork-mainStep/delete/{id}','HowItWorkStepsController@Delete'); 
+        #/ How It Work Sub Steps/#
+    Route::get('howItWork-subSteps/{id}','HowItWorkStepsController@ShowSubSteps');
+    Route::get('howItWork-subStep/{mainStep}/edit/{id}','HowItWorkSubStepsController@Edit');
+    Route::post('howItWork-subStep/postEdit','HowItWorkSubStepsController@postEdit');
+    Route::get('howItWork-subStep/{mainStep}/add','HowItWorkSubStepsController@Add');
+    Route::post('howItWork-subStep/postAdd','HowItWorkSubStepsController@postAdd');
+    Route::get('howItWork-subStep/delete/{id}','HowItWorkSubStepsController@Delete');
+        #/ Products Routes/#
+    Route::get('products','ProductController@Products');
+    Route::get('product/edit/{id}','ProductController@Edit');
+    Route::post('product/postEdit','ProductController@postEdit');
+    Route::get('product/add','ProductController@Add');
+    Route::post('product/postAdd','ProductController@postAdd');
+    Route::get('product/delete/{id}','ProductController@Delete');
+   
+
 });
 
 

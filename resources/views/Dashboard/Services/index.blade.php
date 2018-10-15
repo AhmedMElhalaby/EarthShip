@@ -29,6 +29,7 @@
                                         <th>Name</th>
                                         <th>Description</th>
                                         <th>Price</th>
+                                        <th>Image</th>
                                         <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
@@ -38,6 +39,8 @@
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->description}}</td>
                                         <td>{{$item->price}}</td>
+                                        <td>
+                                            <img src="{{asset($item->image)}}" width="130" height="85"/> </td>
                                         <td class="text-center">
                                             <a href="{{url('admin/service/edit/'.$item->id)}}" class="text-primary" ><i class="ti-pencil-alt"></i></a>
                                             <a href="" class="text-danger" data-toggle="modal" data-target="#DeleteService{{$item->id}}"><i class="ti-trash"></i></a>

@@ -8,7 +8,7 @@
                     <div class="bgc-white p-20 bd">
                         <h6 class="c-grey-900">Add Service</h6>
                         <div class="mT-30">
-                            <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/service/postAdd') }}">
+                            <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/service/postAdd') }}"  enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                     <label for="name">Name</label>
@@ -30,13 +30,22 @@
                                 </div>
                                 <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
                                     <label for="price">price</label>
-                                    <input type="number" class="form-control" id="price" name="price"  value="{{ old('price') }}">
+                                    <input type="text" class="form-control" id="price" name="price"  value="{{ old('price') }}">
                                     @if ($errors->has('price'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('price') }}</strong>
                                         </span>
                                     @endif
                                 </div> 
+                                <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+                                        <label for="image">Image</label>
+                                        <input type="file" class="form-control" id="image" name="image" required value="{{ old('image') }}" >
+                                        @if ($errors->has('image'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('image') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
                                 <button type="submit" class="btn btn-primary"> Save </button>
                                 <a href="{{url('admin/services')}}" role="button" class="btn btn-danger"> Cancel </a>
                             </form>

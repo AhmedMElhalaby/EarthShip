@@ -8,7 +8,7 @@
                     <div class="bgc-white p-20 bd">
                         <h6 class="c-grey-900">Edit Service </h6>
                         <div class="mT-30">
-                            <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/service/postEdit') }}">
+                            <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/service/postEdit') }}"  enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="id" value="{{$Service->id}}">
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -30,11 +30,20 @@
                                     @endif
                                 </div>
                                 <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
-                                    <label for="price">Price</label>
+                                    <label for="text">Price</label>
                                     <input type="text" class="form-control" id="price" name="price"  value="{{ $Service->price  }}">
                                     @if ($errors->has('price'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('price') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+                                    <label for="image">Service Image</label>
+                                    <input type="file" class="form-control" id="image" name="image"  value="{{ $Service->image  }}">
+                                    @if ($errors->has('image'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('image') }}</strong>
                                         </span>
                                     @endif
                                 </div>

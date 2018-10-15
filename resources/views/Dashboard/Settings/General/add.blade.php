@@ -7,6 +7,12 @@
                 <div class="masonry-item col-md-12">
                     <div class="bgc-white p-20 bd">
                         <h6 class="c-grey-900">Add Setting</h6>
+                        <div class="info-note">
+                            <p class="info-note-p"><strong>Be Careful!</strong> If Your setting Value is an image  : <br/>
+                                1. Save Image in [ <span class="text-danger"> public\app-images\settings  </span>] , if settings folder not found create it. <br/>
+                                2. Save Setting Value as [ public\app-images\settings\<span class="text-danger">Your image</span> ] .
+                            </p>
+                        </div>
                         <div class="mT-30">
                             <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/setting/postAdd') }}">
                                 {{ csrf_field() }}
