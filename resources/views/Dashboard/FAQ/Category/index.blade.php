@@ -37,12 +37,12 @@
                                 @foreach($FaqCategories as $item)
                                     <tr>
                                         <td>
-                                            <img src="/Earthship/{{$item->icon}}"  width="35" height="35"/>
+                                            <img src="{{asset($item->icon)}}"  width="35" height="35"/>
                                         </td>
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->description}}</td>
                                         <td>
-                                            <img src="/Earthship/{{$item->image}}"  width="75" height="75"/>
+                                            <img src="{{asset($item->image)}}"  width="75" height="75"/>
                                         </td>
                                         <td class="text-center">
                                             <a href="{{url('admin/faq-category-question/'.$item->id)}}" class="text-success" title="Show Category Questions" ><i class="ti-eye"></i></a>

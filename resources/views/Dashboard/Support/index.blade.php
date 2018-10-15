@@ -46,13 +46,13 @@
                                             <a title="Download "
                                                class="btn btn-xs text-primary ti ti-download"
                                                target="_self" 
-                                               href="/Earthship/{{$item->attachment}}" 
-                                               download="/Earthship/{{$item->attachment}}">
+                                               href="{{asset($item->attachment)}}" 
+                                               download="{{asset($item->attachment)}}">
                                             </a>
                                             <a title="Show "
                                                class="btn btn-xs text-primary ti ti-eye"
                                                target="_self" 
-                                               href="/Earthship/{{$item->attachment}}" 
+                                               href="{{asset($item->attachment)}}" 
                                                on-click="window.open({{$item->attachment}},'_blank');">
                                             </a>
                                         </td>
@@ -103,8 +103,8 @@
             </div>
         </div>
     </main>
-    <!-- <a href="{{url('admin/support/add')}}" id="myBtn">
+    <a href="{{url('admin/support/add')}}" id="myBtn">
         <i class="ti-plus mt-5"></i>
-    </a> -->
+    </a> 
 
 @endsection

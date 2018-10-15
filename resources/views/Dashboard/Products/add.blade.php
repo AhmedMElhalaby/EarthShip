@@ -6,9 +6,9 @@
                 {{--<div class="masonry-sizer col-md-6"></div>--}}
                 <div class="masonry-item col-md-12">
                     <div class="bgc-white p-20 bd">
-                        <h6 class="c-grey-900">Add Service</h6>
+                        <h6 class="c-grey-900">Add Product</h6>
                         <div class="mT-30">
-                            <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/service/postAdd') }}"  enctype="multipart/form-data">
+                            <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/product/postAdd') }}"  enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                     <label for="name">Name</label>
@@ -19,12 +19,12 @@
                                         </span>
                                     @endif
                                 </div> 
-                                <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                                    <label for="description">description</label>
-                                    <input type="text" class="form-control" id="description" name="description"  value="{{ old('description') }}">
-                                    @if ($errors->has('description'))
+                                <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
+                                    <label for="url">url</label>
+                                    <input type="text" class="form-control" id="url" name="url"  value="{{ old('url') }}">
+                                    @if ($errors->has('url'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('description') }}</strong>
+                                            <strong>{{ $errors->first('url') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -45,9 +45,18 @@
                                                 <strong>{{ $errors->first('image') }}</strong>
                                             </span>
                                         @endif
-                                    </div>
+                                </div>
+                                <div class="form-group{{ $errors->has('notes') ? ' has-error' : '' }}">
+                                        <label for="notes">Notes</label>
+                                        <input type="text" class="form-control" id="notes" name="notes"  value="{{ old('notes') }}">
+                                        @if ($errors->has('notes'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('notes') }}</strong>
+                                            </span>
+                                        @endif
+                                </div> 
                                 <button type="submit" class="btn btn-primary"> Save </button>
-                                <a href="{{url('admin/services')}}" role="button" class="btn btn-danger"> Cancel </a>
+                                <a href="{{url('admin/products')}}" role="button" class="btn btn-danger"> Cancel </a>
                             </form>
                         </div>
                     </div>

@@ -7,11 +7,22 @@
     <link rel="stylesheet" type="text/css" href="{{asset('public/home/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/home/css/font-awesome.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/home/css/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('public/home/css/slick.css')}}"><link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-                                                                      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/home/css/slick.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"  >
     <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.eng.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> -->
+    
+    <!-- custome style -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/home/css/price-style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/home/css/pricre-responsive.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/home/css/prohibited-and-limited.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/home/css/prohibited-and-limited-responsive.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/home/css/style.css')}} ">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/home/css/calculator.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/home/css/how-it-work.css')}}">
+
     @yield('style')
 
 </head>
@@ -69,10 +80,10 @@
             <div class="right">
                 <ul>
                     <li>
-                        <a href="">Services & Prices</a>
+                        <a href="{{url('services-prices')}}">Services & Prices</a>
                     </li>
                     <li>
-                        <a href="">How it works</a>
+                    <a href="{{url('how-it-work')}}">How it works</a>
                     </li>
                     @if(!Auth::guard('user')->check())
                     <li class="login">

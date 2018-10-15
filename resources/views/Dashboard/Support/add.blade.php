@@ -10,6 +10,7 @@
                         <div class="mT-30">
                             <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/support/postAdd') }}" enctype="multipart/form-data">
                                 {{ csrf_field() }}
+                                <input type="hidden" name="user_id" value="{{Auth::guard('admin')->user()->id}}">
                                 <div class="form-group{{ $errors->has('subject') ? ' has-error' : '' }}">
                                     <label for="subject">Subject</label>
                                     <input type="text" class="form-control" id="subject" name="subject"  value="{{ old('subject') }}">

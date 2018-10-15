@@ -8,6 +8,7 @@
                         <div class="bgc-white bd bdrs-3 p-20 mB-20">
                             <h4 class="c-grey-900 mB-20">
                                 Reply For / [ <span class="text-primary">{{$Support->subject}}  </span> ] 
+                                <a href="{{url('admin/support')}}" role="button" class="btn btn-info pull-right"> <span class="ti ti-control-backward"> </span> </a>
                             </h4>
                             <center>
                                 <div class="col-md-10">
@@ -19,7 +20,7 @@
                                         <li class="other">
                                             <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
                                             <div class="msg">
-                                                <img src="/Earthship/{{$Support->attachment}}" width="250" height="300" />
+                                                <img src=" {{asset($Support->attachment)}} " width="250" height="300" />
                                                 <p class="text-success">{{$Support->supportType->type}}</p>
                                                 <p class="text-muted">{{$Support->detail}}</p>
                                                 <time>{{$Support->created_at}}</time>

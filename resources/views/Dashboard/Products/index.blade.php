@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                            <h4 class="c-grey-900 mB-20">Services</h4>
+                            <h4 class="c-grey-900 mB-20">Products</h4>
                             @if(session('success'))
                                 <div class="alert alert-success" role="alert">
                                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
@@ -26,27 +26,28 @@
                             <table id="dataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
                                         <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Url</th>
+                                        <th>Price</th>
+                                        <th>Notes</th>
                                         <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($Services as $item)
+                                @foreach($Products as $item)
                                     <tr>
+                                        <td><img src="{{asset($item->image)}}" width="130" height="85"/> </td>
                                         <td>{{$item->name}}</td>
-                                        <td>{{$item->description}}</td>
+                                        <td>{{$item->url}}</td>
                                         <td>{{$item->price}}</td>
-                                        <td>
-                                            <img src="{{asset($item->image)}}" width="130" height="85"/> </td>
+                                        <td>{{$item->notes}}</td>
                                         <td class="text-center">
-                                            <a href="{{url('admin/service/edit/'.$item->id)}}" class="text-primary" ><i class="ti-pencil-alt"></i></a>
-                                            <a href="" class="text-danger" data-toggle="modal" data-target="#DeleteService{{$item->id}}"><i class="ti-trash"></i></a>
+                                            <a href="{{url('admin/product/edit/'.$item->id)}}" class="text-primary" ><i class="ti-pencil-alt"></i></a>
+                                            <a href="" class="text-danger" data-toggle="modal" data-target="#DeleteProduct{{$item->id}}"><i class="ti-trash"></i></a>
                                         </td>
                                     </tr>
-                                    <div class="modal fade" id="DeleteService{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="DeleteProduct{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -60,7 +61,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <a href="{{url('admin/service/delete/'.$item->id)}}" class="btn btn-danger">Yes, Delete it</a>
+                                                    <a href="{{url('admin/product/delete/'.$item->id)}}" class="btn btn-danger">Yes, Delete it</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,7 +76,7 @@
             </div>
         </div>
     </main>
-    <a href="{{url('admin/service/add')}}" id="myBtn">
+    <a href="{{url('admin/product/add')}}" id="myBtn">
         <i class="ti-plus mt-5"></i>
     </a>
 
