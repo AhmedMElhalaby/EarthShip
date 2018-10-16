@@ -38,7 +38,7 @@
                                     @endif
                                 </div>
                                 <button type="submit" class="btn btn-primary"> Save </button>
-                                <a href="{{url('admin/howItWork-mainStep')}}" role="button" class="btn btn-danger"> Cancel </a>
+                                <a href="{{url('admin/howItWork-mainSteps/')}}" role="button" class="btn btn-danger"> Cancel </a>
                             </form>
                         </div>
                     </div>

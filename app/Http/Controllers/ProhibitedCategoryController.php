@@ -22,9 +22,7 @@ class ProhibitedCategoryController extends Controller
         return view('Dashboard.Prohibitions.Category.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(ProhibitedCategory::$rules);
-        $new = (new ProhibitedCategory)->CreateProhibitedCategory($request);
-        return redirect('admin/prohibited-category/')->withSuccess('Successful Added!');;
+        return(ProhibitedCategory::saveProhibitedCategory($request->all(), null));
     }
     public function Edit($id){
         $ProhibitedCategory = ProhibitedCategory::where('id',$id)->first();
@@ -32,24 +30,21 @@ class ProhibitedCategoryController extends Controller
         return view('Dashboard.Prohibitions.Category.edit',compact('ProhibitedCategory','Items'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(ProhibitedCategory::$rules);
-        $new = (new ProhibitedCategory)->UpdateProhibitedCategory($request);
-        return redirect('admin/prohibited-category/')->withInfo('Successful Updated!');;
+        return(ProhibitedCategory::saveProhibitedCategory($request->all(),  $request->id));
     }
     public function Delete($id){
-        $ProhibitedCategory = ProhibitedCategory::with('items')->find($id);
-        if($ProhibitedCategory){
+        $ProhibitedCategory = ProhibitedCategory::where('id',$id)->first();
+        if (ProhibitedCategory::destroy($id)) {
             $ProhibitedCategory->items()->delete();
+            unlink($ProhibitedCategory->image);
+            return redirect('admin/prohibited-category/')->withSuccess('Product Successfully Deleted!');
         }
-        unlink($ProhibitedCategory->image);
-        $ProhibitedCategory->delete();
-        return redirect('admin/prohibited-category/')->withDanger('Successful Deleted!');;
+        return redirect('admin/prohibited-category/')->withDanger('Failed Delete Product !');
     }
 
     
     public function ShowCategoryItems($id){
         $ProhibitedCategory = ProhibitedCategory::where('id',$id)->first();
-        $ProhibitedCategory = ProhibitedCategory::with('items')->find($id); 
         $countries = Country::All();
         return view('Dashboard.Prohibitions.Item.index',compact('ProhibitedCategory','countries'));        
     }

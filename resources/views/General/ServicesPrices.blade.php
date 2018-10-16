@@ -14,60 +14,30 @@
         <section id="cards">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="general-card card1">
-                            <div class="top">
-                                <h3>Standard</h3>
-                                <h1>FREE</h1>
-                            </div>
-                            <div class="description">
-                                <p>
-                                    for people who want to try<br> Shipito for as long as they like 
-                                </p>
-                                <h3>Standard includes:</h3>
-                                <ul>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Your own U.S. Address</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Your own E.U. Address</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;3 free photos of each package</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Save up to 80% on shipping</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Free storage up to 180 days</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Multiple shipping options for each country</li>
-                                    <li class="false"><i class="fa fa-times-circle"></i>&ensp;Tax-free shipping in the U.S.*</li>
-                                    <li class="false"><i class="fa fa-times-circle"></i>&ensp;Combine your packages for more savings*</li>
-                                    <li class="false"><i class="fa fa-times-circle"></i>&ensp;Multi-package shipments</li>
-                                </ul>
-                                <div class="sign">
-                                    <button href="" class="btn">sign up free</button>
+                    @foreach ($memberships as $membership)
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="general-card card1">
+                                <div class="top">
+                                    <h3>{{$membership->name}}</h3>
+                                    <h1>{{$membership->price}}</h1>
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        for people who want to try<br> Shipito for as long as they like 
+                                    </p>
+                                    <h3>{{$membership->name}} includes:</h3>
+                                    <ul>
+                                        @foreach ($membership->features as $item)
+                                        <li class="true"><i class="fa fa-check-circle"></i>&ensp;{{$item->feature->name}}</li>
+                                        @endforeach
+                                    </ul>
+                                    <div class="sign">
+                                        <button href="{{url('how-it-work')}} " class="btn">sign up free</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="general-card card2">
-                            <div class="top">
-                                <h3>Premium</h3>
-                                <h1><sup>$</sup>10<span>/ month</span></h1>
-                            </div>
-                            <div class="description padding">
-                                <h3>Premium includes:</h3>
-                                <ul>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Your own U.S. Address</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Your own E.U. Address</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;3 free photos of each package</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Save up to 80% on shipping</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Free storage up to 180 days</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Multiple shipping options for each country</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Tax-free shipping in the U.S.*</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Combine your packages for more savings*</li>
-                                    <li class="true"><i class="fa fa-check-circle"></i>&ensp;Multi-package shipments</li>
-                                </ul>
-                                <div class="sign">
-                                    <button href="" class="btn">Become Premium</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>

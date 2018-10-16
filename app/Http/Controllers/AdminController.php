@@ -20,22 +20,19 @@ class AdminController extends Controller
         return view('Dashboard.Admins.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(Admin::$rules);
-        $new = (new Admin)->CreateAdmin($request);
-        return redirect('admin/admins');
+        return(Admin::saveAdmin($request->all(), null));
     }
     public function Edit($id){
         $Admin = Admin::where('id',$id)->first();
         return view('Dashboard.Admins.edit',compact('Admin'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Admin::$rules);
-        $new = (new Admin)->UpdateAdmin($request);
-        return redirect('admin/admins');
+        return(Admin::saveAdmin($request->all(), $request->id));
     }
     public function Delete($id){
-        $Admin = Admin::where('id',$id)->first();
-        $Admin->delete();
-        return redirect('admin/admins');
+        if (Admin::destroy($id)) {
+            return redirect('admin/admins')->withSuccess('Admin Successfully Deleted!');
+        }
+        return redirect('admin/admins')->withDanger('Failed Delete Admin !');
     }
 }

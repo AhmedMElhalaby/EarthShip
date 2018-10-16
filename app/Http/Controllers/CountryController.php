@@ -22,23 +22,19 @@ class CountryController extends Controller
         return view('Dashboard.Countries.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(Country::$rules);
-        $new = (new Country)->CreateCountry($request);
-        return redirect('admin/countries/')->withSuccess('Successful Added!');
-        
+        return(Country::saveCountry($request->all(), null));       
     }
     public function Edit($id){
         $Country = Country::where('id',$id)->first();
         return view('Dashboard.Countries.edit',compact('Country'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Country::$rules);
-        $new = (new Country)->UpdateCountry($request);
-        return redirect('admin/countries/')->withInfo('Successful Updated!');
+        return(Country::saveCountry($request->all(), $request->id));
     }
     public function Delete($id){
-        $Country = Country::where('id',$id)->first();
-        $Country->delete();
-        return redirect('admin/countries/')->withDanger('Successful Deleted!');
+        if (Country::destroy($id)) {
+            return redirect('admin/countries/')->withSuccess('Country Successfully Deleted!');
+        }
+        return redirect('admin/countries/')->withDanger('Failed Delete Country !');
     }
 }

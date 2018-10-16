@@ -16,23 +16,21 @@ class HowItWorkSubStepsController extends Controller
         return view('Dashboard.HowItWork.SubSteps.add',compact('id'));
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(HowItWorkSubStep::$rules);
-        $new = (new HowItWorkSubStep)->CreateSubStep($request);
-        return redirect('admin/howItWork-subSteps/'.$request->parent_step)->withSuccess('Successful Added!');;
+        return(HowItWorkSubStep::saveSubStep($request->all(), null));
     }
     public function Edit($mainStep,$id){
         $HowItWorkSubStep = HowItWorkSubStep::where('id',$id)->first();
         return view('Dashboard.HowItWork.SubSteps.edit',compact('HowItWorkSubStep','mainStep'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(HowItWorkSubStep::$rules);
-        $new = (new HowItWorkSubStep)->UpdateSubStep($request);
-        return redirect('admin/howItWork-subSteps/'.$request->parent_step)->withInfo('Successful Updated!');
+        return(HowItWorkSubStep::saveSubStep($request->all(), $request->id));
     }
     public function Delete($id){
         $HowItWorkSubStep = HowItWorkSubStep::where('id',$id)->first();
         $parent_step=$HowItWorkSubStep->parent_step ;
-        $HowItWorkSubStep->delete();
-        return redirect('admin/howItWork-subSteps/'.$parent_step)->withDanger('Successful Deleted!');;
+        if (HowItWorkSubStep::destroy($id)) {
+            return redirect('admin/howItWork-subSteps/'.$membershipID)->withSuccess('How It Work-sub Step Successfully Deleted!');
+        }
+        return redirect('admin/howItWork-subSteps/'.$membershipID)->withDanger('Failed Delete How It Work-sub Step  !');
     }
 }

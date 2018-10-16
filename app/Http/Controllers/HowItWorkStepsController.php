@@ -21,9 +21,7 @@ class HowItWorkStepsController extends Controller
         return view('Dashboard.HowItWork.MainSteps.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(HowItWorkStep::$rules);
-        $new = (new HowItWorkStep)->CreateMainStep($request);
-        return redirect('admin/howItWork-mainSteps/')->withSuccess('Successful Added!');;
+        return(HowItWorkStep::saveMainStep($request->all(), null));
     }
     public function Edit($id){
         $HowItWorkStep = HowItWorkStep::where('id',$id)->first();
@@ -31,24 +29,23 @@ class HowItWorkStepsController extends Controller
         return view('Dashboard.HowItWork.MainSteps.edit',compact('HowItWorkStep','subSteps'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(HowItWorkStep::$rules);
-        $new = (new HowItWorkStep)->UpdateMainStep($request);
-        return redirect('admin/howItWork-mainSteps/')->withInfo('Successful Updated!');;
+        return(HowItWorkStep::saveMainStep($request->all(), $request->id));
     }
     public function Delete($id){
         $HowItWorkStep = HowItWorkStep::with('subSteps')->find($id);
         if($HowItWorkStep){
             $HowItWorkStep->subSteps()->delete();
+            unlink($HowItWorkStep->image);
+            $HowItWorkStep->delete();
+            return redirect('admin/howItWork-mainSteps/')->withSuccess('How It WorkStep Category Successfully Deleted!');
         }
-        unlink($HowItWorkStep->image);
-        $HowItWorkStep->delete();
-        return redirect('admin/howItWork-mainSteps/')->withDanger('Successful Deleted!');;
+        return redirect('admin/howItWork-mainSteps/')->withDanger('Successfully Delete How It WorkStep !');
+     
     }
 
     
     public function ShowSubSteps($id){
         $HowItWorkStep = HowItWorkStep::where('id',$id)->first();
-        $subSteps = HowItWorkStep::with('subSteps')->find($id); 
         return view('Dashboard.HowItWork.SubSteps.index',compact('HowItWorkStep'));        
     }
 

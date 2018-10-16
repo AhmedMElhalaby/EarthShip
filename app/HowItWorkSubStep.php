@@ -3,57 +3,70 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Http\Helpers;
+use Session ;
 
 class HowItWorkSubStep extends Model
 {
     protected $table = 'how_it_work_sub_steps';
-
-    public static $rules =[
-        'parent_step' => 'required',
-        'title' => 'required',
-        'description' => 'required',
-        
-    ];
-
-    protected $fillable = [
-        'parent_step','title', 'description','image'
-    ];
-
+    protected $fillable = ['parent_step','title', 'description','image'];
+    protected $hidden = ['created_at','updated_at']; 
+    protected static $rules;
     
+    public static function getValidatorRules(){
+        if (!self::$rules) {
+            self::$rules = array(
+                'parent_step' => 'required',
+                'title' => 'required',
+                'description' => 'required',
+            );
+        }
+        return self::$rules;
+    }
+
     public function parent(){
         return $this->belongsTo('App\HowItWorkStep');
     }
 
-    public function CreateSubStep($request){
-        if ($request->hasFile('image')) {
-            $step_image = $request->file('image');
-            $step_image_name = $step_image->getClientOriginalName();
-            $destinationPath_Img = "public/app-images/how-it-work/sub-steps/";
-            $step_image->move($destinationPath_Img, $step_image_name);            
+    public static function saveSubStep($attributes,$id){
+        $validator = Helpers::isValid($attributes,self::getValidatorRules());
+        if(!is_null($validator)){
+            Session::flash('danger', $validator);
         }
-        $new = HowItWorkSubStep::create(array(
-            'parent_step'=>$request->parent_step,
-            'title'=>$request->title,
-            'description'=>$request->description,
-            'image'=>'public/app-images/how-it-work/sub-steps/'.$step_image_name ,
-        ));
+        if (\Request::hasFile('image')) {
+            $image = \Request::file('image');
+            $name = $image->getClientOriginalName();
+            $destinationPath = "public/app-images/how-it-work/sub-steps/";
+            $image->move($destinationPath, $name);            
+        }
+        if(is_null($id)){
+            $SubStep =new HowItWorkSubStep();
+            $SubStep->image='public/app-images/how-it-work/sub-steps/'.$name ;
+            $SubStep->created_at = date('Y-m-d H:i:s');
+        }else{
+            $SubStep = self::findOrFail($id);
+            $SubStep->updated_at = date('Y-m-d H:i:s');
+        }
+
+        $inputs = ['parent_step','title', 'description'];
+        foreach ($attributes as $key => $value) {
+            if (in_array($key, $inputs)) {
+                if($key =="image"){
+                    $SubStep->image='public/app-images/how-it-work/sub-steps/'.$name ;
+                }
+                if ( $value != "" ) {
+                    $SubStep->$key=$value;
+
+                }
+            }
+        }
+
+       if($SubStep->save()){
+            return redirect('admin/howItWork-subSteps/'.$attributes['parent_step'])->withSuccess('Operation Accomplished Successfully!');
+        }
+        return redirect('admin/howItWork-subSteps/'.$attributes['parent_step'])->withDanger('An Error Occurred During Execution!');
+
     }
-    public static function UpdateSubStep($request){
-        $SubStep = HowItWorkSubStep::where('id',$request->id)->first();
-        if(empty($request->image)){
-            $image = $SubStep->image ;
-        }
-        else{
-            $Imgfile = $request->file('image');
-            $image = $Imgfile->getClientOriginalName();
-            $destinationPath_Img = "public/app-images/how-it-work/sub-steps/";
-            $Imgfile->move($destinationPath_Img, $image); 
-        }
-        $SubStep->update(array(
-            'parent_step'=>$request->parent_step,
-            'title'=>$request->title,
-            'description'=>$request->description,
-            'image'=>'public/app-images/how-it-work/sub-steps/'.$image ,
-        ));
-    }
+
+
 }

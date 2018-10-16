@@ -22,23 +22,20 @@ class ProductController extends Controller
         return view('Dashboard.Products.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(Product::$rules);
-        $new = (new Product)->CreateProduct($request);
-        return redirect('admin/products')->withSuccess('Successful Added!');
+        return(Product::saveProduct($request->all(), null));
     }
-
     public function Edit($id){
         $Product = Product::where('id',$id)->first();
         return view('Dashboard.Products.edit',compact('Product'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Product::$rules);
-        $new = (new Product)->UpdateProduct($request);
-        return redirect('admin/products')->withInfo('Successful Updated!');
+        return(Product::saveProduct($request->all(), $request->id));
     }
+
     public function Delete($id){
-        $Product = Product::where('id',$id)->first();
-        $Product->delete();
-        return redirect('admin/products')->withDanger('Successful Deleted!');
+        if (Product::destroy($id)) {
+            return redirect('admin/products')->withSuccess('Product Successfully Deleted!');
+        }
+        return redirect('admin/products')->withDanger('Failed Delete Product !');
     }
 }

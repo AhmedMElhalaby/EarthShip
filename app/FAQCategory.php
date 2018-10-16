@@ -3,79 +3,79 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Model\FAQQuestion;
+use App\Http\Helpers;
+use Session ;
 
 class FAQCategory extends Model
 {
     protected $table = 'faq_category';
-
-    public static $rules =[
-        'name' => 'required',
-        'description' => 'required',        
-    ];
-
-    protected $fillable = [
-        'name','description','image','icon',
-    ];
-
-
+    protected $fillable = ['name','description','image','icon'];
+    protected $hidden = ['created_at','updated_at']; 
+    protected static $rules;
+    
+    public static function getValidatorRules(){
+        if (!self::$rules) {
+            self::$rules = array(
+                'name' => 'required',
+                'description' => 'required',
+            );
+        }
+        return self::$rules;
+    }
+    
     public function questions(){
         return $this->hasMany('App\FAQQuestion','faq_category_id','id');
     }
 
-    public function CreateFAQCategory($request){
-        if ($request->hasFile('image')) {
-            $category_image = $request->file('image');
-            $category_image_name = $category_image->getClientOriginalName();
-            $destinationPath_Img = "public/app-images/faq/img";
-            $category_image->move($destinationPath_Img, $category_image_name);            
+    public static function saveFAQCategory($attributes,$id){
+        $validator = Helpers::isValid($attributes,self::getValidatorRules());
+        if(!is_null($validator)){
+            Session::flash('danger', $validator);
         }
-        if ($request->hasFile('icon')) {
-            $category_icon = $request->file('icon');
-            $category_icon_name = $category_icon->getClientOriginalName();
-            $destinationPath_Icon = "public/app-images/faq/icon";
-            $category_icon->move($destinationPath_Icon, $category_icon_name);            
+        if (\Request::hasFile('image')) {
+            $image = \Request::file('image');
+            $image_name = $image->getClientOriginalName();
+            $destinationPath = "public/app-images/faq/img/";
+            $image->move($destinationPath, $image_name);            
         }
-        $new = FAQCategory::create(array(
-            'name'=>$request->name,
-            'description'=>$request->description,
-            'image'=>'public/app-images/faq/img/'.$category_image_name ,
-            'icon'=>'public/app-images/faq/icon/'.$category_icon_name 
-        ));
+        if (\Request::hasFile('icon')) {
+            $icon = \Request::file('icon');
+            $icon_name = $icon->getClientOriginalName();
+            $destinationPath = "public/app-images/faq/icon/";
+            $icon->move($destinationPath, $icon_name);            
+        }
+        if(is_null($id)){
+            $FAQCategory =new FAQCategory();
+            $FAQCategory->image='public/app-images/faq/img/'.$image_name ;
+            $FAQCategory->icon='public/app-images/faq/icon/'.$icon_name ;
+            $FAQCategory->created_at =date('Y-m-d H:i:s');
+        }else{
+            $FAQCategory = self::findOrFail($id);
+            $FAQCategory->updated_at =date('Y-m-d H:i:s');
+        }
+
+        $inputs = ['name','description'];
+        foreach ($attributes as $key => $value) {
+            if (in_array($key, $inputs)) {
+                if($key =="image"){
+                    $FAQCategory->image='public/app-images/faq/img/'.$image_name ;
+                }
+                if($key =="icon"){
+                    $FAQCategory->icon='public/app-images/faq/icon/'.$icon_name ;
+                }
+                if ( $value != "" ) {
+                    $FAQCategory->$key=$value;
+                }
+            }
+        }
+
+       if($FAQCategory->save()){
+            return redirect('admin/faq-category/')->withSuccess('Operation Accomplished Successfully!');
+        }
+        return redirect('admin/faq-category/')->withDanger('An Error Occurred During Execution!');
+
     }
 
-
-
-
-    public static function UpdateFAQCategory($request){
-        $FAQCategory = FAQCategory::where('id',$request->id)->first();
-        if(empty($request->image)){
-            $image = $FAQCategory->image ;
-        }
-        else{
-            $Imgfile = $request->file('image');
-            $image = $Imgfile->getClientOriginalName();
-            $destinationPath_Img = "public/app-images/faq/img";
-            $Imgfile->move($destinationPath_Img, $image); 
-        }
-
-        if(empty($request->icon)){
-            $icon = $FAQCategory->icon ;
-        }
-        else{
-            $Iconfile = $request->file('icon');
-            $icon = $Iconfile->getClientOriginalName();
-            $destinationPath_Icon = "public/app-images/faq/img";
-            $Iconfile->move($destinationPath_Icon, $icon); 
-        }
-        
-        $FAQCategory->update(array(
-            'name'=>$request->name,
-            'description'=>$request->description,
-            'image'=> 'public/app-images/faq/img/'.$image ,
-            'icon'=>  'public/app-images/faq/icon/'.$icon 
-        ));
-    }
 
 
 }

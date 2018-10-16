@@ -16,23 +16,22 @@ class ProhibitedItemController extends Controller
         return view('Dashboard.Prohibitions.Item.add',compact('id'));
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(ProhibitedItem::$rules);
-        $new = (new ProhibitedItem)->CreateProhibitedItem($request);
-        return redirect('admin/prohibited-category-item/'.$request->category_id)->withSuccess('Successful Added!');;
+        return(ProhibitedItem::saveProhibitedItem($request->all(), null));
     }
     public function Edit($category,$id){
         $ProhibitedItem = ProhibitedItem::where('id',$id)->first();
         return view('Dashboard.Prohibitions.Item.edit',compact('category','ProhibitedItem'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(ProhibitedItem::$rules);
-        $new = (new ProhibitedItem)->UpdateProhibitedItem($request);
-        return redirect('admin/prohibited-category-item/'.$request->category_id)->withInfo('Successful Updated!');
+        return(ProhibitedItem::saveProhibitedItem($request->all(), $request->id));
     }
     public function Delete($id){
         $ProhibitedItem = ProhibitedItem::where('id',$id)->first();
         $category=$ProhibitedItem->category_id ;
-        $ProhibitedItem->delete();
-        return redirect('admin/prohibited-category-item/'.$category)->withDanger('Successful Deleted!');;
+        if (ProhibitedItem::destroy($id)) {
+            $ProhibitedItem->limitedItems()->delete();
+            return redirect('admin/prohibited-category-item/'.$category)->withSuccess('Product Successfully Deleted!');
+        }
+        return redirect('admin/prohibited-category-item/'.$category)->withDanger('Failed Delete Product !');
     }
 }

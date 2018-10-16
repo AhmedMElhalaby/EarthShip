@@ -33,7 +33,6 @@
                                         <th>Post Code</th>
                                         <th>Country</th>
                                         <th>Permission</th>
-                                        <th>Created at</th>
                                         <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
@@ -53,7 +52,6 @@
                                             <span class="text-danger">Premium </span>
                                             @endif
                                         </td>
-                                        <td>{{$item->created_at->format('Y-m-d')}}</td>
                                         <td class="text-center">
                                             <a href="{{url('admin/address/edit/'.$item->id)}}" class="text-primary" ><i class="ti-pencil-alt"></i></a>
                                             <a href="" class="text-danger" data-toggle="modal" data-target="#DeleteAddress{{$item->id}}"><i class="ti-trash"></i></a>
