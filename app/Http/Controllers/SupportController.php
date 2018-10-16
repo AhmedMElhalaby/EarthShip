@@ -21,9 +21,7 @@ class SupportController extends Controller
         return view('Dashboard.Support.add',compact('SupportTypes'));
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(Support::$rules);
-        Support::CreateSupport($request);
-        return redirect('admin/support/')->withSuccess('Successful Added!');
+        return(Support::saveSupport($request->all(), null));
     }
     public function Edit($id){
         $Support = Support::where('id',$id)->first();
@@ -31,15 +29,15 @@ class SupportController extends Controller
         return view('Dashboard.Support.edit',compact('Support','SupportTypes'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Support::$rules);
-        $new = (new Support)->UpdateSupport($request);
-        return redirect('admin/support/')->withInfo('Successful Updated!');
+        return(Support::saveSupport($request->all(),  $request->id));
     }
     public function Delete($id){
         $Support = Support::where('id',$id)->first();
-        unlink($Support->attachment);
-        $Support->delete();
-        return redirect('admin/support/')->withDanger('Successful Deleted!');
+        unlink($Support->attachment);   
+        if (Support::destroy($id)) {
+            return redirect('admin/support')->withSuccess('Feature Successfully Deleted!');
+        }
+        return redirect('admin/support')->withDanger('Failed Delete Feature !');
     }
 
     public function Close($id){
@@ -58,7 +56,6 @@ class SupportController extends Controller
 
     public function Replies($id){
         $Support = Support::where('id',$id)->first();
-        $Support = Support::with('replies')->find($id); 
         return view('Dashboard.SupportReply.index',compact('Support'));        
     }
 }

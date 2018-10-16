@@ -24,9 +24,7 @@ class AddressController extends Controller
         return view('Dashboard.Addresses.add',compact('countries'));
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(Address::$rules);
-        $new = (new Address)->CreateAddress($request);
-        return redirect('admin/addresses/')->withSuccess('Successful Added!');
+        return(Address::saveAddress($request->all(), null));
     }
     public function Edit($id){
         $countries=Country::all();
@@ -34,13 +32,13 @@ class AddressController extends Controller
         return view('Dashboard.Addresses.edit',compact('Address','countries'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Address::$rules);
-        $new = (new Address)->UpdateAddress($request);
-        return redirect('admin/addresses/')->withInfo('Successful Updated!');
+        return(Address::saveAddress($request->all(),  $request->id));
     }
     public function Delete($id){
-        $Address = Address::where('id',$id)->first();
-        $Address->delete();
-        return redirect('admin/addresses/')->withDanger('Successful Deleted!');
+        if (Address::destroy($id)) {
+            return redirect('admin/addresses/')->withSuccess('Address Successfully Deleted!');
+        }
+        return redirect('admin/addresses/')->withDanger('Failed Delete Address !');
+
     }
 }

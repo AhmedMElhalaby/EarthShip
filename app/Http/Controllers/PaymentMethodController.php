@@ -22,22 +22,19 @@ class PaymentMethodController extends Controller
         return view('Dashboard.PaymentMethods.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(PaymentMethod::$rules);
-        $new = (new PaymentMethod)->CreatePaymentMethod($request);
-        return redirect('admin/payment-methods/')->withSuccess('Successful Added!');
+        return(PaymentMethod::savePaymentMethod($request->all(), null));
     }
     public function Edit($id){
         $PaymentMethod = PaymentMethod::where('id',$id)->first();
         return view('Dashboard.PaymentMethods.edit',compact('PaymentMethod'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(PaymentMethod::$rules);
-        $new = (new PaymentMethod)->UpdatePaymentMethod($request);
-        return redirect('admin/payment-methods/')->withInfo('Successful Updated!');
+        return(PaymentMethod::savePaymentMethod($request->all(), $request->id));
     }
     public function Delete($id){
-        $PaymentMethod = PaymentMethod::where('id',$id)->first();
-        $PaymentMethod->delete();
-        return redirect('admin/payment-methods/')->withDanger('Successful Deleted!');
+        if (PaymentMethod::destroy($id)) {
+            return redirect('admin/payment-methods')->withSuccess('Payment Method Successfully Deleted!');
+        }
+        return redirect('admin/payment-methods')->withDanger('Failed Delete Payment Method !');
     }
 }

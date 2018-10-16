@@ -8,6 +8,8 @@ use App\ProhibitedItem;
 use App\HowItWorkStep;
 use App\ProhibitedItemCountry ;
 use App\Service ;
+use App\Feature ;
+use App\Membership ;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -46,8 +48,10 @@ class GeneralController extends Controller
 
     public function ServicesPrices() {
         $settings = SettingCategory::all();
+        $features = Feature::all();
+        $memberships = Membership::all();
         $Services = Service::all();
-        return view('General.ServicesPrices',compact('Services','settings'));
+        return view('General.ServicesPrices',compact('Services','settings' ,'features','memberships'));
     }
 
     

@@ -21,23 +21,20 @@ class FeaturesController extends Controller
     public function Add(){
         return view('Dashboard.Features.add');
     }
-    public function postAdd(Request $request){
-        $validation = $request->validate(Feature::$rules);
-        $new = (new Feature)->CreateFeature($request);
-        return redirect('admin/features/')->withSuccess('Successful Added!');
+    public function postAdd(Request $request){ 
+        return(Feature::saveFeature($request->all(), null));
     }
     public function Edit($id){
         $Feature = Feature::where('id',$id)->first();
         return view('Dashboard.Features.edit',compact('Feature'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Feature::$rules);
-        $new = (new Feature)->UpdateFeature($request);
-        return redirect('admin/features')->withInfo('Successful Updated!');
+        return(Feature::saveFeature($request->all(), $request->id));
     }
     public function Delete($id){
-        $Feature = Feature::where('id',$id)->first();
-        $Feature->delete();
-        return redirect('admin/features')->withDanger('Successful Deleted!');
+        if (Feature::destroy($id)) {
+            return redirect('admin/features')->withSuccess('Feature Successfully Deleted!');
+        }
+        return redirect('admin/features')->withDanger('Failed Delete Feature !');
     }
 }

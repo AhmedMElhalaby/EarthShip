@@ -21,28 +21,26 @@ class SettingCategoryController extends Controller{
         return view('Dashboard.Settings.Category.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(SettingCategory::$rules);
-        $new = (new SettingCategory)->CreateSettingCategory($request);
-        return redirect('admin/settings-categories')->withSuccess('Successful Added!');
+        return(SettingCategory::saveSettingCategory($request->all(), null));
     }
     public function Edit($id){
         $SettingCategory = SettingCategory::where('id',$id)->first();
         return view('Dashboard.Settings.Category.edit',compact('SettingCategory'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(SettingCategory::$rules);
-        $new = (new SettingCategory)->UpdateSettingCategory($request);
-        return redirect('admin/settings-categories')->withInfo('Successful Updated!');
+        return(SettingCategory::saveSettingCategory($request->all(), $request->id));
     }
     public function Delete($id){
         $SettingCategory = SettingCategory::where('id',$id)->first();
-        $SettingCategory->delete();
-        return redirect('admin/settings-categories')->withDanger('Successful Deleted!');
+        if($SettingCategory){
+            $SettingCategory->settings()->delete();
+            return redirect('admin/settings-categories')->withSuccess('Successful Successfully Deleted!');
+        }
+        return redirect('admin/settings-categories')->withDanger('Successfully Delete Successful  !');
     }
 
     public function ShowCategorySettings($id){
         $SettingCategory = SettingCategory::where('id',$id)->first();
-        $SettingCategory = SettingCategory::with('settings')->find($id); 
         return view('Dashboard.Settings.General.index',compact('SettingCategory'));        
     }
 }
