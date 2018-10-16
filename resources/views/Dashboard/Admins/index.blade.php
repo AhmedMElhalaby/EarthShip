@@ -28,7 +28,6 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Created at</th>
                                         <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
@@ -37,7 +36,6 @@
                                     <tr>
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->email}}</td>
-                                        <td>{{$item->created_at->format('Y-m-d')}}</td>
                                         <td class="text-center">
                                             <a href="{{url('admin/admins/edit/'.$item->id)}}" class="text-primary" ><i class="ti-pencil-alt"></i></a>
                                             <a href="" class="text-danger" data-toggle="modal" data-target="#DeleteAdmin{{$item->id}}"><i class="ti-trash"></i></a>

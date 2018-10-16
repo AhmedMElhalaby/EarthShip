@@ -6,7 +6,7 @@
                 {{--<div class="masonry-sizer col-md-6"></div>--}}
                 <div class="masonry-item col-md-12">
                     <div class="bgc-white p-20 bd">
-                        <h6 class="c-grey-900">Edit FAQ Question </h6>
+                        <h6 class="c-grey-900">Edit Sub Step - How It Work </h6>
                         <div class="mT-30">
                             <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/howItWork-subStep/postEdit') }}" enctype="multipart/form-data">
                                 {{ csrf_field() }}
