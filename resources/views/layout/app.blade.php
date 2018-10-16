@@ -94,7 +94,7 @@
                     </li>
                     @else
                     <li class="login">
-                        <button onclick="window.location='{{url('dashboad')}}'" class="btn">Dashboard</button>
+                        <button onclick="window.location='{{url('dashboard')}}'" class="btn">Dashboard</button>
                     </li>
                     <li class="sign">
                         <button  class="btn" onclick="event.preventDefault();document.getElementById('logout-form').submit();" >

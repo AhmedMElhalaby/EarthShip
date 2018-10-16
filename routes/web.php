@@ -43,23 +43,9 @@ Route::group(['prefix' => ''], function () {
     Route::get('/password/reset/{token}', 'UserAuth\ResetPasswordController@showResetForm');
 });
 
-Route::get('GetOut', function (){
 
-        Auth::guard('user')->logout();
-    return redirect('login');
-});
 
-Route::group([
-    'middleware' => 'api',
-    'prefix' => 'auth'
-], function ($router) {
 
-    Route::post('login', 'AuthController@login');
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
-
-});
 
 Route::get('/','GeneralController@Index');
 Route::get('/prohibition','GeneralController@Prohibitions');
@@ -203,7 +189,7 @@ Route::group(['prefix' => 'admin/','middleware' => 'admin'], function () {
     Route::post('howItWork-mainStep/postEdit','HowItWorkStepsController@postEdit');
     Route::get('howItWork-mainStep/add','HowItWorkStepsController@Add');
     Route::post('howItWork-mainStep/postAdd','HowItWorkStepsController@postAdd');
-    Route::get('howItWork-mainStep/delete/{id}','HowItWorkStepsController@Delete'); 
+    Route::get('howItWork-mainStep/delete/{id}','HowItWorkStepsController@Delete');
         #/ How It Work Sub Steps/#
     Route::get('howItWork-subSteps/{id}','HowItWorkStepsController@ShowSubSteps');
     Route::get('howItWork-subStep/{mainStep}/edit/{id}','HowItWorkSubStepsController@Edit');
@@ -218,24 +204,39 @@ Route::group(['prefix' => 'admin/','middleware' => 'admin'], function () {
     Route::get('product/add','ProductController@Add');
     Route::post('product/postAdd','ProductController@postAdd');
     Route::get('product/delete/{id}','ProductController@Delete');
-   
+
 
 });
 
+//User Dashboard
+Route::get('dashboard', 'UserDashboardController@index');
+Route::get('account/membership', 'AccountUDController@membership');
+Route::get('account/preferences', 'AccountUDController@preferences');
+Route::get('account/email_news', 'AccountUDController@email_news');
+Route::get('account/package_photo', 'AccountUDController@package_photo');
+Route::get('account/content_photo', 'AccountUDController@content_photo');
+Route::get('account/detailed_photo', 'AccountUDController@detailed_photo');
+Route::get('account/open_package', 'AccountUDController@open_package');
+Route::get('account/address', 'AccountUDController@address');
+Route::get('account/names', 'AccountUDController@names');
+Route::post('account/add_name', 'AccountUDController@add_name');
+Route::post('account/delete_name', 'AccountUDController@delete_name');
+Route::get('account/wallet', 'AccountUDController@wallet');
 
+Route::get('sent-packages', 'UserDashboardController@package');
 
-
-//Api
-Route::get('api/memberships',function (){
-    return MemberShipResource::collection(MemberShip::all());
-});
-Route::get('api/memberships/feature',function (\Illuminate\Http\Request $request){
-
-    return MemberShipFeatureResource::collection(MembershipFeature::where('membership_id',$request->id)->get());
-});
-Route::get('test', function() {
-
-    Mail::send('emails.test', [], function ($message) {
-        $message->to('eng.ahmed.elhalaby@gmail.com', 'Ahmed')->subject('Welcome!');
-    });
-});
+// Expected Packages
+Route::get('expected-packages', 'ExpectedPackageController@index');
+Route::post('add/expected-packages', 'ExpectedPackageController@add');
+Route::post('edit/expected-packages', 'ExpectedPackageController@edit');
+Route::get('delete/expected-packages', 'ExpectedPackageController@delete');
+// Assisted Purchase
+Route::get('assisted-purchase', 'AssistedPurchaseController@index');
+Route::post('add/assisted-purchase', 'AssistedPurchaseController@add');
+Route::post('edit/assisted-purchase', 'AssistedPurchaseController@edit');
+Route::get('delete/assisted-purchase', 'AssistedPurchaseController@delete');
+// Support Ticket
+Route::get('support-ticket', 'SupportTicketController@index');
+Route::post('add/support-ticket', 'SupportTicketController@add');
+Route::post('edit/support-ticket', 'SupportTicketController@edit');
+Route::get('delete/support-ticket', 'SupportTicketController@delete');

@@ -70,6 +70,7 @@ class User extends Authenticatable implements JWTSubject
         'detailed_photo',
         'open_package',
         'other_instruction',
+        'email_news',
         'default_address_id',
         'balance',
         'verified',
@@ -100,6 +101,28 @@ class User extends Authenticatable implements JWTSubject
 
     public function country() {
         return  $this->belongsTo('App\Country','country_id','id');
+    }
+
+    public function AdditionalNameFirst() {
+        return AdditionalName::where('user_id',$this->id)->first();
+    }
+
+    public function AdditionalName() {
+        return AdditionalName::where('user_id',$this->id)->get();
+    }
+
+
+    public function ExpectedPackage() {
+        return ExpectedPackage::where('user_id',$this->id)->get();
+    }
+
+
+    public function AssistedPurchase() {
+        return AssistedPurchase::where('user_id',$this->id)->get();
+    }
+
+    public function Support() {
+        return Support::where('user_id',$this->id)->get();
     }
 
     public function membership() {
