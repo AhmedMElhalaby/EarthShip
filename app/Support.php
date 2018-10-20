@@ -3,30 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Helpers;
-use Session ;
 
 class Support extends Model
 {
     protected $table = 'support';
     protected $fillable = ['subject','user_id','detail','attachment','type','status','close_date'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules; 
+    public static $rules =[
+            'subject' => 'required|max:100',
+            'user_id' => 'required',
+            'detail' => 'required|max:255',
+            'type' => 'required',
+            'status' => 'required',
+            'close_date' => 'required',    
+    ];  
     
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'subject' => 'required',
-                'user_id' => 'required',
-                'detail' => 'required',
-                'type' => 'required',
-                'status' => 'required',
-                'close_date' => 'required',
-            );
-        }
-        return self::$rules;
-    }
-
     public function supportType(){
         return $this->belongsTo('App\SupportType','type','id');
     }
@@ -41,10 +32,6 @@ class Support extends Model
 
 
     public static function saveSupport($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator);
-        }
         if (\Request::hasFile('attachment')) {
             $attachment = \Request::file('attachment');
             $name = $attachment->getClientOriginalName();

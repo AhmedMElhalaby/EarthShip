@@ -3,33 +3,20 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Helpers;
-use Session ;
 
 class SupportReply extends Model
 {
     protected $table = 'support_reply';
     protected $fillable = ['support_id','sender_id','sender_type','details'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules;
-
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'support_id' => 'required',
-                'sender_id' => 'required',
-                'sender_type' => 'required',
-                'details' => 'required',
-            );
-        }
-        return self::$rules;
-    }
+    public static $rules =[
+            'support_id' => 'required',
+            'sender_id' => 'required',
+            'sender_type' => 'required',
+            'details' => 'required|max:255',
+    ];  
 
     public static function saveSupportReply($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator);
-        }
         if(is_null($id)){
             $SupportReply =new SupportReply();
             $SupportReply->created_at = date('Y-m-d H:i:s');

@@ -22,6 +22,7 @@ class ServicesController extends Controller
         return view('Dashboard.Services.add');
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(Service::$rules);
         return(Service::saveService($request->all(), null));
     }
     public function Edit($id){
@@ -29,12 +30,13 @@ class ServicesController extends Controller
         return view('Dashboard.Services.edit',compact('Service'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(Service::$rules);
         return(Service::saveService($request->all(),  $request->id));
     }
     public function Delete($id){
         if (Service::destroy($id)) {
-            return redirect('admin/services')->withSuccess('Shipping Method Successfully Deleted!');
+            return redirect('admin/services')->withSuccess('Service Successfully Deleted!');
         }
-        return redirect('admin/services')->withDanger('Failed Delete Shipping Method !');
+        return redirect('admin/services')->withDanger('Failed Delete Service !');
     }
 }

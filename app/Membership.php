@@ -3,8 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Helpers;
-use Session ;
 use App\MembershipFeature;
 
 class Membership extends Model
@@ -12,19 +10,13 @@ class Membership extends Model
     protected $table = 'membership';
     protected $fillable = ['name','price','billed'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules;
-    
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'name' => 'required',
-                'price' => 'required',
-                'billed' => 'required',
-            );
-        }
-        return self::$rules;
-    }
+    public static $rules =[
+            'name' => 'required',
+            'price' => 'required',
+            'billed' => 'required', 
 
+    ];
+   
     public function users(){
         return $this->hasMany('App\User','membership_id','id');
     }
@@ -33,10 +25,6 @@ class Membership extends Model
     }
 
     public static function saveMembership($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator);
-        }
         if(is_null($id)){
             $Membership =new Membership();
             $Membership->created_at =date('Y-m-d H:i:s');

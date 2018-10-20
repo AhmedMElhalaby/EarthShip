@@ -6,8 +6,7 @@ use App\Notifications\AdminResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Helpers;
-use Session ;
+
 
 
 class Admin extends Authenticatable
@@ -16,24 +15,13 @@ class Admin extends Authenticatable
     protected $table = 'admins';
     protected $fillable = ['name','email','password'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules;
+    public static $rules =[
+                'name'  => 'required|max:255',
+                'email' => 'required|email', 
+    ];
 
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'name'  => 'required',
-                'email' => 'required', 
-                'password' => 'required',                
-            );
-        }
-        return self::$rules;
-    }
 
     public static function saveAdmin($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator); 
-        }
         if(is_null($id)){
             $Admin =new Admin();
             $Admin->password =Hash::make($attributes['password']);

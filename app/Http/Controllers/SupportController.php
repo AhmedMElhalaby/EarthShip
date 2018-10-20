@@ -21,6 +21,7 @@ class SupportController extends Controller
         return view('Dashboard.Support.add',compact('SupportTypes'));
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(Support::$rules);
         return(Support::saveSupport($request->all(), null));
     }
     public function Edit($id){
@@ -29,15 +30,16 @@ class SupportController extends Controller
         return view('Dashboard.Support.edit',compact('Support','SupportTypes'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(Support::$rules);
         return(Support::saveSupport($request->all(),  $request->id));
     }
     public function Delete($id){
         $Support = Support::where('id',$id)->first();
         unlink($Support->attachment);   
         if (Support::destroy($id)) {
-            return redirect('admin/support')->withSuccess('Feature Successfully Deleted!');
+            return redirect('admin/support')->withSuccess('Support Successfully Deleted!');
         }
-        return redirect('admin/support')->withDanger('Failed Delete Feature !');
+        return redirect('admin/support')->withDanger('Failed Delete Support !');
     }
 
     public function Close($id){

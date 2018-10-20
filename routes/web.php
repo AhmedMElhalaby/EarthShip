@@ -165,7 +165,7 @@ Route::group(['prefix' => 'admin/','middleware' => 'admin'], function () {
     Route::post('setting/postEdit','SettingsController@postEdit');
     Route::get('setting/{category_id}/add','SettingsController@Add');
     Route::post('setting/postAdd','SettingsController@postAdd');
-    Route::get('setting/delete/{id}','SettingsController@Delete');
+    Route::get('setting/delete/{id}','SettingsController@Delete'); 
         #/ Payment Methods Routes/#
     Route::get('payment-methods','PaymentMethodController@PaymentMethods');
     Route::get('payment-method/edit/{id}','PaymentMethodController@Edit');
