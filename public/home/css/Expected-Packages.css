@@ -115,11 +115,11 @@
 /* ************************ Modal ************************* */
 
 .modal.modal-dialog {
-    margin-top: 50px;
+	margin-top: 50px;
 }
 
 .modal .modal-title {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .modal-header {
@@ -128,7 +128,7 @@
 
 .modal-body , .modal-header {
 	padding-left: 30px;
-	padding-right: 30px; 
+	padding-right: 30px;
 }
 
 .modal-footer {
@@ -136,7 +136,7 @@
 }
 
 .modal-header .close {
-    margin-top: -27px;
+	margin-top: -27px;
 }
 
 .close {
@@ -145,8 +145,8 @@
 
 
 .modal .form-control {
-    border: 1px solid #eef2f3;
-    border-radius: 5px;
+	border: 1px solid #eef2f3;
+	border-radius: 5px;
 }
 
 .modal .form-group span {
@@ -162,7 +162,7 @@
 
 .modal select {
 	width: 100%;
-	margin: 0;      
+	margin: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -171,19 +171,19 @@
 }
 .modal .select {
 	height: 40px;
-    background-image:
-    linear-gradient(45deg, transparent 50%, white 50%),
-    linear-gradient(135deg, white 50%, transparent 50%),
-    linear-gradient(to right, #808080, #808080);
-  background-position:
-    calc(100% - 23px) calc(.5em + 9px),
-    calc(100% - 15px) calc(.5em + 9px),
-    100% 0px;
-  background-size:
-    9px 8px,
-    8px 8px,
-    3.5em 4.5em;
-  background-repeat: no-repeat;
+	background-image:
+			linear-gradient(45deg, transparent 50%, white 50%),
+			linear-gradient(135deg, white 50%, transparent 50%),
+			linear-gradient(to right, #808080, #808080);
+	background-position:
+			calc(100% - 23px) calc(.5em + 9px),
+			calc(100% - 15px) calc(.5em + 9px),
+			100% 0px;
+	background-size:
+			9px 8px,
+			8px 8px,
+			3.5em 4.5em;
+	background-repeat: no-repeat;
 }
 
 .modal textarea {
@@ -196,9 +196,178 @@
 }
 
 .modal .m-btn .btn-primary {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
+.add-line {
+	width: 20%;
+	float: left;
+	padding-right: 5px;
+}
+
+.add-line label , .add-line1 label {
+	font-size: 12px;
+}
+
+.add-line1 {
+	width: 13%;
+	display: inline-block;
+}
+
+.lines span {
+	padding-left: 5px;
+	font-size: 18px;
+	color: #808080;
+}
+
+.lines .m-btn button{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.PaT {
+	padding-top: 20px;
+}
+
+.form-check-label{
+	position: relative;
+	display: inline !important;
+	padding-left: 10px;
+}
+.form-check-label:before{
+	content: '';
+	width: 20px;
+	height: 23px;
+	position: absolute;
+	left: -15px;
+	background-size: 20px 45px;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	background-position: 0px -23px;
+	display: inline-block;
+	background-image: url('../img/check.png');
+
+}
+
+.form-check-label.active:before{
+	background-position:0px 0px;
+}
+
+.form-check-label1{
+	position: relative;
+	display: inline !important;
+	padding-left: 10px;
+}
+.form-check-label1:before{
+	content: '';
+	width: 20px;
+	height: 23px;
+	position: absolute;
+	left: -15px;
+	background-size: 20px 45px;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	background-position: 0px -23px;
+	display: inline-block;
+	background-image: url('../img/check.png');
+
+}
+
+.form-check-label1.active:before{
+	background-position:0px 0px;
+}
+
+.mrT {
+	margin-top: 5px;
+	margin-right: 50px;
+}
+.mrT label{
+	font-size: 12px;
+	font-weight: 600;
+}
+
+label.mT {
+	margin-top: 20px;
+}
+
+.mrT1 {
+	margin-top: 5px;
+	margin-right: 50px;
+	width: 350px;
+}
+.mrT1 label{
+	font-size: 12px;
+	font-weight: 600;
+}
+
+label.mT {
+	margin-top: 20px;
+}
+
+
+
+#exampleModal2 .countrypicker , #exampleModal2 .countrypicker button{
+	width: 100%;
+	margin:0;
+	height: 35px;
+	border-radius: 5px;
+}
+#exampleModal2 .countrypicker button{
+	background-position: 9px 9px !important;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner{
+	max-height: 220px !important;
+}
+.bs-caret{
+	background: #808080;
+	width: 30px !important;
+	height: 100%;
+	display: inline-block;
+	right: 0px;
+	position: absolute;
+	top: 0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret{
+	color: white;
+	right: 8px !important;
+	border-top: 10px dashed;
+	border-top: 4px solid\9;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	padding: 0;
+}
+
+#exampleModal2 .countrypicker , #exampleModal2 .countrypicker span.filter-option {
+	padding: 0;
+}
+
+.modal-body .input-group input {
+	width: 80%;
+	border-top-left-radius: 5px !important;
+	border-bottom-left-radius: 5px !important;
+}
+.modal-body .input-group span {
+	display: inline-block;
+	width: 20%;
+	height: 34px;
+	padding-top: 10px;
+	background-color: #808080;
+	color: #fff;
+}
+
+#exampleModal2 .m-btn  {
+	width: 100%;
+	text-align: left;
+}
+
+#exampleModal2 .bottom-p {
+	font-size: 13px;
+	font-weight: 700;
+	padding-left: 25px;
+	padding-top: 10px;
+}
 
 
 
@@ -210,8 +379,41 @@
 	a.btn {
 		font-size: 12px;
 	}
-	
+
 }
+
+@media (max-width: 620px){
+
+	.add-line , .add-line1  {
+		width: 100%;
+		display: flex;
+		border-bottom: 1px solid #dadcdd;
+		padding-bottom: 10px;
+
+	}
+
+	.add-line .form-control , .add-line1 .form-control {
+		border: 1px solid #dadcdd;
+		padding-left: 0;
+		margin-left: 1%;
+
+	}
+	.add-line label, .add-line1 label {
+		width: 40%;
+		padding-top: 8px;
+	}
+	.lines span {
+		padding-left: 50%;
+	}
+
+	.lines {
+		background: #eef2f3;
+		padding: 10px;
+		border: 1px solid #dadcdd;
+		margin-bottom: 10px;
+	}
+}
+
 
 @media (max-width: 480px){
 	.row{
@@ -224,11 +426,73 @@
 		font-size: 14px;
 	}
 	.main-content .right-btns {
-    	margin-top: 30px;
-    	padding-left: 0;
+		margin-top: 30px;
+		padding-left: 0;
 	}
 	.main-content .title {
-	    padding-left: 5px;
+		padding-left: 5px;
 	}
-	
+	.bttn {
+		width: 100%;
+	}
+
+}
+
+@media (max-width: 991px){
+
+	.add-line , .add-line1  {
+		width: 100%;
+		display: flex;
+		border-bottom: 1px solid #dadcdd;
+		padding-bottom: 10px;
+
+	}
+
+	.add-line .form-control , .add-line1 .form-control {
+		border: 1px solid #dadcdd;
+		padding-left: 0;
+		margin-left: 1%;
+
+	}
+	.add-line label, .add-line1 label {
+		width: 40%;
+		padding-top: 8px;
+	}
+	.lines span {
+		padding-left: 50%;
+	}
+
+	.lines {
+		background: #eef2f3;
+		padding: 10px;
+		border: 1px solid #dadcdd;
+		margin-bottom: 10px;
+	}
+	.modal .m-btn{
+		margin-left: 20%;
+	}
+
+	.modal-body .input-group span {
+		padding-left: 0;
+	}
+	#exampleModal2 .countrypicker .bs-caret{
+		padding-left: 0;
+	}
+
+	#exampleModal2 .m-btn .btn-primary {
+		margin-top: 0 !important;
+
+	}
+
+	#exampleModal2 .m-btn {
+		margin-left: 0 !important;
+
+	}
+
+}
+
+@media (max-width: 380px){
+	.mrT1 {
+		width: 260px;
+	}
 }
