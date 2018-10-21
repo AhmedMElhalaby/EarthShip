@@ -19,6 +19,7 @@ class SupportReplyController extends Controller
         return view('Dashboard.SupportReply.add',compact('id','Replies'));
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(SupportReply::$rules);
         return(SupportReply::saveSupportReply($request->all(), null));
     }
 

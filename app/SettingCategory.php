@@ -2,24 +2,16 @@
 
 namespace App;
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Helpers;
-use Session ;
 
 class SettingCategory extends Model
 {
     protected $table = 'setting_category';
     protected $fillable = ['name'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules; 
+    public static $rules =[
+            'name' => 'required|max:100',
+    ];
     
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'name' => 'required',
-            );
-        }
-        return self::$rules;
-    }
 
     public function settings()
     {
@@ -27,12 +19,7 @@ class SettingCategory extends Model
     }
 
 
-
     public static function saveSettingCategory($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator);
-        }
         if(is_null($id)){
             $SettingCategory =new SettingCategory();
             $SettingCategory->created_at =date('Y-m-d H:i:s');

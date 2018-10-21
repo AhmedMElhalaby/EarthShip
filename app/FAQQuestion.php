@@ -3,36 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Helpers;
-use Session ;
+
 
 class FAQQuestion extends Model
 {
     protected $table = 'faq_question';
     protected $fillable = ['question','answer','faq_category_id'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules;
-
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'question' => 'required',
-                'answer' => 'required',
+    public static $rules =[
+                'question' => 'required|max:255',
+                'answer' => 'required|max:255',
                 'faq_category_id' => 'required',
-            );
-        }
-        return self::$rules;
-    }
+    ];
+
 
     public function category() {
         return  $this->belongsTo('App\FAQCategory');
     }
 
     public static function saveFAQQuestion($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator);
-        }
         if(is_null($id)){
             $FAQQuestion =new FAQQuestion();
             $FAQQuestion->created_at =date('Y-m-d H:i:s');

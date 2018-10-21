@@ -21,6 +21,7 @@ class HowItWorkStepsController extends Controller
         return view('Dashboard.HowItWork.MainSteps.add');
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(HowItWorkStep::$rules);
         return(HowItWorkStep::saveMainStep($request->all(), null));
     }
     public function Edit($id){
@@ -29,6 +30,7 @@ class HowItWorkStepsController extends Controller
         return view('Dashboard.HowItWork.MainSteps.edit',compact('HowItWorkStep','subSteps'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(HowItWorkStep::$rules);
         return(HowItWorkStep::saveMainStep($request->all(), $request->id));
     }
     public function Delete($id){
@@ -39,7 +41,7 @@ class HowItWorkStepsController extends Controller
             $HowItWorkStep->delete();
             return redirect('admin/howItWork-mainSteps/')->withSuccess('How It WorkStep Category Successfully Deleted!');
         }
-        return redirect('admin/howItWork-mainSteps/')->withDanger('Successfully Delete How It WorkStep !');
+        return redirect('admin/howItWork-mainSteps/')->withDanger('Failed Delete !');
      
     }
 

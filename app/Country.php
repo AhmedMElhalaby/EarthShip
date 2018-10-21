@@ -3,25 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Helpers;
-use Session ;
+
 
 class Country extends Model
 {
     protected $table = 'country';
     protected $fillable = ['name'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules;
+    public static $rules =[
+                'name'  => 'required|max:100',    
 
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'name'  => 'required',   
-            );
-        }
-        return self::$rules;
-    }
-
+    ];
 
     public function users() {
         return  $this->hasMany('App\User');
@@ -35,10 +27,6 @@ class Country extends Model
     }
 
     public static function saveCountry($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator); 
-        }
         if(is_null($id)){
             $Country =new Country();
             $Country->created_at =date('Y-m-d H:i:s');

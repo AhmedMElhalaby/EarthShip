@@ -17,23 +17,25 @@ class MembershipFeaturesController extends Controller
         return view('Dashboard.MembershipFeatures.add',compact('id','Features'));
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(MembershipFeature::$rules);
         return(MembershipFeature::saveMembershipFeature($request->all(), null));
     }
     public function Edit($membership,$id){
         $Features = Feature::all();
         $MembershipFeature = MembershipFeature::where('id',$id)->first();
-        return view('Dashboard.MembershipFeatures.edit',compact('membership','MembershipFeature','Features'));
+        return view('Dashboard.MembershipFeatures.edit',compact('membership','id','MembershipFeature','Features'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(MembershipFeature::$rules);
         return(MembershipFeature::saveMembershipFeature($request->all(), $request->id));
     }
     public function Delete($id){
         $MembershipFeature = MembershipFeature::where('id',$id)->first();
         $membershipID=$MembershipFeature->membership_id ;
         if (MembershipFeature::destroy($id)) {
-            return redirect('admin/membership-features/'.$membershipID)->withSuccess('Feature Successfully Deleted!');
+            return redirect('admin/membership-features/'.$membershipID)->withSuccess('Membership Feature Successfully Deleted!');
         }
-        return redirect('admin/membership-features/'.$membershipID)->withDanger('Failed Delete Feature !');
+        return redirect('admin/membership-features/'.$membershipID)->withDanger('Failed Delete Membership Feature !');
     }
 
 }

@@ -22,6 +22,7 @@ class ProhibitedCategoryController extends Controller
         return view('Dashboard.Prohibitions.Category.add');
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(ProhibitedCategory::$rules);
         return(ProhibitedCategory::saveProhibitedCategory($request->all(), null));
     }
     public function Edit($id){
@@ -30,6 +31,7 @@ class ProhibitedCategoryController extends Controller
         return view('Dashboard.Prohibitions.Category.edit',compact('ProhibitedCategory','Items'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(ProhibitedCategory::$rules);
         return(ProhibitedCategory::saveProhibitedCategory($request->all(),  $request->id));
     }
     public function Delete($id){

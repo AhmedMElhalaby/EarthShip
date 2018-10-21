@@ -3,8 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Helpers;
-use Session ;
+
  
 
 class Service extends Model
@@ -12,24 +11,15 @@ class Service extends Model
     protected $table = 'services';
     protected $fillable = ['name','description','price','image'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules; 
+    public static $rules =[
+            'name' => 'required|max:100',
+            'description' => 'required|max:255',
+            'price' => 'required',    
 
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'name' => 'required',
-                'description' => 'required',
-                'price' => 'required',
-            );
-        }
-        return self::$rules;
-    }
+    ];
+    
 
     public static function saveService($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator);
-        }
         if (\Request::hasFile('image')) {
             $image = \Request::file('image');
             $name = $image->getClientOriginalName();
@@ -45,16 +35,16 @@ class Service extends Model
             $Service->updated_at = date('Y-m-d H:i:s');
         }
 
-        $inputs = ['name','description','price'];
+        $inputs = ['name','description','image','price'];
         foreach ($attributes as $key => $value) {
             if (in_array($key, $inputs)) {
-                if($key =="image"){
+               if ( $value != "" ) {
+                    $Service->$key=$value;
+                }
+                 if($key =="image"){
                     $Service->image='public/app-images/services/'.$name ;
                 }
-                if ( $value != "" ) {
-                    $Service->$key=$value;
-
-                }
+                
             }
         }
 

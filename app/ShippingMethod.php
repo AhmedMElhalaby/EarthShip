@@ -3,32 +3,22 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Helpers;
-use Session ;
+
 
 class ShippingMethod extends Model
 {
     protected $table = 'shipping_method';
     protected $fillable = ['name','password','client_id'];
     protected $hidden = ['created_at','updated_at']; 
-    protected static $rules;
-    
-    public static function getValidatorRules(){
-        if (!self::$rules) {
-            self::$rules = array(
-                'client_id'  => 'required',
-                'password'  => 'required',
-                'name'  => 'required',
-            );
-        }
-        return self::$rules;
-    }
+    public static $rules =[
+            'client_id'  => 'required',
+            'password'  => 'required',
+            'name'  => 'required',    
+
+    ];
+ 
 
     public static function saveShippingMethod($attributes,$id){
-        $validator = Helpers::isValid($attributes,self::getValidatorRules());
-        if(!is_null($validator)){
-            Session::flash('danger', $validator);
-        }
         if(is_null($id)){
             $ShippingMethod =new ShippingMethod();
             $ShippingMethod->password =Hash::make($attributes['password']);

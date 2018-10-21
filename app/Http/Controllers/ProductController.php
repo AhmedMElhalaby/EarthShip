@@ -22,6 +22,7 @@ class ProductController extends Controller
         return view('Dashboard.Products.add');
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(Product::$rules);
         return(Product::saveProduct($request->all(), null));
     }
     public function Edit($id){
@@ -29,6 +30,7 @@ class ProductController extends Controller
         return view('Dashboard.Products.edit',compact('Product'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(Product::$rules);
         return(Product::saveProduct($request->all(), $request->id));
     }
 
