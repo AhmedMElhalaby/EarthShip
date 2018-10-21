@@ -1,0 +1,289 @@
+.circles{
+	text-align: center;
+	position: relative;
+	top: -100px;
+}
+
+#calcalutor label , #calcalutor h4{
+	font-size: 22px;
+	font-family: Lato-Regular;
+	font-weight: bold;
+	margin:10px 0;
+	display: block;
+}
+.WH {
+	position: relative;
+}
+ #calcalutor .WH select{
+	background-color: #808080 !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: auto !important;
+	color: white;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+ #calcalutor .WH select:focus{
+ 	outline: 0
+ }
+#calcalutor h4{
+	margin:40px 0 20px;
+}
+.bootstrap-select>select{
+	left: auto !important
+}
+#calcalutor select {
+
+  /* styling */
+  background-color: white;
+  border: thin solid lightgray;
+  text-align: center;
+  border-radius: 12px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 9.5px 3.5em 9px 10px;
+
+  /* reset */
+    width: 33%;
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#calcalutor .select {
+	height: 55px;
+    background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #808080, #808080);
+  background-position:
+    calc(100% - 23px) calc(1em + 9px),
+    calc(100% - 15px) calc(1em + 9px),
+    100% 0px;
+  background-size:
+    9px 8px,
+    8px 8px,
+    3.5em 4.5em;
+  background-repeat: no-repeat;
+}
+#calcalutor .buttons{
+	text-align: center;
+	margin-top: 40px;
+}
+#calcalutor form button{
+	width: 200px;
+	height: 45px;
+	border-radius: 50px;
+	margin:10px;
+}
+#calcalutor form button.btn-primary{
+	border:0;
+}
+#calcalutor select,#calcalutor input{
+	width: 100% !important;
+	border-radius: 12px;
+	height: 55px;
+}
+
+#calcalutor hr{
+	border-color: #c1c1c1;
+	border-width: 2px;
+}
+#calcalutor .dimension{
+	width: 26% !important;
+	display: inline-block;
+}
+#calcalutor .WH.dimension{
+	width: 40% !important;
+}
+#calcalutor .WH.dimension select{
+	padding:8.5px 2.5em 8px 10px;
+	background-position: calc(100% - 18px) calc(1em + 9px),
+	calc(100% - 10px) calc(1em + 9px),100% 0px;
+}
+.total span{
+	position: absolute;
+	padding:20px;
+	height: 55px;
+	color: white;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	background: #808080;
+}
+.total input{
+	padding-left:54px;
+}
+/*.btn-default.active.focus, .btn-default.active:focus,
+.btn-default.active:hover, .btn-default:active.focus,
+.btn-default:active:focus, .btn-default:active:hover,
+.open>.dropdown-toggle.btn-default.focus,
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:hover{
+	background: none !important
+}*/
+#calcalutor .countrypicker , #calcalutor .countrypicker button{
+	width: 100%;
+	margin:0;
+	height: 55px;
+	border-radius: 12px;
+}
+#calcalutor .countrypicker button{
+	background-position: 12px 19px !important;
+}
+.bootstrap-select.btn-group .dropdown-menu.inner{
+	max-height: 220px !important;
+}
+.bs-caret{
+	background: #808080;
+	width: 50px !important;
+    height: 100%;
+    display: inline-block;
+    right: 0px;
+    position: absolute;
+    top: 0;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret{
+	color: white;
+	right: 16px !important; 
+    border-top: 10px dashed;
+    border-top: 4px solid\9;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+.result{
+	padding-bottom: 40px;
+}
+.result h2{
+	font-family: Lato-Bold;
+	margin:30px 5px;
+}
+.result h4{
+	font-size: 24px;
+	margin:20px 5px 30px;
+}
+.table-of-details .table{
+	background: white;
+	width: 100%;
+	margin:auto;
+	table-layout: fixed;
+	border-radius: 15px;
+}
+.table-of-details .table thead{
+    background:#808080;
+    color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.table-of-details .table thead tr:first-child th:first-child{
+    border-top-left-radius:15px;
+}
+
+.table-of-details .table thead tr:first-child th:last-child{
+    border-top-right-radius: 15px;
+}
+
+.table-of-details .table thead th{
+    /*padding:15px;*/
+    height: 70px;
+    width: 175px;
+    font-size: 16px;
+    font-family: Lato-Regular;
+    font-weight: normal;
+    /*text-align: center;*/
+    padding:8px 8px 8px 30px;
+    vertical-align: middle;
+}
+.table-of-details .table-responsive{
+	min-height: auto;
+	padding: 10px;
+	border:0;
+}
+.table-responsive thead tr{
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+.table-of-details .table tbody tr{
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	font-family: Lato-Bold;
+	color: black;
+}
+.table-of-details .table td{
+	padding:20px 11px;
+	vertical-align: middle;
+	height: 60px;
+
+    padding:8px 8px 8px 30px;
+
+}
+.table-of-details .table tr{
+	box-shadow: 1px 1px 10px #c4c1c1;
+}
+.table-of-details .table td img{
+	width: 60px;
+}
+@media(max-width:992px){
+/*.inside-header{
+	position: relative;
+}
+.inside-header .circles{
+	position: absolute;
+	top: 165px;
+}*/
+	.circles img{
+		max-width: 600px;
+    	max-height: 150px;
+	}
+	.circles{
+    	top: auto;
+    	bottom:70px;
+	}
+	#calcalutor .dimension{
+		width: 27% !important
+	}
+}
+@media(max-width: 610px){
+	#calcalutor .dimension{
+		width: 46% !important;
+	}
+	#calcalutor .WH.dimension{
+		width: 94% !important;
+		margin-top: 10px;
+	}
+	.circles img{
+		max-width: 400px;
+    	max-height: 150px;
+	}
+	.circles{
+    	top: auto;
+    	bottom:46px;
+	}
+}
+@media(max-width: 400px){
+	.circles img{
+		max-width: 310px;
+    	max-height: 150px;
+	}
+	.circles{
+    	top: auto;
+    	bottom:36px;
+	}
+}

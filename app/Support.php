@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Http\Helpers;
 
 class Support extends Model
 {
@@ -10,14 +11,11 @@ class Support extends Model
     protected $fillable = ['subject','user_id','detail','attachment','type','status','close_date'];
     protected $hidden = ['created_at','updated_at']; 
     public static $rules =[
-            'subject' => 'required|max:100',
-            'user_id' => 'required',
-            'detail' => 'required|max:255',
-            'type' => 'required',
-            'status' => 'required',
-            'close_date' => 'required',    
-    ];  
-    
+        'subject' => 'required|max:100',
+        'detail' => 'required|max:255',
+        'type' => 'required',
+    ];
+
     public function supportType(){
         return $this->belongsTo('App\SupportType','type','id');
     }
@@ -29,7 +27,6 @@ class Support extends Model
     public function replies(){
         return $this->hasMany('App\SupportReply','support_id','id');
     }
-
 
     public static function saveSupport($attributes,$id){
         if (\Request::hasFile('attachment')) {
