@@ -20,6 +20,7 @@ class AdminController extends Controller
         return view('Dashboard.Admins.add');
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(Admin::$rules);
         return(Admin::saveAdmin($request->all(), null));
     }
     public function Edit($id){
@@ -27,6 +28,7 @@ class AdminController extends Controller
         return view('Dashboard.Admins.edit',compact('Admin'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(Admin::$rules);
         return(Admin::saveAdmin($request->all(), $request->id));
     }
     public function Delete($id){

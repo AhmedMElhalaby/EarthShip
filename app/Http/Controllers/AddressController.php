@@ -24,6 +24,7 @@ class AddressController extends Controller
         return view('Dashboard.Addresses.add',compact('countries'));
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(Address::$rules);
         return(Address::saveAddress($request->all(), null));
     }
     public function Edit($id){
@@ -32,6 +33,7 @@ class AddressController extends Controller
         return view('Dashboard.Addresses.edit',compact('Address','countries'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(Address::$rules);
         return(Address::saveAddress($request->all(),  $request->id));
     }
     public function Delete($id){

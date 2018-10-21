@@ -22,6 +22,7 @@ class CountryController extends Controller
         return view('Dashboard.Countries.add');
     }
     public function postAdd(Request $request){
+        $validation = $request->validate(Country::$rules);
         return(Country::saveCountry($request->all(), null));       
     }
     public function Edit($id){
@@ -29,6 +30,7 @@ class CountryController extends Controller
         return view('Dashboard.Countries.edit',compact('Country'));
     }
     public function postEdit(Request $request){
+        $validation = $request->validate(Country::$rules);
         return(Country::saveCountry($request->all(), $request->id));
     }
     public function Delete($id){
