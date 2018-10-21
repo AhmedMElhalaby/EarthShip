@@ -22,7 +22,6 @@ class PaymentMethodController extends Controller
         return view('Dashboard.PaymentMethods.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(PaymentMethod::$rules);
         return(PaymentMethod::savePaymentMethod($request->all(), null));
     }
     public function Edit($id){
@@ -30,7 +29,6 @@ class PaymentMethodController extends Controller
         return view('Dashboard.PaymentMethods.edit',compact('PaymentMethod'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(PaymentMethod::$rules);
         return(PaymentMethod::savePaymentMethod($request->all(), $request->id));
     }
     public function Delete($id){

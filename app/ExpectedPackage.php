@@ -24,9 +24,6 @@ class ExpectedPackage extends Model
     public function user() {
         return  $this->belongsTo('App\User','user_id','id');
     }
-    public function Custom() {
-        return CustomDeclaration::where('package_id',$this->id)->first();
-    }
 //
 //    public function Create($request){
 //        $new = ExpectedPackage::create(array(

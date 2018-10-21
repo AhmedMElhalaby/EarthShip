@@ -3,19 +3,26 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Http\Helpers;
+use Session ;
 
 class ProhibitedItemCountry extends Model
 {
     protected $table = 'prohibited_item_country';
     protected $fillable = ['country_id','prohibited_item_id'];
     protected $hidden = ['created_at','updated_at']; 
-    public static $rules =[
-            'country_id' => 'required',
-            'prohibited_item_id' => 'required',  
-
-    ];
+    protected static $rules; 
     
+    public static function getValidatorRules(){
+        if (!self::$rules) {
+            self::$rules = array(
+                'country_id' => 'required',
+                'prohibited_item_id' => 'required',
+            );
+        }
+        return self::$rules;
+    }
+
     public function country() {
         return  $this->belongsTo('App\Country');
     }
@@ -24,6 +31,10 @@ class ProhibitedItemCountry extends Model
     }
 
     public static function saveProhibitedItemCountry($attributes,$id){
+        $validator = Helpers::isValid($attributes,self::getValidatorRules());
+        if(!is_null($validator)){
+            Session::flash('danger', $validator);
+        }
         $Found = ProhibitedItemCountry::where('prohibited_item_id',$attributes['prohibited_item_id'])
                                       ->where('country_id',$attributes['country_id'])->first();
         if(is_null($id) && !$Found){

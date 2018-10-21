@@ -3,17 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Http\Helpers;
+use Session ;
 
 class MembershipFeature extends Model
 {
     protected $table = 'membership_features';
     protected $fillable = ['membership_id','feature_id'];
     protected $hidden = ['created_at','updated_at']; 
-    public static $rules =[
-            'membership_id' => 'required',
-            'feature_id' => 'required', 
+    protected static $rules;
 
-    ];
+    public static function getValidatorRules(){
+        if (!self::$rules) {
+            self::$rules = array(
+                'membership_id' => 'required',
+                'feature_id' => 'required',
+            );
+        }
+        return self::$rules;
+    }
 
     public function feature(){
         return $this->belongsTo('App\Feature');
@@ -22,6 +30,10 @@ class MembershipFeature extends Model
         return $this->belongsTo('App\Membership');
     }
     public static function saveMembershipFeature($attributes,$id){
+        $validator = Helpers::isValid($attributes,self::getValidatorRules());
+        if(!is_null($validator)){
+            Session::flash('danger', $validator);
+        }
         if(is_null($id)){
             $MembershipFeature =new MembershipFeature();
             $MembershipFeature->created_at =date('Y-m-d H:i:s');

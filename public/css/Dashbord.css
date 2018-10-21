@@ -1,68 +1,25 @@
 .card-img-top{
-	width: 100%;
-	object-fit: cover;
-	height: 130px;
+	    width: 100%;
+    object-fit: cover;
+    height: 130px;
 }
 
 .container {
 	width: 100%
 }
 
-.side-nav nav {
-	background-color: #fff;
-}
-
-ul.dropdown-cart{
-	min-width:250px;
-}
-ul.dropdown-cart li .item{
-	display:block;
-	padding:3px 10px;
-	margin: 3px 0;
-}
-ul.dropdown-cart li .item:hover{
-	background-color:#f3f3f3;
-}
-ul.dropdown-cart li .item:after{
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-
-ul.dropdown-cart li .item-left{
-	float:left;
-}
-ul.dropdown-cart li .item-left img,
-ul.dropdown-cart li .item-left span.item-info{
-	float:left;
-}
-ul.dropdown-cart li .item-left span.item-info{
-	margin-left:10px;
-}
-ul.dropdown-cart li .item-left span.item-info span{
-	display:block;
-}
-ul.dropdown-cart li .item-right{
-	float:right;
-}
-ul.dropdown-cart li .item-right button{
-	margin-top:14px;
-}
 
 
 .header{
 	height: 90px ;
 	background-color: #fff;
-	/*	position: fixed;
-    */}
+/*	position: fixed;
+*/}
 
 .header-content {
-	height: 100%;
-	width: 100%;
-	padding-left: 245px;
+    height: 100%;
+    width: 100%;
+    padding-left: 245px;
 }
 
 .search{
@@ -73,7 +30,7 @@ ul.dropdown-cart li .item-right button{
 	width: 100%;
 	border: 1px solid #25395a61;
 	border-radius: 50px;
-	padding-left: 50px;
+    padding-left: 50px;
 	box-shadow: 1px 1px 10px grey;
 
 
@@ -91,12 +48,12 @@ ul.dropdown-cart li .item-right button{
 }
 
 .search input{
-	height: 35px;
-	width: 100%;
-	background: none;
-	margin-left: -40px;
-	border:0;
-	border-radius: 50px;
+    height: 35px;
+    width: 100%;
+    background: none;
+    margin-left: -40px;
+    border:0;
+    border-radius: 50px; 
 }
 
 .inline {
@@ -129,31 +86,26 @@ nav ul li a:hover {
 }
 .main-UL {
 	padding:0;
-	margin-top: 30px;
 }
-.main-UL ul , .main-UL a {
+.main-UL ul {
+	padding-top: 30px;
 	padding-left: 0;
 	list-style: none;
-	float: left;
-}
-
-.main-UL  a {
-	float: left;
 
 }
 
-.main-UL ul li , .main-UL a{
+.main-UL ul li{
 	display: inline-block;
 	padding: 0 19px;
 	color: #eef2f3;
-	font-size: 25px;
+	font-size: 25px;	
 }
-.main-UL ul li:hover , .main-UL a:hover{
+.main-UL ul li:hover{
 	color: #ff0101;
-	font-size: 25px;
+	font-size: 25px;	
 }
 
-.main-UL ul li i.active , .main-UL a i.active{
+.main-UL ul li i.active{
 	color: #ff0101 !important;
 }
 
@@ -173,192 +125,6 @@ nav ul li a:hover {
 	width: 90%;
 }
 
-div#simple-account-dropdown
-{
-	position: relative;
-	font-size: 25px;
-	color: #eef2f3;
-}
-
-div#simple-account-dropdown > .account
-{
-	overflow: hidden;
-	text-align: center;
-	cursor: pointer;
-	-webkit-transition: 0.1s ease-in;
-	-moz-transition: 0.1s ease-in;
-	-o-transition: 0.1s ease-in;
-	transition: 0.1s ease-in;
-}
-
-
-
-div#simple-account-dropdown > .account:active
-{
-
-	overflow: hidden;
-}
-div#simple-account-dropdown2 > .account:active,
-{
-	overflow: hidden;
-}
-
-
-div#simple-account-dropdown > .account > i:hover {
-	color: #ff0101;
-}
-div#simple-account-dropdown > .account > i.active {
-	color: #ff0101 !important;
-}
-
-div#simple-account-dropdown > .dropdown
-{
-	position: absolute;
-	width: 300px;
-	top: 50px;
-	left: -100%;
-	margin-left: -170px;
-	z-index: 109;
-}
-div#simple-account-dropdown > .dropdown::before
-{
-	content: '';
-	display: block;
-	position: absolute;
-	border: 10px solid #80808096;
-	border-left: 10px solid rgba(255, 255, 255, 0);
-	border-right: 10px solid rgba(255, 255, 255, 0);
-	border-top: 0px solid rgba(255, 255, 255, 0);
-	top: -9px;
-	margin-left: -10px;
-}
-div#simple-account-dropdown .fa-sort-down{
-	color: white;
-	font-size: 20px;
-}
-div#simple-account-dropdown > .dropdown::before {
-	right: 82px;
-}
-div#simple-account-dropdown > .dropdown > .scroll
-{
-	display: block;
-	margin: 0; padding: 0;
-	list-style: none;
-	border:1px solid #80808096;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	box-shadow: 0px 0px 5px gray;
-	height: 300px;
-	overflow-y: auto;
-	background: white;
-
-}
-
-.scroll::-webkit-scrollbar-track
-{
-	border-radius: 10px;
-	background-color: #ff010115;
-}
-
-.scroll::-webkit-scrollbar
-{
-	width: 8px;
-	background-color: #F5F5F5;
-	border-radius: 10px;
-}
-
-.scroll::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-color: #ccc;
-}
-
-
-
-div#simple-account-dropdown > .dropdown > ul > li {
-	padding-left: 0;
-	padding-right: 0;
-	width: 100%;
-	background-color: #ff010123;
-	display: inline-flex;
-}
-div#simple-account-dropdown > .dropdown > ul > li.read {
-	background-color: #cccccc50 !important;
-}
-
-div#simple-account-dropdown > .dropdown > ul > li.viewAll {
-	background-color: #cccccc50 !important;
-}
-div#simple-account-dropdown > .dropdown > ul > li.viewAll a {
-	text-align: center;
-	color: #e16565c9;
-	font-size: 14px;
-}
-/*div#simple-account-dropdown > .dropdown > ul > li.noti {
-	background-color: #cccccc50 !important;
-}
-div#simple-account-dropdown > .dropdown > ul > li.noti a {
-	text-align: left;
-	color: #e16565c9;
-	font-size: 14px;
-    padding-left: 5px;
-
-}*/
-div#simple-account-dropdown > .dropdown > ul > li.noti a:hover {
-	padding-left: 5px;
-
-}
-
-div#simple-account-dropdown > .dropdown > ul > li a
-{
-	width: 100%;
-	color: #808080;
-	text-align: left;
-	text-align: justify;
-	display: block;
-	padding: 15px 20px;
-	font-size: 13px;
-	border-top: 1px solid #cccccc60;
-	border-bottom: 1px solid #cccccc60;
-}
-div#simple-account-dropdown > .dropdown > ul > li a:hover
-{
-	margin: 0;
-	padding: 15px 20px;
-	text-decoration: none;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-
-div#simple-account-dropdown > .dropdown > ul > li a > img
-{
-	vertical-align: middle;
-	margin-right: 10px;
-}
-
-div#simple-account-dropdown > .dropdown > ul > li:first-child a,
-div#simple-account-dropdown2 > .dropdown > ul > li:first-child a
-{
-	border-top: none;
-}
-
-div#simple-account-dropdown > .dropdown > ul > li:last-child a
-{
-	border-bottom: none;
-}
-
-ul#simple-account-dropdown-freebie > li { float: left; margin-right: 20px; margin-bottom: 20px;}
-ul#simple-account-dropdown-freebie > li:last-child { margin-right: 0; }
-ul#simple-account-dropdown-freebie > li > span { margin-bottom: 10px; }
-#gallery ul#simple-account-dropdown-freebie{
-	float: right;
-}
-
-
-
-
 footer {
 	background: #eef2f3;
 	color: #999;
@@ -367,24 +133,24 @@ footer {
 
 footer .social ul li a {
 	color: #111;
-	width: 40px;
-	display: inline-block;
-	height: 40px;
-	font-size: 17px;
-	padding-top: 5px;
-	text-align: center;
-	border-radius: 100%;
-	border: 3px double #000;
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    font-size: 17px;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 100%;
+    border: 3px double #000;
 }
 
 footer .social {
-	direction: ltr;
-	margin-top: 20px;
+    direction: ltr;
+    margin-top: 20px;
 
 }
 
 footer .col-md-3 img {
-	width: 80px;
+    width: 80px;
 }
 
 footer ul li a , footer h3 , footer ul li {
@@ -415,20 +181,20 @@ footer .col-md-3 {
 .main-content .title {
 	margin-top: 50px;
 	background-color: #f4f8f9;
-	border-bottom: 0;
-	padding: 10px 20px;
-	color: #333;
+    border-bottom: 0;
+    padding: 10px 20px;
+    color: #333;
 }
 
 .main-content .title h3{
 	font-size: 30px;
-	font-weight: 700;
+    font-weight: 700;
 }
 
 .main-content .title p{
 	font-size: 16px;
-	font-weight: 400;
-	width: 80%;
+    font-weight: 400;
+    width: 80%;
 }
 
 .card {
@@ -483,7 +249,7 @@ footer .col-md-3 {
 }
 
 footer .container {
-	width: 100%;
+    width: 100%;
 }
 
 .help ul li a {
@@ -491,123 +257,40 @@ footer .container {
 }
 
 .load_more{
-	overflow: hidden;
-	text-align: center;
-	width: 250px;
-	margin: 50px auto;
-	background: #ff0101;
-	border-radius: 50px;
+    overflow: hidden;
+   text-align: center;
+   width: 250px;
+   margin: 50px auto;
+   background: #ff0101;
+   border-radius: 50px;
 }
 .load_more ul{
-	padding:0;
-	margin:0;
+    padding:0;
+    margin:0;
 }
 .load_more ul li{
-	display: inline-block;
-	padding:10px;
-
+    display: inline-block;
+    padding:10px;
+    
 }
 .load_more ul li a i{
-	border:1px solid white;
-	border-radius: 100%;
-	padding:4px 8px;
-	font-weight: bolder;
+    border:1px solid white;
+    border-radius: 100%;
+    padding:4px 8px;
+    font-weight: bolder;
 }
 .load_more ul li a{
-	display: inline-block;
-	color: #fff;
-	transition: all .2s;
+    display: inline-block;
+    color: #fff;
+    transition: all .2s;
 }
 .load_more ul li a:hover{
-	color: #ccc
+    color: #ccc
 }
 .load_more ul li a:hover i{
-	border-color: #ccc
+    border-color: #ccc
 }
 
-
-/* ============================= Modal ================================= */
-
-/* ************************ Modal ************************* */
-
-.modal.modal-dialog {
-	margin-top: 50px;
-}
-
-.modal .modal-title {
-	margin-top: 10px;
-}
-
-.modal-header {
-	border-bottom: 0;
-}
-
-.modal-body , .modal-header {
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.modal-footer {
-	border-top: 0;
-}
-
-.modal-header .close {
-	margin-top: -27px;
-}
-
-.close {
-	font-size: 25px;
-}
-
-
-.modal .form-control {
-	border-radius: 5px;
-}
-
-.modal .form-group .input-group span {
-	background-color: #808080;
-	color: #fff;
-	border: 0;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-.modal .form-group span i {
-	font-size: 16px;
-	color: #ff0101;
-	padding-right: 5px;
-}
-
-.modal select {
-	width: 100%;
-	margin: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-.modal .select {
-	height: 40px;
-	background-image:
-			linear-gradient(45deg, transparent 50%, white 50%),
-			linear-gradient(135deg, white 50%, transparent 50%),
-			linear-gradient(to right, #808080, #808080);
-	background-position:
-			calc(100% - 23px) calc(.5em + 9px),
-			calc(100% - 15px) calc(.5em + 9px),
-			100% 0px;
-	background-size:
-			9px 8px,
-			8px 8px,
-			3.5em 4.5em;
-	background-repeat: no-repeat;
-}
-
-.modal select option {
-	font-size: 14px;
-	color: #000;
-}
 
 
 @media (max-width: 1024px){
@@ -618,7 +301,7 @@ footer .container {
 }
 @media (min-width: 992px){
 	.acc-balance .btn.inline {
-		padding:2px;
+	    padding:2px;
 	}
 
 	.acc-balance {
@@ -648,8 +331,8 @@ footer .container {
 		margin-top: -40px;
 	}
 	.acc-balance .btn.inline {
-		padding:2px;
-		margin-left: 45px;
+	    padding:2px;
+	    margin-left: 45px;
 	}
 	.main-UL{
 		float: right;
@@ -677,8 +360,8 @@ footer .container {
 		padding-left: 95px
 	}
 	.card .right {
-		float: none;
-		margin-top: 15px;
+	    float: none; 
+	    margin-top: 15px;
 	}
 
 	.footer {
@@ -686,12 +369,12 @@ footer .container {
 	}
 
 	footer .col-md-3 {
-		padding: 10px;
+     padding: 10px; 
 	}
 
 	.footer-btn .btn-primary {
-		width: 100%;
-		font-size: 12px;
+	    width: 100%;
+	    font-size: 12px;
 	}
 }
 
@@ -705,18 +388,13 @@ footer .container {
 
 
 @media (max-width: 599px){
-
-	.side-nav ul {
-		margin-top: 50px;
-		border-top: 1px solid #cccccc50;
-	}
 	.none{
 		display: none;
 	}
 
 	.main-content {
-		padding-top: 150px;
-		padding-left: 10px;
+	    padding-top: 150px;
+	    padding-left: 10px;
 	}
 
 	.header{
@@ -729,63 +407,56 @@ footer .container {
 	}
 
 	.search {
-		width: 100%;
-	}
+	    width: 100%;
+	}	
 
 	.acc-balance .btn.inline {
-		margin-left: 90px;
+    	margin-left: 90px;
 	}
 
 	.card {
-		width: 85%;
-		margin: auto;
-	}
+	    width: 85%;
+	    margin: auto;
+	}  
 
 	footer {
 		padding-left: 0;
 	}
 	footer ul {
-		width: 100%;
-	}
-
+	    width: 100%;
+	} 
 
 	.main-content .title p {
-		font-size: 13px;
-		text-align: justify;
+    	font-size: 13px;
+    	text-align: justify;
 	}
 
 	.search {
-		padding-right: 0;
+	    padding-right: 0;
 	}
-	div#simple-account-dropdown > .dropdown {
-		left: -75px;
-		margin-left: 0;
-	}
-	div#simple-account-dropdown > .dropdown::before {
-		right: 205px;
-	}
+
 }
 
 @media (max-width: 375px){
 	.acc-balance .btn.inline {
-		margin-left: 40px;
+    	margin-left: 40px;
 	}
 	.search {
-		padding-right: 0;
-	}
+	    padding-right: 0;
+	}    
 
 }
 
 @media (max-width: 320px){
 	.acc-balance .btn.inline {
-		margin-left: 15px;
-	}
+    	margin-left: 15px;
+	} 
 	.acc-balance {
-		font-size: 13px;
-		padding-right: 0;
+    	font-size: 13px;
+    	padding-right: 0;
 	}
 	.search {
-		padding-right: 0;
+	    padding-right: 0;
 	}
-
+	
 }

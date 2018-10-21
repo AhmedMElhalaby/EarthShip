@@ -16,7 +16,6 @@ class SettingsController extends Controller{
         return view('Dashboard.Settings.General.add',compact('id'));
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(Setting::$rules);
         return(Setting::saveSetting($request->all(), null));
     }
     
@@ -26,16 +25,15 @@ class SettingsController extends Controller{
     }
 
     public function postEdit(Request $request){
-        $validation = $request->validate(Setting::$rules);
         return(Setting::saveSetting($request->all(), $request->id));
     }
     public function Delete($id){
         $Setting = Setting::where('id',$id)->first();
         $category = $Setting->category_id ;
-        if (Setting::destroy($id)) {
-            return redirect('admin/settings-category/'.$category)->withSuccess('Successfully Deleted!');
+        if($Setting){
+            $Setting->settings()->delete();
+            return redirect('admin/settings-categories'.$category)->withSuccess('Successful Successfully Deleted!');
         }
-        return redirect('admin/settings-category/'.$category)->withDanger('Failed Delete  !');
+        return redirect('admin/settings-category/'.$category)->withDanger('Successful Deleted!');
     }
-
 }

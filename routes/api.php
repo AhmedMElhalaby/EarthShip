@@ -1,7 +1,5 @@
 <?php
 
-use App\CustomDeclaration;
-use App\CustomDeclarationItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Resources\MemberShip as MemberShipResource;
@@ -163,27 +161,17 @@ Route::post('edit/expected_package', function (Request $request){
     }
 });
 Route::post('edit/expected_package/custom', function (Request $request){
-
-    $validation = $request->validate(CustomDeclaration::$rules);
-    $CustomDeclaration = CustomDeclaration::where('id',$request->id)->first();
-    if($CustomDeclaration != null){
-        $CustomDeclaration->update(array(
-            'battery_in'=>$request->battery_in,
-            'battery_with'=>$request->battery_with,
-            'dangerous_goods'=>$request->dangerous_goods,
-            'alcoholic'=>$request->alcoholic,
-            'describe_package'=>$request->describe_package,
-            'package_id'=>$request->package_id,
+    $validation = $request->validate(ExpectedPackage::$rules);
+    $ExpectedPackage = ExpectedPackage::where('id',$request->id)->where('user_id',auth()->user()->id)->first();
+    if($ExpectedPackage != null){
+        $ExpectedPackage->update(array(
+            'vendor'=>$request->vendor,
+            'recipient_name'=>$request->recipient_name,
+            'address_id'=>$request->address_id,
+            'tracking_number'=>$request->tracking_number,
+            'note'=>$request->note,
         ));
-        $CustomDeclarationItem = CustomDeclarationItem::where('custom_id',$request->id)->first();
-        $CustomDeclarationItem->update(array(
-            'item_name'=>$request->item_name,
-            'quantity'=>$request->quantity,
-            'price'=>$request->price,
-            'origin'=>$request->origin,
-            'custom_id'=>$request->custom_id,
-        ));
-        return response()->json(['status' => true,'data'=>$CustomDeclaration]);
+        return response()->json(['status' => true,'data'=>$ExpectedPackage]);
     }else{
         return response()->json(['status' => false,'msg'=>'Not Exist !']);
     }
@@ -335,40 +323,4 @@ Route::post('changeAddress',function (Request $request){
 
 Route::get('packages',function (){
     return PackagesResource::collection(Packages::where('user_id',auth()->user()->id)->get());
-});
-
-
-
-
-
-Route::get('test',function(){
-
-	    $url = 'https://sandbox-api.postmen.com/v3/rates';
-	    $method = 'POST';
-	    $headers = array(
-	        "content-type: application/json",
-	        "postmen-api-key: 8fc7966b-679b-4a57-911d-c5a663229c9e"
-	    );
-	    $body = '{"async":false,"shipper_accounts":[{"id":"00000000-0000-0000-0000-000000000000"}],"shipment":{"parcels":[{"description":"Food XS","box_type":"custom","weight":{"value":2,"unit":"kg"},"dimension":{"width":20,"height":40,"depth":40,"unit":"cm"},"items":[{"description":"Food Bar","origin_country":"JPN","quantity":2,"price":{"amount":3,"currency":"JPY"},"weight":{"value":0.6,"unit":"kg"},"sku":"PS4-2015"}]}],"ship_from":{"contact_name":"Yin Ting Wong","street1":"Flat A, 29/F, Block 17\nLaguna Verde","city":"Hung Hom","state":"Kowloon","country":"HKG","phone":"96679797","email":"test@test.test","type":"residential"},"ship_to":{"contact_name":"Mike Carunchia","street1":"9504 W Smith ST","city":"Yorktown","state":"Indiana","postal_code":"47396","country":"USA","phone":"7657168649","email":"test@test.test","type":"residential"}}}';
-
-	    $curl = curl_init();
-
-	    curl_setopt_array($curl, array(
-	        CURLOPT_RETURNTRANSFER => true,
-	        CURLOPT_URL => $url,
-	        CURLOPT_CUSTOMREQUEST => $method,
-	        CURLOPT_HTTPHEADER => $headers,
-			CURLOPT_POSTFIELDS => $body
-	    ));
-
-	    $response = curl_exec($curl);
-	    $err = curl_error($curl);
-
-	    curl_close($curl);
-
-	    if ($err) {
-	    	echo "cURL Error #:" . $err;
-	    } else {
-	    	echo $response;
-	    }
 });

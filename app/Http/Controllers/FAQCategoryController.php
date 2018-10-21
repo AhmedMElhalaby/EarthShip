@@ -22,7 +22,6 @@ class FAQCategoryController extends Controller
         return view('Dashboard.FAQ.Category.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(FAQCategory::$rules);
         return(FAQCategory::saveFAQCategory($request->all(), null));
     }
     public function Edit($id){
@@ -31,7 +30,6 @@ class FAQCategoryController extends Controller
         return view('Dashboard.FAQ.Category.edit',compact('FAQCategory','Questions'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(FAQCategory::$rules);
         return(FAQCategory::saveFAQCategory($request->all(), $request->id));
     }
     public function Delete($id){
@@ -41,9 +39,9 @@ class FAQCategoryController extends Controller
             unlink($FAQCategory->icon);
             unlink($FAQCategory->image);
             $FAQCategory->delete();
-            return redirect('admin/faq-category')->withSuccess('Successfully Deleted!');
+            return redirect('admin/faq-category')->withSuccess('FAQ Category Successfully Deleted!');
         }
-        return redirect('admin/faq-category')->withDanger('Failed Delete  !');
+        return redirect('admin/faq-category')->withDanger('Successfully Delete FAQ Category !');
     }
 
     

@@ -20,7 +20,6 @@ class MembershipController extends Controller
         return view('Dashboard.Membership.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(Membership::$rules);
         return(Membership::saveMembership($request->all(), null));
     }
     public function Edit($id){
@@ -28,7 +27,6 @@ class MembershipController extends Controller
         return view('Dashboard.Membership.edit',compact('Membership'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Membership::$rules);
         return(Membership::saveMembership($request->all(), $request->id));
     }
     public function Delete($id){
@@ -38,7 +36,7 @@ class MembershipController extends Controller
             $Membership->delete();
             return redirect('admin/memberships')->withSuccess('MemberShip Successfully Deleted!');
         }   
-        return redirect('admin/memberships')->withDanger('Failed Delete MemberShip !');     
+        return redirect('admin/memberships')->withDanger('MemberShip Delete Feature !');     
     }
 
     public function ShowMembershipFeatures($id){

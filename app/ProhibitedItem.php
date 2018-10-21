@@ -3,20 +3,27 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Http\Helpers;
+use Session ;
 
 class ProhibitedItem extends Model
 {
     protected $table = 'prohibited_items';
     protected $fillable = ['category_id','name','details'];
     protected $hidden = ['created_at','updated_at']; 
-    public static $rules =[
-            'category_id' => 'required', 
-            'name' => 'required|max:100',
-            'details' => 'required|max:255',    
-
-    ];
+    protected static $rules; 
     
+    public static function getValidatorRules(){
+        if (!self::$rules) {
+            self::$rules = array(
+                'category_id' => 'required',
+                'name' => 'required',
+                'details' => 'required',
+            );
+        }
+        return self::$rules;
+    }
+
 
     public function category() {
         return  $this->belongsTo('App\ProhibitedCategory');
@@ -27,6 +34,10 @@ class ProhibitedItem extends Model
     }
 
     public static function saveProhibitedItem($attributes,$id){
+        $validator = Helpers::isValid($attributes,self::getValidatorRules());
+        if(!is_null($validator)){
+            Session::flash('danger', $validator);
+        }
         if(is_null($id)){
             $ProhibitedItem =new ProhibitedItem();
             $ProhibitedItem->created_at =date('Y-m-d H:i:s');

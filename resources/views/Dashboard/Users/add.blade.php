@@ -63,7 +63,7 @@
                                     <label for="membership_id">MemberShip</label>
                                     <select name="membership_id" class="form-control" id="membership_id" name="membership_id" value="{{ old('membership_id') }}">
                                         @foreach($memberships as $membership)
-                                            <option value="{{$membership->id}}">{{$membership->name}} </option>
+                                            <option value="{{$membership->id}}">{{$country->name}} </option>
                                         @endforeach
                                     </select>
                                     @if ($errors->has('membership_id'))

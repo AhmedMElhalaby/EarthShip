@@ -229,7 +229,6 @@ Route::get('sent-packages', 'UserDashboardController@package');
 Route::get('expected-packages', 'ExpectedPackageController@index');
 Route::post('add/expected-packages', 'ExpectedPackageController@add');
 Route::post('edit/expected-packages', 'ExpectedPackageController@edit');
-Route::post('edit/expected-packages/custom', 'ExpectedPackageController@editCustom');
 Route::get('delete/expected-packages', 'ExpectedPackageController@delete');
 // Assisted Purchase
 Route::get('assisted-purchase', 'AssistedPurchaseController@index');
@@ -241,25 +240,3 @@ Route::get('support-ticket', 'SupportTicketController@index');
 Route::post('add/support-ticket', 'SupportTicketController@add');
 Route::post('edit/support-ticket', 'SupportTicketController@edit');
 Route::get('delete/support-ticket', 'SupportTicketController@delete');
-
-
-Route::get('Test', function (){
-    return view('test');
-});
-
-Route::post('charge', function (){
-    \Stripe\Stripe::setApiKey("sk_test_QeEJJWgwRPQQVTqUqKIPlNDa");
-    $customer = \Stripe\Customer::create([
-        'source' => 'tok_mastercard',
-        'email' => 'paying.user@example.com',
-    ]);
-    $token = $_POST['stripeToken'];
-    $charge = \Stripe\Charge::create([
-        'amount' => 10000,
-        'currency' => 'usd',
-        'customer' => $customer->id,
-
-    ]);
-        dd("Done !");
-});
-

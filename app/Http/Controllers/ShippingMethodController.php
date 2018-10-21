@@ -22,7 +22,6 @@ class ShippingMethodController extends Controller
         return view('Dashboard.ShippingMethods.add');
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(ShippingMethod::$rules);
         return(ShippingMethod::saveShippingMethod($request->all(), null));
     }
     public function Edit($id){
@@ -30,7 +29,6 @@ class ShippingMethodController extends Controller
         return view('Dashboard.ShippingMethods.edit',compact('ShippingMethod'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(ShippingMethod::$rules);
         return(ShippingMethod::saveShippingMethod($request->all(), $request->id));
     }
     public function Delete($id){

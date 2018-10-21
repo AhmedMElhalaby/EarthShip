@@ -22,7 +22,6 @@ class FeaturesController extends Controller
         return view('Dashboard.Features.add');
     }
     public function postAdd(Request $request){ 
-        $validation = $request->validate(Feature::$rules);
         return(Feature::saveFeature($request->all(), null));
     }
     public function Edit($id){
@@ -30,7 +29,6 @@ class FeaturesController extends Controller
         return view('Dashboard.Features.edit',compact('Feature'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(Feature::$rules);
         return(Feature::saveFeature($request->all(), $request->id));
     }
     public function Delete($id){

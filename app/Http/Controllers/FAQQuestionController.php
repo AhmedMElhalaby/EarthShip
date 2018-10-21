@@ -16,7 +16,6 @@ class FAQQuestionController extends Controller
         return view('Dashboard.FAQ.Question.add',compact('id'));
     }
     public function postAdd(Request $request){
-        $validation = $request->validate(FAQQuestion::$rules);
         return(FAQQuestion::saveFAQQuestion($request->all(), null));
     }
     public function Edit($category,$id){
@@ -24,8 +23,8 @@ class FAQQuestionController extends Controller
         return view('Dashboard.FAQ.Question.edit',compact('FAQQuestion','category'));
     }
     public function postEdit(Request $request){
-        $validation = $request->validate(FAQQuestion::$rules);
         return(FAQQuestion::saveFAQQuestion($request->all(), $request->id));
+        //return redirect('admin/faq-category-question/'.$request->faq_category_id)->withInfo('Successful Updated!');
     }
     public function Delete($id){
         $FAQQuestion = FAQQuestion::where('id',$id)->first();

@@ -210,7 +210,6 @@
 <script src="{{asset('public/home/js/bootstrap.min.js')}}"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="{{asset('public/home/js/countrypicker.min.js')}}"></script>
 <script src="{{asset('public/home/js/main.js')}}"></script>
 <script src="{{asset('public/home/js/custom.js')}}"></script>
 <script>

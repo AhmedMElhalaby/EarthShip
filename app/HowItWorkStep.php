@@ -3,24 +3,35 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Http\Helpers;
+use Session ;
 
 class HowItWorkStep extends Model
 {
     protected $table = 'how_it_work_steps';
     protected $fillable = ['title','description','image'];
     protected $hidden = ['created_at','updated_at']; 
-    public static $rules =[
-                'title'  => 'required|max:100',
-                'description' => 'required|max:255', 
-
-    ];
+    protected static $rules;
     
+    public static function getValidatorRules(){
+        if (!self::$rules) {
+            self::$rules = array(
+                'title' => 'required', 
+                'description' => 'required',
+            );
+        }
+        return self::$rules;
+    }
+
     public function subSteps(){
         return $this->hasMany('App\HowItWorkSubStep','parent_step','id');
     }
 
     public static function saveMainStep($attributes,$id){
+        $validator = Helpers::isValid($attributes,self::getValidatorRules());
+        if(!is_null($validator)){
+            Session::flash('danger', $validator);
+        }
         if (\Request::hasFile('image')) {
             $image = \Request::file('image');
             $name = $image->getClientOriginalName();
@@ -36,17 +47,16 @@ class HowItWorkStep extends Model
             $MainStep->updated_at = date('Y-m-d H:i:s');
         }
 
-        $inputs = ['title','description','image'];
+        $inputs = ['title','description'];
         foreach ($attributes as $key => $value) {
             if (in_array($key, $inputs)) {
+                if($key =="image"){
+                    $MainStep->image='public/app-images/how-it-work/main-steps/'.$name ;
+                }
                 if ( $value != "" ) {
                     $MainStep->$key=$value;
 
                 }
-                if($key =="image"){
-                    $MainStep->image='public/app-images/how-it-work/main-steps/'.$name ;
-                }
-                
             }
         }
 
