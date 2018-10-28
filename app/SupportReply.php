@@ -9,7 +9,7 @@ use Session ;
 class SupportReply extends Model
 {
     protected $table = 'support_reply';
-    protected $fillable = ['support_id','sender_id','sender_type','details'];
+    protected $fillable = ['support_id','sender_id','sender_type','details','subject','attachment'];
     protected $hidden = ['created_at','updated_at']; 
     protected static $rules;
 
@@ -20,11 +20,14 @@ class SupportReply extends Model
                 'sender_id' => 'required',
                 'sender_type' => 'required',
                 'details' => 'required',
+                'subject' => 'required',
             );
         }
         return self::$rules;
     }
-
+    public function user(){
+        return $this->belongsTo('App\User','sender_id','id');
+    }
     public static function saveSupportReply($attributes,$id){
         $validator = Helpers::isValid($attributes,self::getValidatorRules());
         if(!is_null($validator)){

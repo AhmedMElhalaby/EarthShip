@@ -1,4 +1,8 @@
 @extends('UserDashboard.layout.app')
+@section('style')
+    <link rel="stylesheet" href="{{asset('public/home/css/setteing-membership.css')}}">
+    <link rel="stylesheet" href="{{asset('public/home/css/virtual-wallet.css')}}">
+@endsection
 @section('content')
     <div class="setteing-top-nav">
         <ul class="nav">
@@ -11,115 +15,109 @@
     </div>
 
     <div class="set-content">
-        <h2>Account Membership</h2>
-        <div class="rows">
+        <h2>Your Virtual Wallet</h2>
+
+        <div class="remaining-dep">
+            <table>
+                <tr>
+                    <td>Remaining Deposit</td>
+                    <td>500</td>
+                    <td style="width: 10%;" class="gray">$</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="date-picker">
             <div class="row">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Current Membership Type</p>
+                <div class="col-md-6 col-sm-6 N-Pr">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2 ">
+                                <label for="">From</label>
+                            </div>
+                            <div class="col-md-10 col-sm-10 ">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+						                        <span class="fa fa-calendar"></span>
+						                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <p>Standard Account <a href="">Change</a></p>
-                </div>
-            </div>
-            <div class="row bg">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Your current billing cycle</p>
-                </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <p>Free Membership (No Billing)</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Membership Fee</p>
-                </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <p>Free</p>
-                </div>
-            </div>
-            <div class="row bg">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Storage Space</p>
-                </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                            <span><strong>40%</strong></span>
+                <div class="col-md-6 col-sm-6 N-Pr">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2 ">
+                                <label for="">To</label>
+                            </div>
+                            <div class="col-md-10 col-sm-10 ">
+                                <div class='input-group date' id='datetimepicker2'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+						                        <span class="fa fa-calendar"></span>
+						                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="set-content">
-        <h2>Account Deposit</h2>
-        <div class="rows">
-            <div class="row">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Remaining Balance	   </p>
-                </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <p>0,00</p>
-                </div>
-            </div>
-            <div class="row non">
-                <div class="col-md-4 col-sm left-col">
-                </div>
-                <div class="col-md-8 col-sm-10 right-col">
-                    <div class="inner-uls">
-                        <ul class="inner-ul">
-                            <li style="width: 25%"> Add Deposit</li>
-                            <li style="width: 25%">Request a Refund</li>
-                            <li style="width: 39%" class="width">View Transaction History</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="cstm-table">
+            <div class="table-responsive" style="overflow: auto;">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" >Date</th>
+                        <th scope="col">Deposit</th>
+                        <th scope="col">Remaining Deposit</th>
+                        <th scope="col">Payment Method</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>4-4-2018</td>
+                        <td>1000$</td>
+                        <td>500$</td>
+                        <td>Visa</td>
+                    </tr>
+                    <tr>
+                        <td>4-4-2018</td>
+                        <td>1000$</td>
+                        <td>500$</td>
+                        <td>Visa</td>
+                    </tr>
+                    <tr>
+                        <td>4-4-2018</td>
+                        <td>1000$</td>
+                        <td>500$</td>
+                        <td>Visa</td>
+                    </tr>
+                    <tr>
+                        <td>4-4-2018</td>
+                        <td>1000$</td>
+                        <td>500$</td>
+                        <td>Visa</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+
+        <div class="remaining-dep all">
+            <table>
+                <tr>
+                    <td>All Deposit</td>
+                    <td>2000</td>
+                    <td style="width: 10%;" class="gray">$</td>
+                </tr>
+            </table>
+        </div>
+
     </div>
 
-    <div class="set-content">
-        <h2>Contact Information</h2>
-        <div class="rows">
-            <div class="row bg">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Name</p>
-                </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <p>Mai I Abu Muaileq</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Email</p>
-                </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <p>mai.mq.1995@gmail.com</p>
-                </div>
-            </div>
-            <div class="row bg">
-                <div class="col-md-4 col-sm-4 left-col">
-                    <p>Country</p>
-                </div>
-                <div class="col-md-8 col-sm-8 right-col">
-                    <p>Palestine</p>
-                </div>
-            </div>
-            <div class="row non">
-                <div class="col-md-4 col-sm left-col">
-                </div>
-                <div class="col-md-8 col-sm-10 right-col">
-                    <div class="inner-uls">
-                        <ul class="inner-ul inner-ul2">
-                            <li style="width: 39%" class="width">Change Contact Information</li>
-                            <li style="width: 25%">Change Email</li>
-                            <li style="width: 25%">Change Password</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 @endsection

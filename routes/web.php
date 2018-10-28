@@ -238,5 +238,68 @@ Route::get('delete/assisted-purchase', 'AssistedPurchaseController@delete');
 // Support Ticket
 Route::get('support-ticket', 'SupportTicketController@index');
 Route::post('add/support-ticket', 'SupportTicketController@add');
+Route::post('add/support-ticket/replay', 'SupportTicketController@replay');
 Route::post('edit/support-ticket', 'SupportTicketController@edit');
 Route::get('delete/support-ticket', 'SupportTicketController@delete');
+
+
+Route::get('TheTest', function (){
+    $products[] = [
+        'name'     => 'aaa',
+        'price'    => 150,
+        'quantity' => 2,
+        'weight'   => 3,
+        'hscode'   => "6404.1900", //retrieved from their HSCode systems
+    ];
+    $TAS = new \MisterBrownRSA\DHL\TAS\DHLTAS();
+    $TAS->addProduct($products);
+    $TAS->total(300);
+    $TAS->reference('A1AQV');
+    $TAS->toCountry('ZW');
+    $results = $TAS->doCurlPost();
+//    dd(Shippo_Address::validate('caab6e0272e24224a5bfa665a3f51a30'));
+    dd($results);
+
+});
+
+Route::get('CreateTest', function (){
+
+    $fromAddress = array(
+        'name' => 'Shawn Ippotle',
+        'city' => 'California ',
+        'state' => 'US',
+        'zip' => '90002',
+        'country' => 'US'
+    );
+
+    $toAddress = array(
+        'name' => 'Mr Hippo',
+        'city' => 'gaza',
+        'state' => 'NY',
+        'zip' => '00970',
+        'country' => 'PS',
+    );
+
+    $parcel = array(
+        'length'=> '5',
+        'width'=> '5',
+        'height'=> '5',
+        'distance_unit'=> 'in',
+        'weight'=> '2',
+        'mass_unit'=> 'lb',
+    );
+
+    $shipment = Shippo_Shipment::create( array(
+            'address_from'=> $fromAddress,
+            'address_to'=> $toAddress,
+            'parcels'=> array($parcel),
+            'async'=> false
+        )
+    );
+
+    dd( $shipment);
+
+});
+Route::get('TestP',function(){
+    return view('test');
+});

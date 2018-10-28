@@ -26,8 +26,8 @@
     vertical-align: middle;
 }
 .table-responsive tbody tr.H{
-	border-top-right-radius: 15px;
-	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .tables .table tbody th.view-details {
@@ -51,27 +51,27 @@
 }
 
 .form-check-label{
-   position: relative;
-   display: inline !important;
-   padding-left: 24px;
+    position: relative;
+    display: inline !important;
+    padding-left: 24px;
 }
 .form-check-label:before{
-   content: '';
-   width: 20px;
-   height: 23px;
-   position: absolute;
-   left: 0;
-   background-size: 20px 45px;
-   background-repeat: no-repeat;
-   margin-right: 10px;
-   background-position: 0px -23px;
-   display: inline-block;
-   background-image: url('../img/check.png');
+    content: '';
+    width: 20px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    background-size: 20px 45px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    background-position: 0px -23px;
+    display: inline-block;
+    background-image: url('../img/check.png');
 
 }
 
 .form-check-label.active:before{
-   background-position:0px 0px;
+    background-position:0px 0px;
 }
 
 .mrT {
@@ -86,12 +86,252 @@ label.mT {
     margin-top: 20px;
 }
 
- .modal-header {
+.modal-header {
     border-bottom: 0;
+}
+
+.mt{
+    margin-top: 50px;
+}
+
+.mb {
+    margin-bottom: 10px;
+}
+
+.exampleModal1 .modal-content {
+    padding-bottom: 25px;
+}
+
+.exampleModal1 .modal-body .send-message,
+.exampleModal1 .modal-body .messages ,
+.exampleModal1 .modal-body .close-ticket {
+    border: 1px solid #80808096;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 20px;
+}
+
+
+.exampleModal1 .modal-body .send-message .send-message-title ,
+.exampleModal1 .modal-body .messages .messages-title ,
+.exampleModal1 .modal-body .close-ticket .close-ticket-title{
+    background-color: #80808096;
+    color: #fff;
+    padding: 10px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.exampleModal1 .modal-body .send-message .send-message-title h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.exampleModal1 .modal-body .close-ticket .close-ticket-content {
+    padding-top: 10px;
+}
+
+.exampleModal1 .modal-body .send-message .send-message-content , .exampleModal1 .modal-body .close-ticket .close-ticket-content {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.exampleModal1 .modal-body .send-message .send-message-content .btn-choose {
+
+    background-color: #80808096;
+    color: #000;
+    font-weight: 600;
+    border: 1px solid #eef2f3;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.exampleModal1 .modal-body .send-message .send-message-content .btn-choose:focus {
+    outline: 0;
+}
+
+.exampleModal1 .modal-body .send-message .send-message-content .btn-reset {
+
+    background-color: #ff010199;
+    color: #fff;
+    border: 1px solid #eef2f3;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.exampleModal1 .modal-body .send-message .send-message-content .btn-reset:focus {
+    outline: 0;
+}
+
+.exampleModal1 .modal-body .close-ticket .m-btn , .exampleModal1 .modal-body .m-btn{
+    padding-right: 20px;
+}
+
+.exampleModal1 .modal-body .send-message .m-btn,
+.exampleModal1 .modal-body .close-ticket .m-btn,
+.exampleModal1 .modal-body .m-btn
+{
+    text-align: right;
+    margin-top: 30px;
+    margin-left: 0 !important;
+
+}
+
+.exampleModal1 .modal-body .send-message .m-btn button ,
+.exampleModal1 .modal-body .close-ticket .m-btn button,
+.exampleModal1 .modal-body .m-btn button
+{
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 0;
+    box-shadow: 1px 1px 10px #808080;
+    border-radius: 20px;
+}
+
+.exampleModal1 .modal-body .send-message .m-btn button:hover,
+.exampleModal1 .modal-body .close-ticket .m-btn button:hover,
+.exampleModal1 .modal-body .m-btn button:hover
+{
+    background-color: #ff0101 !important;
+    color: #fff !important;
+
+}
+
+.exampleModal1 .modal-body .send-message button:focus,
+.exampleModal1 .modal-body .close-ticket button:focus,
+.exampleModal1 .modal-body button:focus{
+    background-color: #fff !important;
+    color: #000 !important;
+    outline: 0;
+}
+
+.exampleModal1 .modal-body .messages,
+.exampleModal1 .modal-body .close-ticket {
+    margin-top: 20px;
+}
+
+.exampleModal1 .messages .messages-content .accordion {
+    margin-top: 20px;
+}
+
+.exampleModal1 .messages .messages-content .accordion .cstm-card {
+    width: 95% !important;
+    margin: 0 auto;
+    border: 1px solid #80808096;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 20px;
+}
+
+.exampleModal1 .messages .messages-content .accordion .cstm-card .card-header {
+    background-color: #80808096;
+    color: #fff;
+    padding: 1px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    margin: auto;
+}
+
+.exampleModal1 .messages .messages-content .accordion .cstm-card button {
+    outline: 0;
+}
+
+.exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info .col-md-3 h4{
+    padding-top: 40px;
+}
+.exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info img {
+
+    height: 125px;
+    width: 125px;
+    object-fit: cover;
+    float: right;
+    border-radius: 5px;
+    border: 1px solid #808080;
+
+}
+
+.exampleModal1 .messages .messages-content .accordion .cstm-card .card-body {
+    min-height: 150px;
+    padding: 20px 20px ;
 }
 
 @media (max-width: 599px){
     .mrT {
         margin-top: 10px;
     }
+}
+
+
+@media (max-width: 991px){
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info h4{
+        font-size: 14px;
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info .cstm-col {
+        padding-left: 0;
+        padding-right: 5px;
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info .col-md-4 img{
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info .col-xs-8{
+        text-align: left;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .card-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px){
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info h4{
+        font-size: 12px;
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info .cstm-col {
+        padding-top: 5px;
+        padding-left: 0;
+        padding-right: 5px;
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info .col-md-4 img{
+        width: 70px;
+        height: 70px;
+
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .messages-info .col-xs-8{
+        text-align: left;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .exampleModal1 .messages .messages-content .accordion .cstm-card .card-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .table-responsive>.table>tbody>tr>td {
+        white-space: normal !important;
+    }
+
 }

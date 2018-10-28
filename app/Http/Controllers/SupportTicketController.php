@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\AssistedPurchase;
 use App\AssistedPurchaseItem;
+use App\ExpectedPackage;
 use App\Support;
+use App\SupportReply;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,21 +30,22 @@ class SupportTicketController extends Controller
         ));
         return redirect('support-ticket');
     }
-    public function edit(Request $request){
-        $validation = $request->validate(ExpectedPackage::$rules);
-        $ExpectedPackage= ExpectedPackage::where('id',$request->id)->first();
-        $ExpectedPackage->update(array(
-            'vendor'=>$request->vendor,
-            'recipient_name'=>$request->recipient_name,
-            'address_id'=>$request->address_id,
-            'tracking_number'=>$request->tracking_number,
-            'note'=>$request->note,
+    public function replay(Request $request){
+        $validation = $request->validate( array(
+            'support_id' => 'required',
+            'sender_id' => 'required',
+            'sender_type' => 'required',
+            'details' => 'required',
+            'subject' => 'required',
         ));
-        return redirect('expected-packages');
-    }
-    public function delete(Request $request){
-        $ExpectedPackage= ExpectedPackage::where('id',$request->id)->first();
-        $ExpectedPackage->delete();
-        return redirect('expected-packages');
+        $SupportReply= SupportReply::where('id',$request->id)->first();
+        $new =SupportReply::create(array(
+            'support_id'=>$request->support_id,
+            'sender_id'=>$request->sender_id,
+            'sender_type'=>$request->sender_type,
+            'details'=>$request->details,
+            'subject'=>$request->subject,
+        ));
+        return redirect('support-ticket');
     }
 }
